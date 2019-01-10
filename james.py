@@ -297,14 +297,14 @@ def read(index_file,results_file,freq_mode,current_dir):
 			### 4) Evaluates the status of the calculation and stores it as success, failure, working or mistery
 			decision = evaluate_status(log_lines)
 			if decision == 'Working':
-                                results[number] = ['In progress']+[""]+[""]
-                        elif decision == 'Success':
-				### 5) If the calculation is successful, records its result
-                                results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
-                        elif decision == 'Failure':
-                                results[number] = ['Failed']+[""]+[""]
-                        elif decision == 'Mistery':
-                                results[number] = ['*** Anomaly ***']+["tt"]+["tt"]
+                results[number] = ['In progress']+[""]+[""]
+            elif decision == 'Success':
+			### 5) If the calculation is successful, records its result
+                results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
+            elif decision == 'Failure':
+                results[number] = ['Failed']+[""]+[""]
+            elif decision == 'Mistery':
+                results[number] = ['*** Anomaly ***']+["tt"]+["tt"]
 	### 6) Writes down the collected data
 	lines = []
 	for number in numbers:
