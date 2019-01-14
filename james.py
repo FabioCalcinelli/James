@@ -300,7 +300,10 @@ def read(index_file,results_file,freq_mode,current_dir):
                 results[number] = ['In progress']+[""]+[""]
             elif decision == 'Success':
 			### 5) If the calculation is successful, records its result
-                results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
+		if freq_mode:                
+			results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
+		else:
+			results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]
             elif decision == 'Failure':
                 results[number] = ['Failed']+[""]+[""]
             elif decision == 'Mistery':
