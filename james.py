@@ -1,15 +1,15 @@
 ### Tools for working with Gaussian 09 and slurm ###
 ### python james.py function (parameters) ###
 ### functions:  run	
-#		convert
-#		read
-#		check
-#		write
-#		collect
-#		unpack	
-#		repack
-#		rmsd
-#		restart
+#				convert
+#				read
+#				check
+#				write
+#				collect
+#				unpack	
+#				repack
+#				rmsd
+#				restart
 
 import subprocess
 import sys
@@ -292,22 +292,27 @@ def read(index_file,results_file,freq_mode,current_dir):
 			number = words[0]
 			numbers.append(number)
 			description = ' '.join(words[2:])
-			log_lines = read_lines(current_dir+'/'+number+'/'+number+'.log') 
-			descriptions[number] = read_description(log_lines) 
-			### 4) Evaluates the status of the calculation and stores it as success, failure, working or mistery
-			decision = evaluate_status(log_lines)
-			if decision == 'Working':
-                results[number] = ['In progress']+[""]+[""]
-            elif decision == 'Success':
-			### 5) If the calculation is successful, records its result
-		if freq_mode:                
-			results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
-		else:
-			results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]
-            elif decision == 'Failure':
-                results[number] = ['Failed']+[""]+[""]
-            elif decision == 'Mistery':
-                results[number] = ['*** Anomaly ***']+["tt"]+["tt"]
+			try:
+				log_lines = read_lines(current_dir+'/'+number+'/'+number+'.log') 
+				descriptions[number] = read_description(log_lines) 
+				### 4) Evaluates the status of the calculation and stores it as success, failure, working or mistery
+				decision = evaluate_status(log_lines)
+				if decision == 'Working':
+					results[number] = ['In progress']+[""]+[""]
+				elif decision == 'Success':
+				### 5) If the calculation is successful, records its result
+					if freq_mode:
+				  		results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
+                	else:
+                  		results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+['']
+				elif decision == 'Failure':
+					results[number] = ['Failed']+[""]+[""]
+                elif decision == 'Mistery':
+                   	results[number] = ['*** Anomaly ***']+[""]+[""]
+			except:
+				descriptions[number] = 'NO .LOG'
+				results[number] = ['NO .LOG']+['NO']+['NO']
+
 	### 6) Writes down the collected data
 	lines = []
 	for number in numbers:
@@ -336,9 +341,14 @@ def check(index_file,results_file,current_dir):
                         numbers.append(number)
                         description = ' '.join(words[2:])
                         ### 3) Collect informations for each calculation
-                        log_lines = read_lines(current_dir+'/'+number+'/'+number+'.log')
-                        opt_status[number]=read_opt_status(log_lines) 
-                        descriptions[number] = read_description(log_lines)
+                        try:
+				log_lines = read_lines(current_dir+'/'+number+'/'+number+'.log')
+                        	opt_status[number]=read_opt_status(log_lines) 
+                        	descriptions[number] = read_description(log_lines)
+			except:
+				log_lines = 'NO .LOG FILE'
+				opt_status[number]=['NO .LOG']*5
+				descriptions[number]='NO .LOG'
 	### 4) Records optimization status on results file	
 	out_lines = [('{0:4}{1:1}{2:53}{3:15}{4:15}{5:15}{6:15}{7:15}'.format('Num.','','Description','N. iterations','Max. Force','RMS Force','Max. disp.','RMS disp.'))+'\n']
 	for number in numbers:
