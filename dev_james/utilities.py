@@ -12,7 +12,7 @@ def extract_proj(path):
 	path_in_list = list(path)
 	path_in_parts = isplit(path_in_list,'/')
 	new_parts = ["".join(x) for x in path_in_parts[:-1]]
-	new_path = "/".join(new_parts)	
+	new_path = "/"+"/".join(new_parts)	
 	return(new_path)
 
 def extract_calc(path):
@@ -24,7 +24,6 @@ def extract_calc(path):
 
 def read_lines(input_file):
     ### returns a list of lines by reading a file. Full path must be included. ###
-    ### folder must be included in the name ###
     with open(input_file,'r') as reading_input:
         lines = reading_input.readlines()
     return(lines)

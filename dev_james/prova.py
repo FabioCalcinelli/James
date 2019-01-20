@@ -1,9 +1,11 @@
 import manager
 
-#test = manager.project('test_project')
-#new = manager.project('new_project')
-#print(test)
-#print(new)
+test = manager.project('test_project')
 
-test = manager.calculation('24')
-print (test.status)
+print(test)
+
+print(test.calculations[2].com.content)
+
+test.calculations[2].com.description =['AAAAAAAASCCHEDUREEEEEEEO']
+test.calculations[2].com.write_content()
+print(test.calculations[2].com.content)

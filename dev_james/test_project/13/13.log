@@ -1,0 +1,2494 @@
+ Entering Gaussian System, Link 0=/sw/xc40cle6/gaussian09/d.01/precompiled/g09/g09
+ Initial command:
+ /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l1.exe "/project/k1212/calcinf/13/Gau-29091.inp" -scrdir="/project/k1212/calcinf/13/"
+ Entering Link 1 = /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l1.exe PID=     29092.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision D.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  ES64L-G09RevD.01 24-Apr-2013
+                16-Jan-2019 
+ ******************************************
+ %nprocshared=32
+ Will use up to   32 processors via shared memory.
+ %mem=122GB
+ %chk=q.chk
+ ----------------------------------------------------------------------
+ #pbe1pbe/tzvp scf=(xqc, maxconventionalcycles=2000) SCRF=(SMD,Solvent=
+ water) opt=calcfc
+ ----------------------------------------------------------------------
+ 1/10=4,14=-1,18=20,19=15,26=3,38=1/1,3;
+ 2/9=110,12=2,17=6,18=5,40=1/2;
+ 3/5=19,7=101,11=2,16=1,25=1,30=1,70=32201,71=2,72=1,74=-13,140=1/1,2,3;
+ 4//1;
+ 5/5=2,8=3,13=1,38=5,53=1,85=2000/2,8;
+ 8/6=4,10=90,11=11/1;
+ 11/6=1,8=1,9=11,15=111,16=1/1,2,10;
+ 10/6=1,13=1/2;
+ 6/7=2,8=2,9=2,10=2,28=1/1;
+ 7/10=1,18=20,25=1/1,2,3,16;
+ 1/10=4,14=-1,18=20,19=15,26=3/3(2);
+ 2/9=110/2;
+ 99//99;
+ 2/9=110/2;
+ 3/5=19,7=101,11=2,16=1,25=1,30=1,70=32205,71=1,72=1,74=-13/1,2,3;
+ 4/5=5,16=3,69=1/1;
+ 5/5=2,8=3,13=1,38=5,53=1,85=2000/2,8;
+ 7//1,2,3,16;
+ 1/14=-1,18=20,19=15,26=3/3(-5);
+ 2/9=110/2;
+ 6/7=2,8=2,9=2,10=2,19=2,28=1/1;
+ 99/9=1/99;
+ Leave Link    1 at Wed Jan 16 23:01:32 2019, MaxMem= 16374562816 cpu:         2.6
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l101.exe)
+ -----------------
+ Dscr 2F Fe(II) S5
+ -----------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 5
+ C                    -3.68831   2.28617  -0.00835 
+ C                    -2.75899   3.34609   0.0129 
+ C                    -2.90574   1.0631    0.00001 
+ C                    -1.44016   2.73733  -0.00091 
+ N                    -1.58751   1.38976   0.0049 
+ C                    -0.23      3.42716  -0.00041 
+ C                    -3.42778  -0.23     -0.00299 
+ C                    -2.7378   -1.44051  -0.0019 
+ N                    -1.39024  -1.58744   0.00825 
+ C                    -3.34613  -2.75959   0.01068 
+ C                     1.06278   2.90515   0.00056 
+ N                     1.38922   1.58695   0.00176 
+ C                     2.28571   3.6878   -0.0085 
+ C                    -2.28578  -3.68855  -0.01079 
+ C                    -1.06309  -2.9055    0.00307 
+ C                     0.2298   -3.42711   0.00302 
+ C                     3.34557   2.75864   0.01247 
+ C                     2.73673   1.43991  -0.00419 
+ C                     1.43994  -2.73699   0.00099 
+ N                     1.58669  -1.38933   0.0072 
+ C                     2.75916  -3.34527  -0.01094 
+ C                     3.68811  -2.28495   0.01012 
+ C                     2.90478  -1.06239  -0.00444 
+ C                     3.42654   0.23005  -0.0084 
+ Fe                   -0.00028  -0.00036   0.0009 
+ C                     3.2093   -4.65519   0.01265 
+ C                     5.0491   -2.55379  -0.01446 
+ C                     2.55479   5.04845   0.01696 
+ C                     4.65532   3.20824  -0.01318 
+ H                     4.50411   0.30143  -0.0085 
+ H                     0.30128  -4.50451  -0.01111 
+ H                    -0.30133   4.5047   -0.00562 
+ H                    -4.50528  -0.30135  -0.0093 
+ C                    -4.65571  -3.20953  -0.01864 
+ C                    -2.55484  -5.04945   0.01031 
+ C                    -3.86267  -5.48415  -0.00424 
+ C                    -4.91261  -4.5644   -0.01211 
+ C                    -5.04902   2.55537   0.0162 
+ C                    -5.48328   3.86333   0.00572 
+ C                    -4.56346   4.91296  -0.00246 
+ C                    -3.20873   4.65581  -0.01172 
+ C                     3.86275   5.48268   0.00646 
+ C                     4.91266   4.56293  -0.00258 
+ C                     4.56485  -4.91214   0.00715 
+ C                     5.48451  -3.86143   0.00023 
+ F                    -5.96712   1.58748   0.02783 
+ F                    -6.78464   4.14086   0.01163 
+ F                    -5.01056   6.16651  -0.01158 
+ F                    -2.36951   5.69149  -0.02163 
+ F                     1.58648   5.96611   0.03017 
+ F                     4.14036   6.78422   0.01355 
+ F                     5.69064   2.36873  -0.02622 
+ F                     6.16624   5.01001  -0.01159 
+ F                     5.96684  -1.58515  -0.02732 
+ F                     6.7862   -4.13801  -0.00403 
+ F                     2.36984  -5.69072   0.02614 
+ F                     5.0126   -6.16548   0.01585 
+ F                    -6.16601  -5.01167  -0.02457 
+ F                    -5.69141  -2.37038  -0.03008 
+ F                    -1.5865   -5.96745   0.02434 
+ F                    -4.13996  -6.78567  -0.00063 
+ 
+ NAtoms=     61 NQM=       61 NQMF=       0 NMMI=      0 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1           2           3           4           5           6           7           8           9          10
+ IAtWgt=          12          12          12          12          14          12          12          12          14          12
+ AtmWgt=  12.0000000  12.0000000  12.0000000  12.0000000  14.0030740  12.0000000  12.0000000  12.0000000  14.0030740  12.0000000
+ NucSpn=           0           0           0           0           2           0           0           0           2           0
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   2.0440000   0.0000000   0.0000000   0.0000000   2.0440000   0.0000000
+ NMagM=    0.0000000   0.0000000   0.0000000   0.0000000   0.4037610   0.0000000   0.0000000   0.0000000   0.4037610   0.0000000
+ AtZNuc=   6.0000000   6.0000000   6.0000000   6.0000000   7.0000000   6.0000000   6.0000000   6.0000000   7.0000000   6.0000000
+
+  Atom        11          12          13          14          15          16          17          18          19          20
+ IAtWgt=          12          14          12          12          12          12          12          12          12          14
+ AtmWgt=  12.0000000  14.0030740  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  14.0030740
+ NucSpn=           0           2           0           0           0           0           0           0           0           2
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   2.0440000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   2.0440000
+ NMagM=    0.0000000   0.4037610   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.4037610
+ AtZNuc=   6.0000000   7.0000000   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000   7.0000000
+
+  Atom        21          22          23          24          25          26          27          28          29          30
+ IAtWgt=          12          12          12          12          56          12          12          12          12           1
+ AtmWgt=  12.0000000  12.0000000  12.0000000  12.0000000  55.9349393  12.0000000  12.0000000  12.0000000  12.0000000   1.0078250
+ NucSpn=           0           0           0           0           0           0           0           0           0           1
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   2.7928460
+ AtZNuc=   6.0000000   6.0000000   6.0000000   6.0000000  26.0000000   6.0000000   6.0000000   6.0000000   6.0000000   1.0000000
+
+  Atom        31          32          33          34          35          36          37          38          39          40
+ IAtWgt=           1           1           1          12          12          12          12          12          12          12
+ AtmWgt=   1.0078250   1.0078250   1.0078250  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000
+ NucSpn=           1           1           1           0           0           0           0           0           0           0
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    2.7928460   2.7928460   2.7928460   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ AtZNuc=   1.0000000   1.0000000   1.0000000   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000
+
+  Atom        41          42          43          44          45          46          47          48          49          50
+ IAtWgt=          12          12          12          12          12          19          19          19          19          19
+ AtmWgt=  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033
+ NucSpn=           0           0           0           0           0           1           1           1           1           1
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   2.6288670   2.6288670   2.6288670   2.6288670   2.6288670
+ AtZNuc=   6.0000000   6.0000000   6.0000000   6.0000000   6.0000000   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000
+
+  Atom        51          52          53          54          55          56          57          58          59          60
+ IAtWgt=          19          19          19          19          19          19          19          19          19          19
+ AtmWgt=  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033  18.9984033
+ NucSpn=           1           1           1           1           1           1           1           1           1           1
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    2.6288670   2.6288670   2.6288670   2.6288670   2.6288670   2.6288670   2.6288670   2.6288670   2.6288670   2.6288670
+ AtZNuc=   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000   9.0000000
+
+  Atom        61
+ IAtWgt=          19
+ AtmWgt=  18.9984033
+ NucSpn=           1
+ AtZEff=   0.0000000
+ NQMom=    0.0000000
+ NMagM=    2.6288670
+ AtZNuc=   9.0000000
+ Leave Link  101 at Wed Jan 16 23:01:33 2019, MaxMem= 16374562816 cpu:        26.4
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l103.exe)
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Initialization pass.
+                           ----------------------------
+                           !    Initial Parameters    !
+                           ! (Angstroms and Degrees)  !
+ --------------------------                            --------------------------
+ ! Name  Definition              Value          Derivative Info.                !
+ --------------------------------------------------------------------------------
+ ! R1    R(1,2)                  1.4098         calculate D2E/DX2 analytically  !
+ ! R2    R(1,3)                  1.452          calculate D2E/DX2 analytically  !
+ ! R3    R(1,38)                 1.3873         calculate D2E/DX2 analytically  !
+ ! R4    R(2,4)                  1.4526         calculate D2E/DX2 analytically  !
+ ! R5    R(2,41)                 1.385          calculate D2E/DX2 analytically  !
+ ! R6    R(3,5)                  1.3581         calculate D2E/DX2 analytically  !
+ ! R7    R(3,7)                  1.3945         calculate D2E/DX2 analytically  !
+ ! R8    R(4,5)                  1.3556         calculate D2E/DX2 analytically  !
+ ! R9    R(4,6)                  1.393          calculate D2E/DX2 analytically  !
+ ! R10   R(5,25)                 2.1099         calculate D2E/DX2 analytically  !
+ ! R11   R(6,11)                 1.3942         calculate D2E/DX2 analytically  !
+ ! R12   R(6,32)                 1.0799         calculate D2E/DX2 analytically  !
+ ! R13   R(7,8)                  1.3934         calculate D2E/DX2 analytically  !
+ ! R14   R(7,33)                 1.0799         calculate D2E/DX2 analytically  !
+ ! R15   R(8,9)                  1.3556         calculate D2E/DX2 analytically  !
+ ! R16   R(8,10)                 1.4526         calculate D2E/DX2 analytically  !
+ ! R17   R(9,15)                 1.3581         calculate D2E/DX2 analytically  !
+ ! R18   R(9,25)                 2.1097         calculate D2E/DX2 analytically  !
+ ! R19   R(10,14)                1.4099         calculate D2E/DX2 analytically  !
+ ! R20   R(10,34)                1.385          calculate D2E/DX2 analytically  !
+ ! R21   R(11,12)                1.358          calculate D2E/DX2 analytically  !
+ ! R22   R(11,13)                1.452          calculate D2E/DX2 analytically  !
+ ! R23   R(12,18)                1.3555         calculate D2E/DX2 analytically  !
+ ! R24   R(12,25)                2.1096         calculate D2E/DX2 analytically  !
+ ! R25   R(13,17)                1.4096         calculate D2E/DX2 analytically  !
+ ! R26   R(13,28)                1.3872         calculate D2E/DX2 analytically  !
+ ! R27   R(14,15)                1.452          calculate D2E/DX2 analytically  !
+ ! R28   R(14,35)                1.3874         calculate D2E/DX2 analytically  !
+ ! R29   R(15,16)                1.3941         calculate D2E/DX2 analytically  !
+ ! R30   R(16,19)                1.3931         calculate D2E/DX2 analytically  !
+ ! R31   R(16,31)                1.0799         calculate D2E/DX2 analytically  !
+ ! R32   R(17,18)                1.4526         calculate D2E/DX2 analytically  !
+ ! R33   R(17,29)                1.385          calculate D2E/DX2 analytically  !
+ ! R34   R(18,24)                1.3927         calculate D2E/DX2 analytically  !
+ ! R35   R(19,20)                1.3556         calculate D2E/DX2 analytically  !
+ ! R36   R(19,21)                1.4527         calculate D2E/DX2 analytically  !
+ ! R37   R(20,23)                1.3581         calculate D2E/DX2 analytically  !
+ ! R38   R(20,25)                2.109          calculate D2E/DX2 analytically  !
+ ! R39   R(21,22)                1.4098         calculate D2E/DX2 analytically  !
+ ! R40   R(21,26)                1.3853         calculate D2E/DX2 analytically  !
+ ! R41   R(22,23)                1.4521         calculate D2E/DX2 analytically  !
+ ! R42   R(22,27)                1.3875         calculate D2E/DX2 analytically  !
+ ! R43   R(23,24)                1.3938         calculate D2E/DX2 analytically  !
+ ! R44   R(24,30)                1.0799         calculate D2E/DX2 analytically  !
+ ! R45   R(26,44)                1.3797         calculate D2E/DX2 analytically  !
+ ! R46   R(26,56)                1.3331         calculate D2E/DX2 analytically  !
+ ! R47   R(27,45)                1.3783         calculate D2E/DX2 analytically  !
+ ! R48   R(27,54)                1.3344         calculate D2E/DX2 analytically  !
+ ! R49   R(28,42)                1.3782         calculate D2E/DX2 analytically  !
+ ! R50   R(28,50)                1.3341         calculate D2E/DX2 analytically  !
+ ! R51   R(29,43)                1.379          calculate D2E/DX2 analytically  !
+ ! R52   R(29,52)                1.333          calculate D2E/DX2 analytically  !
+ ! R53   R(34,37)                1.379          calculate D2E/DX2 analytically  !
+ ! R54   R(34,59)                1.333          calculate D2E/DX2 analytically  !
+ ! R55   R(35,36)                1.3783         calculate D2E/DX2 analytically  !
+ ! R56   R(35,60)                1.3344         calculate D2E/DX2 analytically  !
+ ! R57   R(36,37)                1.3958         calculate D2E/DX2 analytically  !
+ ! R58   R(36,61)                1.3307         calculate D2E/DX2 analytically  !
+ ! R59   R(37,58)                1.3309         calculate D2E/DX2 analytically  !
+ ! R60   R(38,39)                1.3782         calculate D2E/DX2 analytically  !
+ ! R61   R(38,46)                1.3341         calculate D2E/DX2 analytically  !
+ ! R62   R(39,40)                1.3956         calculate D2E/DX2 analytically  !
+ ! R63   R(39,47)                1.3306         calculate D2E/DX2 analytically  !
+ ! R64   R(40,41)                1.379          calculate D2E/DX2 analytically  !
+ ! R65   R(40,48)                1.3309         calculate D2E/DX2 analytically  !
+ ! R66   R(41,49)                1.3331         calculate D2E/DX2 analytically  !
+ ! R67   R(42,43)                1.3958         calculate D2E/DX2 analytically  !
+ ! R68   R(42,51)                1.3308         calculate D2E/DX2 analytically  !
+ ! R69   R(43,53)                1.3309         calculate D2E/DX2 analytically  !
+ ! R70   R(44,45)                1.3964         calculate D2E/DX2 analytically  !
+ ! R71   R(44,57)                1.3309         calculate D2E/DX2 analytically  !
+ ! R72   R(45,55)                1.3308         calculate D2E/DX2 analytically  !
+ ! A1    A(2,1,3)              106.136          calculate D2E/DX2 analytically  !
+ ! A2    A(2,1,38)             120.0263         calculate D2E/DX2 analytically  !
+ ! A3    A(3,1,38)             133.7862         calculate D2E/DX2 analytically  !
+ ! A4    A(1,2,4)              106.4549         calculate D2E/DX2 analytically  !
+ ! A5    A(1,2,41)             119.7779         calculate D2E/DX2 analytically  !
+ ! A6    A(4,2,41)             133.7049         calculate D2E/DX2 analytically  !
+ ! A7    A(1,3,5)              108.6961         calculate D2E/DX2 analytically  !
+ ! A8    A(1,3,7)              125.4006         calculate D2E/DX2 analytically  !
+ ! A9    A(5,3,7)              125.9027         calculate D2E/DX2 analytically  !
+ ! A10   A(2,4,5)              108.5341         calculate D2E/DX2 analytically  !
+ ! A11   A(2,4,6)              125.5362         calculate D2E/DX2 analytically  !
+ ! A12   A(5,4,6)              125.9237         calculate D2E/DX2 analytically  !
+ ! A13   A(3,5,4)              110.1564         calculate D2E/DX2 analytically  !
+ ! A14   A(3,5,25)             124.869          calculate D2E/DX2 analytically  !
+ ! A15   A(4,5,25)             124.9715         calculate D2E/DX2 analytically  !
+ ! A16   A(4,6,11)             128.3275         calculate D2E/DX2 analytically  !
+ ! A17   A(4,6,32)             115.8963         calculate D2E/DX2 analytically  !
+ ! A18   A(11,6,32)            115.7757         calculate D2E/DX2 analytically  !
+ ! A19   A(3,7,8)              128.3322         calculate D2E/DX2 analytically  !
+ ! A20   A(3,7,33)             115.774          calculate D2E/DX2 analytically  !
+ ! A21   A(8,7,33)             115.8937         calculate D2E/DX2 analytically  !
+ ! A22   A(7,8,9)              125.9046         calculate D2E/DX2 analytically  !
+ ! A23   A(7,8,10)             125.558          calculate D2E/DX2 analytically  !
+ ! A24   A(9,8,10)             108.5304         calculate D2E/DX2 analytically  !
+ ! A25   A(8,9,15)             110.1597         calculate D2E/DX2 analytically  !
+ ! A26   A(8,9,25)             124.986          calculate D2E/DX2 analytically  !
+ ! A27   A(15,9,25)            124.8472         calculate D2E/DX2 analytically  !
+ ! A28   A(8,10,14)            106.4528         calculate D2E/DX2 analytically  !
+ ! A29   A(8,10,34)            133.6908         calculate D2E/DX2 analytically  !
+ ! A30   A(14,10,34)           119.7847         calculate D2E/DX2 analytically  !
+ ! A31   A(6,11,12)            125.8975         calculate D2E/DX2 analytically  !
+ ! A32   A(6,11,13)            125.3921         calculate D2E/DX2 analytically  !
+ ! A33   A(12,11,13)           108.7092         calculate D2E/DX2 analytically  !
+ ! A34   A(11,12,18)           110.1362         calculate D2E/DX2 analytically  !
+ ! A35   A(11,12,25)           124.8926         calculate D2E/DX2 analytically  !
+ ! A36   A(18,12,25)           124.9702         calculate D2E/DX2 analytically  !
+ ! A37   A(11,13,17)           106.1336         calculate D2E/DX2 analytically  !
+ ! A38   A(11,13,28)           133.7855         calculate D2E/DX2 analytically  !
+ ! A39   A(17,13,28)           120.0264         calculate D2E/DX2 analytically  !
+ ! A40   A(10,14,15)           106.1304         calculate D2E/DX2 analytically  !
+ ! A41   A(10,14,35)           120.015          calculate D2E/DX2 analytically  !
+ ! A42   A(15,14,35)           133.7998         calculate D2E/DX2 analytically  !
+ ! A43   A(9,15,14)            108.6984         calculate D2E/DX2 analytically  !
+ ! A44   A(9,15,16)            125.9108         calculate D2E/DX2 analytically  !
+ ! A45   A(14,15,16)           125.3898         calculate D2E/DX2 analytically  !
+ ! A46   A(15,16,19)           128.3333         calculate D2E/DX2 analytically  !
+ ! A47   A(15,16,31)           115.7645         calculate D2E/DX2 analytically  !
+ ! A48   A(19,16,31)           115.8963         calculate D2E/DX2 analytically  !
+ ! A49   A(13,17,18)           106.4449         calculate D2E/DX2 analytically  !
+ ! A50   A(13,17,29)           119.7865         calculate D2E/DX2 analytically  !
+ ! A51   A(18,17,29)           133.6982         calculate D2E/DX2 analytically  !
+ ! A52   A(12,18,17)           108.5502         calculate D2E/DX2 analytically  !
+ ! A53   A(12,18,24)           125.9175         calculate D2E/DX2 analytically  !
+ ! A54   A(17,18,24)           125.5277         calculate D2E/DX2 analytically  !
+ ! A55   A(16,19,20)           125.9088         calculate D2E/DX2 analytically  !
+ ! A56   A(16,19,21)           125.5505         calculate D2E/DX2 analytically  !
+ ! A57   A(20,19,21)           108.5406         calculate D2E/DX2 analytically  !
+ ! A58   A(19,20,23)           110.1419         calculate D2E/DX2 analytically  !
+ ! A59   A(19,20,25)           124.9774         calculate D2E/DX2 analytically  !
+ ! A60   A(23,20,25)           124.8722         calculate D2E/DX2 analytically  !
+ ! A61   A(19,21,22)           106.4584         calculate D2E/DX2 analytically  !
+ ! A62   A(19,21,26)           133.6977         calculate D2E/DX2 analytically  !
+ ! A63   A(22,21,26)           119.7881         calculate D2E/DX2 analytically  !
+ ! A64   A(21,22,23)           106.1178         calculate D2E/DX2 analytically  !
+ ! A65   A(21,22,27)           120.0214         calculate D2E/DX2 analytically  !
+ ! A66   A(23,22,27)           133.7973         calculate D2E/DX2 analytically  !
+ ! A67   A(20,23,22)           108.711          calculate D2E/DX2 analytically  !
+ ! A68   A(20,23,24)           125.9148         calculate D2E/DX2 analytically  !
+ ! A69   A(22,23,24)           125.3671         calculate D2E/DX2 analytically  !
+ ! A70   A(18,24,23)           128.3253         calculate D2E/DX2 analytically  !
+ ! A71   A(18,24,30)           115.8996         calculate D2E/DX2 analytically  !
+ ! A72   A(23,24,30)           115.7739         calculate D2E/DX2 analytically  !
+ ! A73   A(5,25,9)              90.0004         calculate D2E/DX2 analytically  !
+ ! A74   A(5,25,12)             89.9857         calculate D2E/DX2 analytically  !
+ ! A75   A(9,25,20)             90.0176         calculate D2E/DX2 analytically  !
+ ! A76   A(12,25,20)            89.9952         calculate D2E/DX2 analytically  !
+ ! A77   A(21,26,44)           119.6887         calculate D2E/DX2 analytically  !
+ ! A78   A(21,26,56)           122.0097         calculate D2E/DX2 analytically  !
+ ! A79   A(44,26,56)           118.2975         calculate D2E/DX2 analytically  !
+ ! A80   A(22,27,45)           119.5715         calculate D2E/DX2 analytically  !
+ ! A81   A(22,27,54)           122.2845         calculate D2E/DX2 analytically  !
+ ! A82   A(45,27,54)           118.1323         calculate D2E/DX2 analytically  !
+ ! A83   A(13,28,42)           119.5368         calculate D2E/DX2 analytically  !
+ ! A84   A(13,28,50)           122.2797         calculate D2E/DX2 analytically  !
+ ! A85   A(42,28,50)           118.1749         calculate D2E/DX2 analytically  !
+ ! A86   A(17,29,43)           119.6856         calculate D2E/DX2 analytically  !
+ ! A87   A(17,29,52)           122.0209         calculate D2E/DX2 analytically  !
+ ! A88   A(43,29,52)           118.2845         calculate D2E/DX2 analytically  !
+ ! A89   A(10,34,37)           119.6834         calculate D2E/DX2 analytically  !
+ ! A90   A(10,34,59)           122.026          calculate D2E/DX2 analytically  !
+ ! A91   A(37,34,59)           118.2805         calculate D2E/DX2 analytically  !
+ ! A92   A(14,35,36)           119.5532         calculate D2E/DX2 analytically  !
+ ! A93   A(14,35,60)           122.2926         calculate D2E/DX2 analytically  !
+ ! A94   A(36,35,60)           118.1465         calculate D2E/DX2 analytically  !
+ ! A95   A(35,36,37)           120.3969         calculate D2E/DX2 analytically  !
+ ! A96   A(35,36,61)           120.4091         calculate D2E/DX2 analytically  !
+ ! A97   A(37,36,61)           119.192          calculate D2E/DX2 analytically  !
+ ! A98   A(34,37,36)           120.4833         calculate D2E/DX2 analytically  !
+ ! A99   A(34,37,58)           120.37           calculate D2E/DX2 analytically  !
+ ! A100  A(36,37,58)           119.1443         calculate D2E/DX2 analytically  !
+ ! A101  A(1,38,39)            119.5426         calculate D2E/DX2 analytically  !
+ ! A102  A(1,38,46)            122.3003         calculate D2E/DX2 analytically  !
+ ! A103  A(39,38,46)           118.1479         calculate D2E/DX2 analytically  !
+ ! A104  A(38,39,40)           120.4057         calculate D2E/DX2 analytically  !
+ ! A105  A(38,39,47)           120.4017         calculate D2E/DX2 analytically  !
+ ! A106  A(40,39,47)           119.1913         calculate D2E/DX2 analytically  !
+ ! A107  A(39,40,41)           120.4827         calculate D2E/DX2 analytically  !
+ ! A108  A(39,40,48)           119.1431         calculate D2E/DX2 analytically  !
+ ! A109  A(41,40,48)           120.3722         calculate D2E/DX2 analytically  !
+ ! A110  A(2,41,40)            119.6857         calculate D2E/DX2 analytically  !
+ ! A111  A(2,41,49)            122.0322         calculate D2E/DX2 analytically  !
+ ! A112  A(40,41,49)           118.2723         calculate D2E/DX2 analytically  !
+ ! A113  A(28,42,43)           120.4163         calculate D2E/DX2 analytically  !
+ ! A114  A(28,42,51)           120.402          calculate D2E/DX2 analytically  !
+ ! A115  A(43,42,51)           119.1802         calculate D2E/DX2 analytically  !
+ ! A116  A(29,43,42)           120.4653         calculate D2E/DX2 analytically  !
+ ! A117  A(29,43,53)           120.3787         calculate D2E/DX2 analytically  !
+ ! A118  A(42,43,53)           119.1539         calculate D2E/DX2 analytically  !
+ ! A119  A(26,44,45)           120.4622         calculate D2E/DX2 analytically  !
+ ! A120  A(26,44,57)           120.3899         calculate D2E/DX2 analytically  !
+ ! A121  A(45,44,57)           119.1469         calculate D2E/DX2 analytically  !
+ ! A122  A(27,45,44)           120.3894         calculate D2E/DX2 analytically  !
+ ! A123  A(27,45,55)           120.4083         calculate D2E/DX2 analytically  !
+ ! A124  A(44,45,55)           119.1996         calculate D2E/DX2 analytically  !
+ ! A125  L(5,25,20,12,-1)      179.9809         calculate D2E/DX2 analytically  !
+ ! A126  L(9,25,12,20,-1)      180.0129         calculate D2E/DX2 analytically  !
+ ! A127  L(5,25,20,12,-2)      179.7201         calculate D2E/DX2 analytically  !
+ ! A128  L(9,25,12,20,-2)      180.2233         calculate D2E/DX2 analytically  !
+ ! D1    D(3,1,2,4)              1.4162         calculate D2E/DX2 analytically  !
+ ! D2    D(3,1,2,41)           178.9256         calculate D2E/DX2 analytically  !
+ ! D3    D(38,1,2,4)           179.1521         calculate D2E/DX2 analytically  !
+ ! D4    D(38,1,2,41)           -3.3385         calculate D2E/DX2 analytically  !
+ ! D5    D(2,1,3,5)             -0.8883         calculate D2E/DX2 analytically  !
+ ! D6    D(2,1,3,7)            179.391          calculate D2E/DX2 analytically  !
+ ! D7    D(38,1,3,5)          -178.1728         calculate D2E/DX2 analytically  !
+ ! D8    D(38,1,3,7)             2.1066         calculate D2E/DX2 analytically  !
+ ! D9    D(2,1,38,39)            2.6599         calculate D2E/DX2 analytically  !
+ ! D10   D(2,1,38,46)         -178.4663         calculate D2E/DX2 analytically  !
+ ! D11   D(3,1,38,39)          179.6468         calculate D2E/DX2 analytically  !
+ ! D12   D(3,1,38,46)           -1.4794         calculate D2E/DX2 analytically  !
+ ! D13   D(1,2,4,5)             -1.5026         calculate D2E/DX2 analytically  !
+ ! D14   D(1,2,4,6)            179.3531         calculate D2E/DX2 analytically  !
+ ! D15   D(41,2,4,5)          -178.5119         calculate D2E/DX2 analytically  !
+ ! D16   D(41,2,4,6)             2.3438         calculate D2E/DX2 analytically  !
+ ! D17   D(1,2,41,40)            2.6015         calculate D2E/DX2 analytically  !
+ ! D18   D(1,2,41,49)         -178.5568         calculate D2E/DX2 analytically  !
+ ! D19   D(4,2,41,40)          179.2965         calculate D2E/DX2 analytically  !
+ ! D20   D(4,2,41,49)           -1.8618         calculate D2E/DX2 analytically  !
+ ! D21   D(1,3,5,4)             -0.0586         calculate D2E/DX2 analytically  !
+ ! D22   D(1,3,5,25)          -179.4454         calculate D2E/DX2 analytically  !
+ ! D23   D(7,3,5,4)            179.6603         calculate D2E/DX2 analytically  !
+ ! D24   D(7,3,5,25)             0.2735         calculate D2E/DX2 analytically  !
+ ! D25   D(1,3,7,8)            179.6623         calculate D2E/DX2 analytically  !
+ ! D26   D(1,3,7,33)            -0.1798         calculate D2E/DX2 analytically  !
+ ! D27   D(5,3,7,8)             -0.0111         calculate D2E/DX2 analytically  !
+ ! D28   D(5,3,7,33)          -179.8531         calculate D2E/DX2 analytically  !
+ ! D29   D(2,4,5,3)              0.9663         calculate D2E/DX2 analytically  !
+ ! D30   D(2,4,5,25)          -179.6477         calculate D2E/DX2 analytically  !
+ ! D31   D(6,4,5,3)           -179.8936         calculate D2E/DX2 analytically  !
+ ! D32   D(6,4,5,25)            -0.5076         calculate D2E/DX2 analytically  !
+ ! D33   D(2,4,6,11)           179.2817         calculate D2E/DX2 analytically  !
+ ! D34   D(2,4,6,32)            -1.0013         calculate D2E/DX2 analytically  !
+ ! D35   D(5,4,6,11)             0.2836         calculate D2E/DX2 analytically  !
+ ! D36   D(5,4,6,32)          -179.9994         calculate D2E/DX2 analytically  !
+ ! D37   D(3,5,25,9)            -0.5268         calculate D2E/DX2 analytically  !
+ ! D38   D(3,5,25,12)          179.6964         calculate D2E/DX2 analytically  !
+ ! D39   D(4,5,25,9)          -179.8243         calculate D2E/DX2 analytically  !
+ ! D40   D(4,5,25,12)            0.3989         calculate D2E/DX2 analytically  !
+ ! D41   D(4,6,11,12)           -0.0284         calculate D2E/DX2 analytically  !
+ ! D42   D(4,6,11,13)          179.5381         calculate D2E/DX2 analytically  !
+ ! D43   D(32,6,11,12)        -179.7457         calculate D2E/DX2 analytically  !
+ ! D44   D(32,6,11,13)          -0.1792         calculate D2E/DX2 analytically  !
+ ! D45   D(3,7,8,9)              0.3047         calculate D2E/DX2 analytically  !
+ ! D46   D(3,7,8,10)           179.2302         calculate D2E/DX2 analytically  !
+ ! D47   D(33,7,8,9)          -179.8534         calculate D2E/DX2 analytically  !
+ ! D48   D(33,7,8,10)           -0.9279         calculate D2E/DX2 analytically  !
+ ! D49   D(7,8,9,15)          -179.8648         calculate D2E/DX2 analytically  !
+ ! D50   D(7,8,9,25)            -0.7991         calculate D2E/DX2 analytically  !
+ ! D51   D(10,8,9,15)            1.0571         calculate D2E/DX2 analytically  !
+ ! D52   D(10,8,9,25)         -179.8772         calculate D2E/DX2 analytically  !
+ ! D53   D(7,8,10,14)          179.2433         calculate D2E/DX2 analytically  !
+ ! D54   D(7,8,10,34)            2.4506         calculate D2E/DX2 analytically  !
+ ! D55   D(9,8,10,14)           -1.6746         calculate D2E/DX2 analytically  !
+ ! D56   D(9,8,10,34)         -178.4672         calculate D2E/DX2 analytically  !
+ ! D57   D(8,9,15,14)           -0.0339         calculate D2E/DX2 analytically  !
+ ! D58   D(8,9,15,16)          179.6187         calculate D2E/DX2 analytically  !
+ ! D59   D(25,9,15,14)        -179.1011         calculate D2E/DX2 analytically  !
+ ! D60   D(25,9,15,16)           0.5514         calculate D2E/DX2 analytically  !
+ ! D61   D(8,9,25,5)             0.7719         calculate D2E/DX2 analytically  !
+ ! D62   D(8,9,25,20)         -179.5081         calculate D2E/DX2 analytically  !
+ ! D63   D(15,9,25,5)          179.7031         calculate D2E/DX2 analytically  !
+ ! D64   D(15,9,25,20)          -0.5768         calculate D2E/DX2 analytically  !
+ ! D65   D(8,10,14,15)           1.5963         calculate D2E/DX2 analytically  !
+ ! D66   D(8,10,14,35)         179.2641         calculate D2E/DX2 analytically  !
+ ! D67   D(34,10,14,15)        178.9246         calculate D2E/DX2 analytically  !
+ ! D68   D(34,10,14,35)         -3.4077         calculate D2E/DX2 analytically  !
+ ! D69   D(8,10,34,37)         179.159          calculate D2E/DX2 analytically  !
+ ! D70   D(8,10,34,59)          -2.0234         calculate D2E/DX2 analytically  !
+ ! D71   D(14,10,34,37)          2.7037         calculate D2E/DX2 analytically  !
+ ! D72   D(14,10,34,59)       -178.4788         calculate D2E/DX2 analytically  !
+ ! D73   D(6,11,12,18)         179.7009         calculate D2E/DX2 analytically  !
+ ! D74   D(6,11,12,25)           0.0512         calculate D2E/DX2 analytically  !
+ ! D75   D(13,11,12,18)          0.074          calculate D2E/DX2 analytically  !
+ ! D76   D(13,11,12,25)       -179.5756         calculate D2E/DX2 analytically  !
+ ! D77   D(6,11,13,17)         179.3123         calculate D2E/DX2 analytically  !
+ ! D78   D(6,11,13,28)           2.1029         calculate D2E/DX2 analytically  !
+ ! D79   D(12,11,13,17)         -1.0585         calculate D2E/DX2 analytically  !
+ ! D80   D(12,11,13,28)       -178.2679         calculate D2E/DX2 analytically  !
+ ! D81   D(11,12,18,17)          0.9236         calculate D2E/DX2 analytically  !
+ ! D82   D(11,12,18,24)       -179.8222         calculate D2E/DX2 analytically  !
+ ! D83   D(25,12,18,17)       -179.4271         calculate D2E/DX2 analytically  !
+ ! D84   D(25,12,18,24)         -0.1729         calculate D2E/DX2 analytically  !
+ ! D85   D(11,12,25,5)          -0.1866         calculate D2E/DX2 analytically  !
+ ! D86   D(11,12,25,20)       -179.9067         calculate D2E/DX2 analytically  !
+ ! D87   D(18,12,25,5)        -179.7852         calculate D2E/DX2 analytically  !
+ ! D88   D(18,12,25,20)          0.4947         calculate D2E/DX2 analytically  !
+ ! D89   D(11,13,17,18)          1.5557         calculate D2E/DX2 analytically  !
+ ! D90   D(11,13,17,29)        178.9084         calculate D2E/DX2 analytically  !
+ ! D91   D(28,13,17,18)        179.2291         calculate D2E/DX2 analytically  !
+ ! D92   D(28,13,17,29)         -3.4182         calculate D2E/DX2 analytically  !
+ ! D93   D(11,13,28,42)        179.5943         calculate D2E/DX2 analytically  !
+ ! D94   D(11,13,28,50)         -1.4973         calculate D2E/DX2 analytically  !
+ ! D95   D(17,13,28,42)          2.6908         calculate D2E/DX2 analytically  !
+ ! D96   D(17,13,28,50)       -178.4008         calculate D2E/DX2 analytically  !
+ ! D97   D(10,14,15,9)          -1.0205         calculate D2E/DX2 analytically  !
+ ! D98   D(10,14,15,16)        179.3247         calculate D2E/DX2 analytically  !
+ ! D99   D(35,14,15,9)        -178.2222         calculate D2E/DX2 analytically  !
+ ! D100  D(35,14,15,16)          2.1231         calculate D2E/DX2 analytically  !
+ ! D101  D(10,14,35,36)          2.7007         calculate D2E/DX2 analytically  !
+ ! D102  D(10,14,35,60)       -178.3272         calculate D2E/DX2 analytically  !
+ ! D103  D(15,14,35,36)        179.5959         calculate D2E/DX2 analytically  !
+ ! D104  D(15,14,35,60)         -1.432          calculate D2E/DX2 analytically  !
+ ! D105  D(9,15,16,19)          -0.373          calculate D2E/DX2 analytically  !
+ ! D106  D(9,15,16,31)        -179.4371         calculate D2E/DX2 analytically  !
+ ! D107  D(14,15,16,19)        179.2233         calculate D2E/DX2 analytically  !
+ ! D108  D(14,15,16,31)          0.1592         calculate D2E/DX2 analytically  !
+ ! D109  D(15,16,19,20)          0.4474         calculate D2E/DX2 analytically  !
+ ! D110  D(15,16,19,21)       -179.4179         calculate D2E/DX2 analytically  !
+ ! D111  D(31,16,19,20)        179.5104         calculate D2E/DX2 analytically  !
+ ! D112  D(31,16,19,21)         -0.3548         calculate D2E/DX2 analytically  !
+ ! D113  D(13,17,18,12)         -1.5685         calculate D2E/DX2 analytically  !
+ ! D114  D(13,17,18,24)        179.1736         calculate D2E/DX2 analytically  !
+ ! D115  D(29,17,18,12)       -178.3902         calculate D2E/DX2 analytically  !
+ ! D116  D(29,17,18,24)          2.3519         calculate D2E/DX2 analytically  !
+ ! D117  D(13,17,29,43)          2.7016         calculate D2E/DX2 analytically  !
+ ! D118  D(13,17,29,52)       -178.4125         calculate D2E/DX2 analytically  !
+ ! D119  D(18,17,29,43)        179.1888         calculate D2E/DX2 analytically  !
+ ! D120  D(18,17,29,52)         -1.9253         calculate D2E/DX2 analytically  !
+ ! D121  D(12,18,24,23)         -0.1598         calculate D2E/DX2 analytically  !
+ ! D122  D(12,18,24,30)       -179.7366         calculate D2E/DX2 analytically  !
+ ! D123  D(17,18,24,23)        178.9714         calculate D2E/DX2 analytically  !
+ ! D124  D(17,18,24,30)         -0.6054         calculate D2E/DX2 analytically  !
+ ! D125  D(16,19,20,23)       -179.6738         calculate D2E/DX2 analytically  !
+ ! D126  D(16,19,20,25)         -0.6853         calculate D2E/DX2 analytically  !
+ ! D127  D(21,19,20,23)          0.2106         calculate D2E/DX2 analytically  !
+ ! D128  D(21,19,20,25)        179.1991         calculate D2E/DX2 analytically  !
+ ! D129  D(16,19,21,22)       -179.2024         calculate D2E/DX2 analytically  !
+ ! D130  D(16,19,21,26)         -2.0337         calculate D2E/DX2 analytically  !
+ ! D131  D(20,19,21,22)          0.9127         calculate D2E/DX2 analytically  !
+ ! D132  D(20,19,21,26)        178.0814         calculate D2E/DX2 analytically  !
+ ! D133  D(19,20,23,22)         -1.2321         calculate D2E/DX2 analytically  !
+ ! D134  D(19,20,23,24)        179.6946         calculate D2E/DX2 analytically  !
+ ! D135  D(25,20,23,22)        179.7781         calculate D2E/DX2 analytically  !
+ ! D136  D(25,20,23,24)          0.7049         calculate D2E/DX2 analytically  !
+ ! D137  D(19,20,25,9)           0.6397         calculate D2E/DX2 analytically  !
+ ! D138  D(19,20,25,12)       -179.5835         calculate D2E/DX2 analytically  !
+ ! D139  D(23,20,25,9)         179.4822         calculate D2E/DX2 analytically  !
+ ! D140  D(23,20,25,12)         -0.7411         calculate D2E/DX2 analytically  !
+ ! D141  D(19,21,22,23)         -1.589          calculate D2E/DX2 analytically  !
+ ! D142  D(19,21,22,27)       -179.0765         calculate D2E/DX2 analytically  !
+ ! D143  D(26,21,22,23)       -179.2305         calculate D2E/DX2 analytically  !
+ ! D144  D(26,21,22,27)          3.2819         calculate D2E/DX2 analytically  !
+ ! D145  D(19,21,26,44)       -179.2357         calculate D2E/DX2 analytically  !
+ ! D146  D(19,21,26,56)          1.5104         calculate D2E/DX2 analytically  !
+ ! D147  D(22,21,26,44)         -2.3648         calculate D2E/DX2 analytically  !
+ ! D148  D(22,21,26,56)        178.3813         calculate D2E/DX2 analytically  !
+ ! D149  D(21,22,23,20)          1.7698         calculate D2E/DX2 analytically  !
+ ! D150  D(21,22,23,24)       -179.1506         calculate D2E/DX2 analytically  !
+ ! D151  D(27,22,23,20)        178.7555         calculate D2E/DX2 analytically  !
+ ! D152  D(27,22,23,24)         -2.1649         calculate D2E/DX2 analytically  !
+ ! D153  D(21,22,27,45)         -2.8535         calculate D2E/DX2 analytically  !
+ ! D154  D(21,22,27,54)        178.4126         calculate D2E/DX2 analytically  !
+ ! D155  D(23,22,27,45)       -179.5086         calculate D2E/DX2 analytically  !
+ ! D156  D(23,22,27,54)          1.7575         calculate D2E/DX2 analytically  !
+ ! D157  D(20,23,24,18)         -0.138          calculate D2E/DX2 analytically  !
+ ! D158  D(20,23,24,30)        179.4392         calculate D2E/DX2 analytically  !
+ ! D159  D(22,23,24,18)       -179.0616         calculate D2E/DX2 analytically  !
+ ! D160  D(22,23,24,30)          0.5156         calculate D2E/DX2 analytically  !
+ ! D161  D(21,26,44,45)          1.0585         calculate D2E/DX2 analytically  !
+ ! D162  D(21,26,44,57)       -179.3146         calculate D2E/DX2 analytically  !
+ ! D163  D(56,26,44,45)       -179.66           calculate D2E/DX2 analytically  !
+ ! D164  D(56,26,44,57)         -0.0331         calculate D2E/DX2 analytically  !
+ ! D165  D(22,27,45,44)          1.5422         calculate D2E/DX2 analytically  !
+ ! D166  D(22,27,45,55)       -179.057          calculate D2E/DX2 analytically  !
+ ! D167  D(54,27,45,44)       -179.6716         calculate D2E/DX2 analytically  !
+ ! D168  D(54,27,45,55)         -0.2708         calculate D2E/DX2 analytically  !
+ ! D169  D(13,28,42,43)         -1.2829         calculate D2E/DX2 analytically  !
+ ! D170  D(13,28,42,51)        179.1541         calculate D2E/DX2 analytically  !
+ ! D171  D(50,28,42,43)        179.764          calculate D2E/DX2 analytically  !
+ ! D172  D(50,28,42,51)          0.201          calculate D2E/DX2 analytically  !
+ ! D173  D(17,29,43,42)         -1.3013         calculate D2E/DX2 analytically  !
+ ! D174  D(17,29,43,53)        179.2357         calculate D2E/DX2 analytically  !
+ ! D175  D(52,29,43,42)        179.7714         calculate D2E/DX2 analytically  !
+ ! D176  D(52,29,43,53)          0.3085         calculate D2E/DX2 analytically  !
+ ! D177  D(10,34,37,36)         -1.3357         calculate D2E/DX2 analytically  !
+ ! D178  D(10,34,37,58)        179.2306         calculate D2E/DX2 analytically  !
+ ! D179  D(59,34,37,36)        179.8027         calculate D2E/DX2 analytically  !
+ ! D180  D(59,34,37,58)          0.3689         calculate D2E/DX2 analytically  !
+ ! D181  D(14,35,36,37)         -1.3252         calculate D2E/DX2 analytically  !
+ ! D182  D(14,35,36,61)        179.19           calculate D2E/DX2 analytically  !
+ ! D183  D(60,35,36,37)        179.6603         calculate D2E/DX2 analytically  !
+ ! D184  D(60,35,36,61)          0.1755         calculate D2E/DX2 analytically  !
+ ! D185  D(35,36,37,34)          0.6366         calculate D2E/DX2 analytically  !
+ ! D186  D(35,36,37,58)       -179.9228         calculate D2E/DX2 analytically  !
+ ! D187  D(61,36,37,34)       -179.8724         calculate D2E/DX2 analytically  !
+ ! D188  D(61,36,37,58)         -0.4318         calculate D2E/DX2 analytically  !
+ ! D189  D(1,38,39,40)          -1.2795         calculate D2E/DX2 analytically  !
+ ! D190  D(1,38,39,47)         179.1383         calculate D2E/DX2 analytically  !
+ ! D191  D(46,38,39,40)        179.8002         calculate D2E/DX2 analytically  !
+ ! D192  D(46,38,39,47)          0.2179         calculate D2E/DX2 analytically  !
+ ! D193  D(38,39,40,41)          0.5573         calculate D2E/DX2 analytically  !
+ ! D194  D(38,39,40,48)       -179.9539         calculate D2E/DX2 analytically  !
+ ! D195  D(47,39,40,41)       -179.8554         calculate D2E/DX2 analytically  !
+ ! D196  D(47,39,40,48)         -0.3666         calculate D2E/DX2 analytically  !
+ ! D197  D(39,40,41,2)          -1.2285         calculate D2E/DX2 analytically  !
+ ! D198  D(39,40,41,49)        179.8864         calculate D2E/DX2 analytically  !
+ ! D199  D(48,40,41,2)         179.289          calculate D2E/DX2 analytically  !
+ ! D200  D(48,40,41,49)          0.4039         calculate D2E/DX2 analytically  !
+ ! D201  D(28,42,43,29)          0.5818         calculate D2E/DX2 analytically  !
+ ! D202  D(28,42,43,53)       -179.9488         calculate D2E/DX2 analytically  !
+ ! D203  D(51,42,43,29)       -179.85           calculate D2E/DX2 analytically  !
+ ! D204  D(51,42,43,53)         -0.3805         calculate D2E/DX2 analytically  !
+ ! D205  D(26,44,45,27)         -0.6391         calculate D2E/DX2 analytically  !
+ ! D206  D(26,44,45,55)        179.9529         calculate D2E/DX2 analytically  !
+ ! D207  D(57,44,45,27)        179.7294         calculate D2E/DX2 analytically  !
+ ! D208  D(57,44,45,55)          0.3214         calculate D2E/DX2 analytically  !
+ --------------------------------------------------------------------------------
+ Trust Radius=3.00D-01 FncErr=1.00D-07 GrdErr=1.00D-06
+ Number of steps in this run=    366 maximum allowed number of steps=    366.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+ Leave Link  103 at Wed Jan 16 23:01:33 2019, MaxMem= 16374562816 cpu:         5.0
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l202.exe)
+ Stoichiometry    C36H4F16FeN4(5)
+ Framework group  C1[X(C36H4F16FeN4)]
+ Deg. of freedom   177
+ Full point group                 C1      NOp   1
+ Largest Abelian subgroup         C1      NOp   1
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0       -3.687619   -2.287280    0.008351
+      2          6           0       -2.757977   -3.346924   -0.012895
+      3          6           0       -2.905415   -1.063977   -0.000009
+      4          6           0       -1.439334   -2.737769    0.000909
+      5          7           0       -1.587086   -1.390240   -0.004897
+      6          6           0       -0.228962   -3.427225    0.000406
+      7          6           0       -3.427851    0.228960    0.002986
+      8          6           0       -2.738233    1.439686    0.001896
+      9          7           0       -1.390720    1.587022   -0.008250
+     10          6           0       -3.346962    2.758577   -0.010675
+     11          6           0        1.063658   -2.904825   -0.000564
+     12          7           0        1.389702   -1.586534   -0.001761
+     13          6           0        2.286825   -3.687106    0.008500
+     14          6           0       -2.286898    3.687858    0.010790
+     15          6           0       -1.063966    2.905174   -0.003067
+     16          6           0        0.228768    3.427178   -0.003016
+     17          6           0        3.346404   -2.757633   -0.012467
+     18          6           0        2.737165   -1.439087    0.004191
+     19          6           0        1.439113    2.737429   -0.000991
+     20          7           0        1.586269    1.389812   -0.007198
+     21          6           0        2.758145    3.346098    0.010942
+     22          6           0        3.687418    2.286062   -0.010119
+     23          6           0        2.904462    1.063264    0.004436
+     24          6           0        3.426608   -0.229010    0.008404
+     25         26           0       -0.000281    0.000362   -0.000896
+     26          6           0        3.207893    4.656160   -0.012652
+     27          6           0        5.048323    2.555315    0.014459
+     28          6           0        2.556318   -5.047674   -0.016963
+     29          6           0        4.656292   -3.206836    0.013176
+     30          1           0        4.504201   -0.300068    0.008504
+     31          1           0        0.299915    4.504598    0.011112
+     32          1           0       -0.299969   -4.504792    0.005618
+     33          1           0       -4.505372    0.299993    0.009296
+     34          6           0       -4.656682    3.208121    0.018638
+     35          6           0       -2.556365    5.048673   -0.010311
+     36          6           0       -3.864329    5.482980    0.004237
+     37          6           0       -4.913984    4.562912    0.012105
+     38          6           0       -5.048249   -2.556892   -0.016203
+     39          6           0       -5.482112   -3.864990   -0.005716
+     40          6           0       -4.561980   -4.914334    0.002462
+     41          6           0       -3.207322   -4.656778    0.011721
+     42          6           0        3.864407   -5.481515   -0.006457
+     43          6           0        4.914036   -4.561448    0.002575
+     44          6           0        4.563363    4.913521   -0.007149
+     45          6           0        5.483347    3.863085   -0.000225
+     46          9           0       -5.966636   -1.589282   -0.027834
+     47          9           0       -6.783389   -4.142913   -0.011632
+     48          9           0       -5.008695   -6.168028    0.011583
+     49          9           0       -2.367787   -5.692205    0.021630
+     50          9           0        1.588285   -5.965629   -0.030171
+     51          9           0        4.142406   -6.782971   -0.013554
+     52          9           0        5.691359   -2.367010    0.026219
+     53          9           0        6.167750   -5.008145    0.011590
+     54          9           0        5.966360    1.586949    0.027319
+     55          9           0        6.784947    4.140061    0.004027
+     56          9           0        2.368122    5.691438   -0.026136
+     57          9           0        5.010738    6.166993   -0.015850
+     58          9           0       -6.167527    5.009803    0.024574
+     59          9           0       -5.692121    2.368655    0.030078
+     60          9           0       -1.588300    5.966968   -0.024335
+     61          9           0       -4.142011    6.784418    0.000634
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):      0.0382942      0.0382902      0.0191464
+ Leave Link  202 at Wed Jan 16 23:01:33 2019, MaxMem= 16374562816 cpu:         1.5
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l301.exe)
+ Standard basis: TZVP (5D, 7F)
+ Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
+ There are  1180 symmetry adapted cartesian basis functions of A   symmetry.
+ There are  1121 symmetry adapted basis functions of A   symmetry.
+  1121 basis functions,  2078 primitive gaussians,  1180 cartesian basis functions
+   211 alpha electrons      207 beta electrons
+       nuclear repulsion energy      8565.1643519616 Hartrees.
+ IExCor= 1009 DFT=T Ex+Corr=PBE1PBE ExCW=0 ScaHFX=  0.250000
+ ScaDFX=  0.750000  0.750000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      0 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=   61 NActive=   61 NUniq=   61 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=T Big=T
+ Integral buffers will be    131072 words long.
+ Raffenetti 2 integral format.
+ Two-electron integral symmetry is turned on.
+ Force inversion solution in PCM.
+ ------------------------------------------------------------------------------
+ Polarizable Continuum Model (PCM)
+ =================================
+ Model                : PCM (using non-symmetric T matrix).
+ Atomic radii         : SMD-Coulomb.
+ Polarization charges : Total charges.
+ Charge compensation  : None.
+ Solution method      : Matrix inversion.
+ Cavity type          : VdW (van der Waals Surface) (Alpha=1.000).
+ Cavity algorithm     : GePol (No added spheres)
+                        Default sphere list used, NSphG=   61.
+                        Lebedev-Laikov grids with approx.  5.0 points / Ang**2.
+                        Smoothing algorithm: Karplus/York (Gamma=1.0000).
+                        Polarization charges: spherical gaussians, with
+                                              point-specific exponents (IZeta= 3).
+                        Self-potential: point-specific (ISelfS= 7).
+                        Self-field    : sphere-specific E.n sum rule (ISelfD= 2).
+ 1st derivatives      : Analytical E(r).r(x)/FMM algorithm (CHGder, D1EAlg=3).
+                        Cavity 1st derivative terms included.
+ 2nd derivatives      : Analytical E(r).r(xy)/FMM algorithm (CHGder, D2EAlg=3).
+                        Cavity 2nd derivative terms included.
+ Solvent              : Water, Eps=  78.355300 Eps(inf)=   1.777849
+ ------------------------------------------------------------------------------
+ GePol: Number of generator spheres                  =      61
+ GePol: Total number of spheres                      =      61
+ GePol: Number of exposed spheres                    =      61 (100.00%)
+ GePol: Number of points                             =    5057
+ GePol: Average weight of points                     =       0.12
+ GePol: Minimum weight of points                     =   0.19D-11
+ GePol: Maximum weight of points                     =    0.21501
+ GePol: Number of points with low weight             =     267
+ GePol: Fraction of low-weight points (<1% of avg)   =       5.28%
+ GePol: Cavity surface area                          =    619.514 Ang**2
+ GePol: Cavity volume                                =    650.567 Ang**3
+ ------------------------------------------------------------------------------
+ Atomic radii for non-electrostatic terms: SMD-CDS.
+ ------------------------------------------------------------------------------
+ PCM non-electrostatic energy =         0.0250493207 Hartrees.
+ Nuclear repulsion after PCM non-electrostatic terms =     8565.1894012823 Hartrees.
+ Leave Link  301 at Wed Jan 16 23:01:33 2019, MaxMem= 16374562816 cpu:         3.2
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l302.exe)
+ NPDir=0 NMtPBC=     1 NCelOv=     1 NCel=       1 NClECP=     1 NCelD=      1
+         NCelK=      1 NCelE2=     1 NClLst=     1 CellRange=     0.0.
+ One-electron integrals computed using PRISM.
+ NBasis=  1121 RedAO= T EigKep=  4.40D-06  NBF=  1121
+ NBsUse=  1121 1.00D-06 EigRej= -1.00D+00 NBFU=  1121
+ Precomputing XC quadrature grid using
+ IXCGrd= 4 IRadAn=           0 IRanWt=          -1 IRanGd=           0 AccXCQ= 0.00D+00.
+ Generated NRdTot=       0 NPtTot=           0 NUsed=           0 NTot=          32
+ NSgBfM=  1071  1071  1071  1071  1071 MxSgAt=    61 MxSgA2=    61.
+ Leave Link  302 at Wed Jan 16 23:01:37 2019, MaxMem= 16374562816 cpu:       111.2
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l303.exe)
+ DipDrv:  MaxL=1.
+ Leave Link  303 at Wed Jan 16 23:01:37 2019, MaxMem= 16374562816 cpu:        10.8
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l401.exe)
+ ExpMin= 4.20D-02 ExpMax= 3.01D+05 ExpMxC= 2.91D+03 IAcc=2 IRadAn=         4 AccDes= 0.00D+00
+ Harris functional with IExCor= 1009 and IRadAn=       4 diagonalized for initial guess.
+ HarFok:  IExCor= 1009 AccDes= 0.00D+00 IRadAn=         4 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=        2001
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=     500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Harris En= -4451.99639872984    
+ JPrj=0 DoOrth=F DoCkMO=F.
+ Initial guess <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 2.0000 <S**2>= 6.0000 S= 2.0000
+ Leave Link  401 at Wed Jan 16 23:01:42 2019, MaxMem= 16374562816 cpu:       155.5
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l502.exe)
+ UHF open shell SCF:
+ Using DIIS extrapolation, IDIIS=  1040.
+ Integral symmetry usage will be decided dynamically.
+ IVT=     8235342 IEndB=     8235342 NGot= 16374562816 MDV= 16371725055
+ LenX= 16371725055 LenY= 16370331475
+ Requested convergence on RMS density matrix=1.00D-08 within2000 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ Fock matrices will be formed incrementally for  20 cycles.
+
+ Cycle   1  Pass 1  IDiag  1:
+ FoFJK:  IHMeth= 1 ICntrl=       0 DoSepK=F KAlg= 0 I1Cent=   0 FoldK=F
+ IRaf= 590000000 NMat=   1 IRICut=       1 DoRegI=T DoRafI=F ISym2E= 0.
+ FoFCou: FMM=T IPFlag=           0 FMFlag=      100000 FMFlg1=        2001
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=       0 IOpCl=  1 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ FMM levels:  10  Number of levels for PrismC:   9
+ Inv3:  Mode=1 IEnd=    76719747.
+ Iteration    1 A*A^-1 deviation from unit magnitude is 8.88D-15 for   2671.
+ Iteration    1 A*A^-1 deviation from orthogonality  is 7.13D-15 for   5055   2087.
+ Iteration    1 A^-1*A deviation from unit magnitude is 8.66D-15 for   1238.
+ Iteration    1 A^-1*A deviation from orthogonality  is 2.92D-10 for   4383   4317.
+ Iteration    2 A*A^-1 deviation from unit magnitude is 1.58D-14 for    791.
+ Iteration    2 A*A^-1 deviation from orthogonality  is 1.16D-14 for   4794    151.
+ Iteration    2 A^-1*A deviation from unit magnitude is 1.55D-15 for    144.
+ Iteration    2 A^-1*A deviation from orthogonality  is 8.18D-16 for   4886    150.
+ E= -4451.09807820191    
+ DIIS: error= 6.59D-02 at cycle   1 NSaved=   1.
+ NSaved= 1 IEnMin= 1 EnMin= -4451.09807820191     IErMin= 1 ErrMin= 6.59D-02
+ ErrMax= 6.59D-02  0.00D+00 EMaxC= 1.00D-01 BMatC= 5.62D+00 BMatP= 5.62D+00
+ IDIUse=3 WtCom= 3.41D-01 WtEn= 6.59D-01
+ Coeff-Com:  0.100D+01
+ Coeff-En:   0.100D+01
+ Coeff:      0.100D+01
+ Gap=     0.031 Goal=   None    Shift=    0.000
+ Gap=     0.287 Goal=   None    Shift=    0.000
+ GapD=    0.031 DampG=0.250 DampE=0.250 DampFc=0.1250 IDamp=-1.
+ Damping current iteration by 1.25D-01
+ RMSDP=1.02D-02 MaxDP=8.71D-01              OVMax= 9.51D-01
+
+ Cycle   2  Pass 1  IDiag  1:
+ RMSU=  7.24D-04    CP:  9.64D-01
+ E= -4451.39601093273     Delta-E=       -0.297932730824 Rises=F Damp=T
+ DIIS: error= 2.16D-02 at cycle   2 NSaved=   2.
+ NSaved= 2 IEnMin= 2 EnMin= -4451.39601093273     IErMin= 2 ErrMin= 2.16D-02
+ ErrMax= 2.16D-02  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.97D+00 BMatP= 5.62D+00
+ IDIUse=3 WtCom= 7.84D-01 WtEn= 2.16D-01
+ Coeff-Com: -0.613D+00 0.161D+01
+ Coeff-En:   0.000D+00 0.100D+01
+ Coeff:     -0.480D+00 0.148D+01
+ Gap=     0.093 Goal=   None    Shift=    0.000
+ Gap=     0.008 Goal=   None    Shift=    0.000
+ RMSDP=5.87D-03 MaxDP=5.61D-01 DE=-2.98D-01 OVMax= 9.95D-01
+
+ Cycle   3  Pass 1  IDiag  1:
+ RMSU=  4.24D-03    CP:  8.30D-01  2.76D+00
+ E= -4451.69695107092     Delta-E=       -0.300940138191 Rises=F Damp=F
+ DIIS: error= 5.17D-02 at cycle   3 NSaved=   3.
+ NSaved= 3 IEnMin= 3 EnMin= -4451.69695107092     IErMin= 2 ErrMin= 2.16D-02
+ ErrMax= 5.17D-02  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.87D+00 BMatP= 1.97D+00
+ IDIUse=3 WtCom= 4.83D-01 WtEn= 5.17D-01
+ Coeff-Com: -0.668D+00 0.113D+01 0.539D+00
+ Coeff-En:   0.000D+00 0.106D+00 0.894D+00
+ Coeff:     -0.323D+00 0.600D+00 0.722D+00
+ Gap=     0.029 Goal=   None    Shift=    0.000
+ Gap=     0.028 Goal=   None    Shift=    0.000
+ RMSDP=5.48D-03 MaxDP=3.98D-01 DE=-3.01D-01 OVMax= 9.80D-01
+
+ Cycle   4  Pass 1  IDiag  1:
+ RMSU=  2.64D-03    CP:  8.82D-01  3.00D+00 -7.42D-02
+ E= -4447.57997475359     Delta-E=        4.116976317335 Rises=F Damp=F
+ DIIS: error= 2.08D-01 at cycle   4 NSaved=   4.
+ NSaved= 4 IEnMin= 3 EnMin= -4451.69695107092     IErMin= 2 ErrMin= 2.16D-02
+ ErrMax= 2.08D-01  0.00D+00 EMaxC= 1.00D-01 BMatC= 3.06D+01 BMatP= 1.87D+00
+ IDIUse=2 WtCom= 0.00D+00 WtEn= 1.00D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.847D+00 0.153D+00
+ Coeff:      0.000D+00 0.000D+00 0.847D+00 0.153D+00
+ Gap=     0.062 Goal=   None    Shift=    0.000
+ Gap=     0.006 Goal=   None    Shift=    0.000
+ RMSDP=2.22D-03 MaxDP=3.94D-01 DE= 4.12D+00 OVMax= 1.00D+00
+
+ Cycle   5  Pass 1  IDiag  1:
+ RMSU=  1.64D-03    CP:  9.14D-01  2.27D+00  6.31D-02  7.57D-01
+ E= -4451.92765448637     Delta-E=       -4.347679732782 Rises=F Damp=F
+ DIIS: error= 2.62D-02 at cycle   5 NSaved=   5.
+ NSaved= 5 IEnMin= 5 EnMin= -4451.92765448637     IErMin= 2 ErrMin= 2.16D-02
+ ErrMax= 2.62D-02  0.00D+00 EMaxC= 1.00D-01 BMatC= 8.78D-01 BMatP= 1.87D+00
+ IDIUse=3 WtCom= 7.38D-01 WtEn= 2.62D-01
+ Coeff-Com: -0.290D+00 0.407D+00 0.432D+00-0.232D-01 0.474D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.304D+00 0.000D+00 0.696D+00
+ Coeff:     -0.214D+00 0.301D+00 0.399D+00-0.171D-01 0.532D+00
+ Gap=     0.058 Goal=   None    Shift=    0.000
+ Gap=     0.116 Goal=   None    Shift=    0.000
+ RMSDP=2.51D-03 MaxDP=2.21D-01 DE=-4.35D+00 OVMax= 1.13D-01
+
+ Cycle   6  Pass 1  IDiag  1:
+ RMSU=  9.02D-04    CP:  8.44D-01  3.00D+00  2.35D-01  5.02D-01  9.78D-01
+ E= -4452.07771743166     Delta-E=       -0.150062945293 Rises=F Damp=F
+ DIIS: error= 1.17D-02 at cycle   6 NSaved=   6.
+ NSaved= 6 IEnMin= 6 EnMin= -4452.07771743166     IErMin= 6 ErrMin= 1.17D-02
+ ErrMax= 1.17D-02  0.00D+00 EMaxC= 1.00D-01 BMatC= 8.42D-02 BMatP= 8.78D-01
+ IDIUse=3 WtCom= 8.83D-01 WtEn= 1.17D-01
+ Coeff-Com:  0.260D-02 0.192D-01 0.175D+00-0.169D-01 0.234D+00 0.586D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.100D+01
+ Coeff:      0.230D-02 0.169D-01 0.154D+00-0.149D-01 0.207D+00 0.635D+00
+ Gap=     0.093 Goal=   None    Shift=    0.000
+ Gap=     0.098 Goal=   None    Shift=    0.000
+ RMSDP=3.59D-04 MaxDP=2.63D-02 DE=-1.50D-01 OVMax= 5.45D-02
+
+ Cycle   7  Pass 1  IDiag  1:
+ RMSU=  3.50D-04    CP:  8.46D-01  3.00D+00  2.38D-01  5.11D-01  9.94D-01
+                    CP:  9.41D-01
+ E= -4452.09187991797     Delta-E=       -0.014162486303 Rises=F Damp=F
+ DIIS: error= 4.08D-03 at cycle   7 NSaved=   7.
+ NSaved= 7 IEnMin= 7 EnMin= -4452.09187991797     IErMin= 7 ErrMin= 4.08D-03
+ ErrMax= 4.08D-03  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.31D-02 BMatP= 8.42D-02
+ IDIUse=3 WtCom= 9.59D-01 WtEn= 4.08D-02
+ Coeff-Com:  0.708D-01-0.768D-01-0.163D-01-0.156D-02-0.817D-01 0.171D+00
+ Coeff-Com:  0.934D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00
+ Coeff-En:   0.100D+01
+ Coeff:      0.679D-01-0.736D-01-0.156D-01-0.150D-02-0.783D-01 0.164D+00
+ Coeff:      0.937D+00
+ Gap=     0.115 Goal=   None    Shift=    0.000
+ Gap=     0.097 Goal=   None    Shift=    0.000
+ RMSDP=2.57D-04 MaxDP=1.46D-02 DE=-1.42D-02 OVMax= 3.35D-02
+
+ Cycle   8  Pass 1  IDiag  1:
+ RMSU=  1.71D-04    CP:  8.45D-01  2.99D+00  2.53D-01  4.81D-01  9.97D-01
+                    CP:  1.10D+00  1.22D+00
+ E= -4452.09463270295     Delta-E=       -0.002752784987 Rises=F Damp=F
+ DIIS: error= 9.81D-04 at cycle   8 NSaved=   8.
+ NSaved= 8 IEnMin= 8 EnMin= -4452.09463270295     IErMin= 8 ErrMin= 9.81D-04
+ ErrMax= 9.81D-04  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.68D-03 BMatP= 1.31D-02
+ IDIUse=3 WtCom= 9.90D-01 WtEn= 9.81D-03
+ Coeff-Com:  0.527D-02-0.159D-02-0.228D-02 0.141D-03-0.470D-01-0.456D-01
+ Coeff-Com:  0.528D+00 0.564D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00
+ Coeff-En:   0.000D+00 0.100D+01
+ Coeff:      0.522D-02-0.157D-02-0.226D-02 0.139D-03-0.466D-01-0.452D-01
+ Coeff:      0.522D+00 0.568D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=9.90D-05 MaxDP=9.12D-03 DE=-2.75D-03 OVMax= 5.36D-03
+
+ Cycle   9  Pass 1  IDiag  1:
+ RMSU=  4.83D-05    CP:  8.43D-01  3.00D+00  2.51D-01  4.85D-01  9.95D-01
+                    CP:  1.07D+00  1.26D+00  7.36D-01
+ E= -4452.09519969312     Delta-E=       -0.000566990167 Rises=F Damp=F
+ DIIS: error= 2.80D-04 at cycle   9 NSaved=   9.
+ NSaved= 9 IEnMin= 9 EnMin= -4452.09519969312     IErMin= 9 ErrMin= 2.80D-04
+ ErrMax= 2.80D-04  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.76D-04 BMatP= 2.68D-03
+ IDIUse=3 WtCom= 9.97D-01 WtEn= 2.80D-03
+ Coeff-Com: -0.365D-02 0.445D-02 0.275D-02 0.242D-03-0.546D-02-0.274D-01
+ Coeff-Com:  0.125D+00 0.243D+00 0.662D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.100D+01
+ Coeff:     -0.364D-02 0.444D-02 0.274D-02 0.241D-03-0.545D-02-0.273D-01
+ Coeff:      0.124D+00 0.242D+00 0.663D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=3.43D-05 MaxDP=2.28D-03 DE=-5.67D-04 OVMax= 1.45D-03
+
+ Cycle  10  Pass 1  IDiag  1:
+ RMSU=  2.73D-05    CP:  8.44D-01  3.00D+00  2.52D-01  4.84D-01  9.95D-01
+                    CP:  1.07D+00  1.25D+00  7.14D-01  7.44D-01
+ E= -4452.09523843203     Delta-E=       -0.000038738910 Rises=F Damp=F
+ DIIS: error= 1.26D-04 at cycle  10 NSaved=  10.
+ NSaved=10 IEnMin=10 EnMin= -4452.09523843203     IErMin=10 ErrMin= 1.26D-04
+ ErrMax= 1.26D-04  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.27D-05 BMatP= 1.76D-04
+ IDIUse=3 WtCom= 9.99D-01 WtEn= 1.26D-03
+ Coeff-Com: -0.267D-02 0.285D-02 0.174D-02 0.596D-04 0.290D-02-0.846D-02
+ Coeff-Com: -0.352D-02 0.475D-01 0.281D+00 0.678D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00 0.000D+00
+ Coeff-En:   0.000D+00 0.000D+00 0.000D+00 0.100D+01
+ Coeff:     -0.266D-02 0.284D-02 0.174D-02 0.595D-04 0.290D-02-0.845D-02
+ Coeff:     -0.352D-02 0.475D-01 0.281D+00 0.679D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=2.52D-05 MaxDP=2.57D-03 DE=-3.87D-05 OVMax= 8.41D-04
+
+ Cycle  11  Pass 1  IDiag  1:
+ RMSU=  1.27D-05    CP:  8.43D-01  3.00D+00  2.51D-01  4.84D-01  9.93D-01
+                    CP:  1.07D+00  1.25D+00  7.28D-01  8.94D-01  8.38D-01
+ E= -4452.09524520311     Delta-E=       -0.000006771079 Rises=F Damp=F
+ DIIS: error= 4.24D-05 at cycle  11 NSaved=  11.
+ NSaved=11 IEnMin=11 EnMin= -4452.09524520311     IErMin=11 ErrMin= 4.24D-05
+ ErrMax= 4.24D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 6.79D-06 BMatP= 2.27D-05
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.598D-03-0.799D-03-0.879D-03 0.259D-04 0.933D-03 0.237D-02
+ Coeff-Com: -0.308D-01-0.406D-01-0.671D-01 0.330D+00 0.807D+00
+ Coeff:      0.598D-03-0.799D-03-0.879D-03 0.259D-04 0.933D-03 0.237D-02
+ Coeff:     -0.308D-01-0.406D-01-0.671D-01 0.330D+00 0.807D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.14D-05 MaxDP=1.18D-03 DE=-6.77D-06 OVMax= 7.78D-04
+
+ Cycle  12  Pass 1  IDiag  1:
+ RMSU=  5.23D-06    CP:  8.43D-01  3.00D+00  2.51D-01  4.84D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.40D-01  9.10D-01  9.97D-01
+                    CP:  9.23D-01
+ E= -4452.09524799042     Delta-E=       -0.000002787305 Rises=F Damp=F
+ DIIS: error= 1.84D-05 at cycle  12 NSaved=  12.
+ NSaved=12 IEnMin=12 EnMin= -4452.09524799042     IErMin=12 ErrMin= 1.84D-05
+ ErrMax= 1.84D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 7.61D-07 BMatP= 6.79D-06
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.707D-04-0.286D-04-0.159D-03-0.161D-04 0.212D-03 0.151D-02
+ Coeff-Com: -0.770D-02-0.159D-01-0.436D-01 0.343D-01 0.262D+00 0.769D+00
+ Coeff:      0.707D-04-0.286D-04-0.159D-03-0.161D-04 0.212D-03 0.151D-02
+ Coeff:     -0.770D-02-0.159D-01-0.436D-01 0.343D-01 0.262D+00 0.769D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=3.15D-06 MaxDP=2.38D-04 DE=-2.79D-06 OVMax= 2.41D-04
+
+ Cycle  13  Pass 1  IDiag  1:
+ RMSU=  2.00D-06    CP:  8.43D-01  3.00D+00  2.51D-01  4.84D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.42D-01  9.09D-01  1.03D+00
+                    CP:  1.01D+00  1.18D+00
+ E= -4452.09524833741     Delta-E=       -0.000000346992 Rises=F Damp=F
+ DIIS: error= 1.28D-05 at cycle  13 NSaved=  13.
+ NSaved=13 IEnMin=13 EnMin= -4452.09524833741     IErMin=13 ErrMin= 1.28D-05
+ ErrMax= 1.28D-05  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.90D-07 BMatP= 7.61D-07
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.541D-04 0.984D-04 0.110D-03-0.105D-04-0.172D-03 0.294D-03
+ Coeff-Com:  0.477D-02 0.274D-02-0.307D-02-0.833D-01-0.103D+00 0.427D+00
+ Coeff-Com:  0.754D+00
+ Coeff:     -0.541D-04 0.984D-04 0.110D-03-0.105D-04-0.172D-03 0.294D-03
+ Coeff:      0.477D-02 0.274D-02-0.307D-02-0.833D-01-0.103D+00 0.427D+00
+ Coeff:      0.754D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=2.06D-06 MaxDP=1.50D-04 DE=-3.47D-07 OVMax= 1.97D-04
+
+ Cycle  14  Pass 1  IDiag  1:
+ RMSU=  8.93D-07    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.41D-01  9.11D-01  1.05D+00
+                    CP:  1.07D+00  1.41D+00  1.08D+00
+ E= -4452.09524849051     Delta-E=       -0.000000153101 Rises=F Damp=F
+ DIIS: error= 6.08D-06 at cycle  14 NSaved=  14.
+ NSaved=14 IEnMin=14 EnMin= -4452.09524849051     IErMin=14 ErrMin= 6.08D-06
+ ErrMax= 6.08D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 4.84D-08 BMatP= 2.90D-07
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.582D-04 0.629D-04 0.115D-03-0.105D-05-0.116D-04-0.197D-03
+ Coeff-Com:  0.290D-02 0.432D-02 0.933D-02-0.405D-01-0.107D+00-0.343D-02
+ Coeff-Com:  0.307D+00 0.827D+00
+ Coeff:     -0.582D-04 0.629D-04 0.115D-03-0.105D-05-0.116D-04-0.197D-03
+ Coeff:      0.290D-02 0.432D-02 0.933D-02-0.405D-01-0.107D+00-0.343D-02
+ Coeff:      0.307D+00 0.827D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.15D-06 MaxDP=6.95D-05 DE=-1.53D-07 OVMax= 1.02D-04
+
+ Cycle  15  Pass 1  IDiag  1:
+ RMSU=  4.42D-07    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.42D-01  9.13D-01  1.06D+00
+                    CP:  1.10D+00  1.56D+00  1.24D+00  1.12D+00
+ E= -4452.09524851842     Delta-E=       -0.000000027914 Rises=F Damp=F
+ DIIS: error= 3.83D-06 at cycle  15 NSaved=  15.
+ NSaved=15 IEnMin=15 EnMin= -4452.09524851842     IErMin=15 ErrMin= 3.83D-06
+ ErrMax= 3.83D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.59D-08 BMatP= 4.84D-08
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.455D-04 0.492D-04 0.633D-04-0.187D-06 0.327D-04-0.205D-03
+ Coeff-Com:  0.810D-03 0.216D-02 0.622D-02-0.110D-01-0.514D-01-0.746D-01
+ Coeff-Com:  0.586D-01 0.535D+00 0.534D+00
+ Coeff:     -0.455D-04 0.492D-04 0.633D-04-0.187D-06 0.327D-04-0.205D-03
+ Coeff:      0.810D-03 0.216D-02 0.622D-02-0.110D-01-0.514D-01-0.746D-01
+ Coeff:      0.586D-01 0.535D+00 0.534D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=4.57D-07 MaxDP=3.37D-05 DE=-2.79D-08 OVMax= 3.81D-05
+
+ Cycle  16  Pass 1  IDiag  1:
+ RMSU=  1.93D-07    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.43D-01  9.13D-01  1.06D+00
+                    CP:  1.11D+00  1.60D+00  1.33D+00  1.24D+00  7.32D-01
+ E= -4452.09524852787     Delta-E=       -0.000000009450 Rises=F Damp=F
+ DIIS: error= 1.20D-06 at cycle  16 NSaved=  16.
+ NSaved=16 IEnMin=16 EnMin= -4452.09524852787     IErMin=16 ErrMin= 1.20D-06
+ ErrMax= 1.20D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.46D-09 BMatP= 2.59D-08
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.949D-05-0.102D-04-0.103D-04 0.647D-06-0.548D-05-0.474D-04
+ Coeff-Com: -0.304D-03-0.146D-03-0.180D-03 0.387D-02 0.458D-02-0.121D-01
+ Coeff-Com: -0.417D-01-0.200D-01 0.135D+00 0.932D+00
+ Coeff:      0.949D-05-0.102D-04-0.103D-04 0.647D-06-0.548D-05-0.474D-04
+ Coeff:     -0.304D-03-0.146D-03-0.180D-03 0.387D-02 0.458D-02-0.121D-01
+ Coeff:     -0.417D-01-0.200D-01 0.135D+00 0.932D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=2.65D-07 MaxDP=2.87D-05 DE=-9.45D-09 OVMax= 5.14D-05
+
+ Cycle  17  Pass 1  IDiag  1:
+ RMSU=  1.36D-07    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.43D-01  9.13D-01  1.06D+00
+                    CP:  1.11D+00  1.62D+00  1.34D+00  1.31D+00  8.84D-01
+                    CP:  1.04D+00
+ E= -4452.09524852978     Delta-E=       -0.000000001908 Rises=F Damp=F
+ DIIS: error= 1.12D-06 at cycle  17 NSaved=  17.
+ NSaved=17 IEnMin=17 EnMin= -4452.09524852978     IErMin=17 ErrMin= 1.12D-06
+ ErrMax= 1.12D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 9.17D-10 BMatP= 2.46D-09
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.119D-04-0.126D-04-0.144D-04 0.341D-06-0.821D-05 0.662D-05
+ Coeff-Com: -0.270D-03-0.447D-03-0.120D-02 0.405D-02 0.124D-01 0.856D-02
+ Coeff-Com: -0.334D-01-0.120D+00-0.412D-01 0.495D+00 0.676D+00
+ Coeff:      0.119D-04-0.126D-04-0.144D-04 0.341D-06-0.821D-05 0.662D-05
+ Coeff:     -0.270D-03-0.447D-03-0.120D-02 0.405D-02 0.124D-01 0.856D-02
+ Coeff:     -0.334D-01-0.120D+00-0.412D-01 0.495D+00 0.676D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.42D-07 MaxDP=1.17D-05 DE=-1.91D-09 OVMax= 4.21D-05
+
+ Cycle  18  Pass 1  IDiag  1:
+ RMSU=  7.40D-08    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.43D-01  9.13D-01  1.06D+00
+                    CP:  1.11D+00  1.62D+00  1.35D+00  1.33D+00  8.99D-01
+                    CP:  1.43D+00  9.88D-01
+ E= -4452.09524853155     Delta-E=       -0.000000001764 Rises=F Damp=F
+ DIIS: error= 1.13D-06 at cycle  18 NSaved=  18.
+ NSaved=18 IEnMin=18 EnMin= -4452.09524853155     IErMin=17 ErrMin= 1.12D-06
+ ErrMax= 1.13D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 3.82D-10 BMatP= 9.17D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.680D-06-0.923D-06-0.184D-05-0.128D-06-0.603D-06 0.238D-04
+ Coeff-Com:  0.123D-04-0.136D-03-0.385D-03 0.290D-03 0.367D-02 0.624D-02
+ Coeff-Com:  0.217D-02-0.401D-01-0.651D-01-0.137D+00 0.276D+00 0.954D+00
+ Coeff:      0.680D-06-0.923D-06-0.184D-05-0.128D-06-0.603D-06 0.238D-04
+ Coeff:      0.123D-04-0.136D-03-0.385D-03 0.290D-03 0.367D-02 0.624D-02
+ Coeff:      0.217D-02-0.401D-01-0.651D-01-0.137D+00 0.276D+00 0.954D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.18D-07 MaxDP=1.49D-05 DE=-1.76D-09 OVMax= 5.86D-05
+
+ Cycle  19  Pass 1  IDiag  1:
+ RMSU=  5.26D-08    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.43D-01  9.13D-01  1.06D+00
+                    CP:  1.11D+00  1.63D+00  1.35D+00  1.35D+00  9.50D-01
+                    CP:  1.55D+00  1.52D+00  1.63D+00
+ E= -4452.09524853267     Delta-E=       -0.000000001124 Rises=F Damp=F
+ DIIS: error= 1.14D-06 at cycle  19 NSaved=  19.
+ NSaved=19 IEnMin=19 EnMin= -4452.09524853267     IErMin=17 ErrMin= 1.12D-06
+ ErrMax= 1.14D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.29D-10 BMatP= 3.82D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.207D-05 0.190D-05 0.225D-05-0.129D-06 0.213D-05 0.138D-04
+ Coeff-Com:  0.778D-04 0.582D-04 0.166D-03-0.101D-02-0.196D-02-0.347D-03
+ Coeff-Com:  0.108D-01 0.196D-01-0.142D-01-0.208D+00-0.104D+00 0.387D+00
+ Coeff-Com:  0.912D+00
+ Coeff:     -0.207D-05 0.190D-05 0.225D-05-0.129D-06 0.213D-05 0.138D-04
+ Coeff:      0.778D-04 0.582D-04 0.166D-03-0.101D-02-0.196D-02-0.347D-03
+ Coeff:      0.108D-01 0.196D-01-0.142D-01-0.208D+00-0.104D+00 0.387D+00
+ Coeff:      0.912D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.22D-07 MaxDP=1.55D-05 DE=-1.12D-09 OVMax= 5.90D-05
+
+ Cycle  20  Pass 1  IDiag  1:
+ RMSU=  4.47D-08    CP:  8.43D-01  3.00D+00  2.51D-01  4.83D-01  9.93D-01
+                    CP:  1.07D+00  1.26D+00  7.43D-01  9.14D-01  1.06D+00
+                    CP:  1.12D+00  1.63D+00  1.36D+00  1.37D+00  9.56D-01
+                    CP:  1.74D+00  1.86D+00  2.60D+00  1.84D+00
+ E= -4452.09524853351     Delta-E=       -0.000000000837 Rises=F Damp=F
+ DIIS: error= 1.15D-06 at cycle  20 NSaved=  20.
+ NSaved=20 IEnMin=20 EnMin= -4452.09524853351     IErMin=17 ErrMin= 1.12D-06
+ ErrMax= 1.15D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.82D-10 BMatP= 2.29D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.107D-05 0.103D-05 0.140D-05 0.675D-08 0.131D-05-0.199D-05
+ Coeff-Com:  0.238D-04 0.691D-04 0.189D-03-0.570D-03-0.230D-02-0.238D-02
+ Coeff-Com:  0.389D-02 0.249D-01 0.204D-01-0.424D-01-0.171D+00-0.220D+00
+ Coeff-Com:  0.464D+00 0.925D+00
+ Coeff:     -0.107D-05 0.103D-05 0.140D-05 0.675D-08 0.131D-05-0.199D-05
+ Coeff:      0.238D-04 0.691D-04 0.189D-03-0.570D-03-0.230D-02-0.238D-02
+ Coeff:      0.389D-02 0.249D-01 0.204D-01-0.424D-01-0.171D+00-0.220D+00
+ Coeff:      0.464D+00 0.925D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.63D-07 MaxDP=1.77D-05 DE=-8.37D-10 OVMax= 6.56D-05
+
+ Cycle  21  Pass 1  IDiag  1:
+ Restarting incremental Fock formation.
+ E= -4452.09524855166     Delta-E=       -0.000000018154 Rises=F Damp=F
+ DIIS: error= 1.16D-06 at cycle  21 NSaved=  20.
+ NSaved=20 IEnMin=20 EnMin= -4452.09524855166     IErMin=16 ErrMin= 1.12D-06
+ ErrMax= 1.16D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 6.24D-10 BMatP= 1.82D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.108D-05 0.104D-05 0.139D-05 0.132D-05-0.198D-05 0.232D-04
+ Coeff-Com:  0.680D-04 0.185D-03-0.560D-03-0.226D-02-0.233D-02 0.381D-02
+ Coeff-Com:  0.245D-01 0.202D-01-0.412D-01-0.168D+00-0.218D+00 0.454D+00
+ Coeff-Com:  0.912D+00 0.180D-01
+ Coeff:     -0.108D-05 0.104D-05 0.139D-05 0.132D-05-0.198D-05 0.232D-04
+ Coeff:      0.680D-04 0.185D-03-0.560D-03-0.226D-02-0.233D-02 0.381D-02
+ Coeff:      0.245D-01 0.202D-01-0.412D-01-0.168D+00-0.218D+00 0.454D+00
+ Coeff:      0.912D+00 0.180D-01
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=2.06D-07 MaxDP=1.35D-05 DE=-1.82D-08 OVMax= 1.02D-06
+
+ Cycle  22  Pass 1  IDiag  1:
+ RMSU=  1.85D-07    CP:  1.00D+00
+ E= -4452.09524855122     Delta-E=        0.000000000440 Rises=F Damp=F
+ DIIS: error= 1.16D-06 at cycle  22 NSaved=  20.
+ NSaved=20 IEnMin=19 EnMin= -4452.09524855166     IErMin=15 ErrMin= 1.12D-06
+ ErrMax= 1.16D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 6.02D-10 BMatP= 1.82D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.301D-06 0.554D-06 0.655D-06-0.160D-06 0.187D-04 0.548D-04
+ Coeff-Com:  0.147D-03-0.480D-03-0.196D-02-0.209D-02 0.323D-02 0.218D-01
+ Coeff-Com:  0.186D-01-0.342D-01-0.155D+00-0.210D+00 0.419D+00 0.861D+00
+ Coeff-Com: -0.262D+01 0.270D+01
+ Coeff:     -0.301D-06 0.554D-06 0.655D-06-0.160D-06 0.187D-04 0.548D-04
+ Coeff:      0.147D-03-0.480D-03-0.196D-02-0.209D-02 0.323D-02 0.218D-01
+ Coeff:      0.186D-01-0.342D-01-0.155D+00-0.210D+00 0.419D+00 0.861D+00
+ Coeff:     -0.262D+01 0.270D+01
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=3.87D-07 MaxDP=3.03D-05 DE= 4.40D-10 OVMax= 5.61D-06
+
+ Cycle  23  Pass 1  IDiag  1:
+ RMSU=  2.71D-07    CP:  1.00D+00  2.46D+00
+ E= -4452.09524855246     Delta-E=       -0.000000001242 Rises=F Damp=F
+ DIIS: error= 1.16D-06 at cycle  23 NSaved=  20.
+ NSaved=20 IEnMin=20 EnMin= -4452.09524855246     IErMin=14 ErrMin= 1.12D-06
+ ErrMax= 1.16D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 5.58D-10 BMatP= 1.82D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Large coefficients: NSaved= 20 BigCof=   12.05 CofMax=   10.00 Det=-7.55D-14
+ Inversion failed.  Reducing to 19 matrices.
+ Large coefficients: NSaved= 19 BigCof=   12.06 CofMax=   10.00 Det=-4.25D-14
+ Inversion failed.  Reducing to 18 matrices.
+ Large coefficients: NSaved= 18 BigCof=   12.05 CofMax=   10.00 Det=-4.25D-14
+ Inversion failed.  Reducing to 17 matrices.
+ Large coefficients: NSaved= 17 BigCof=   11.89 CofMax=   10.00 Det=-4.31D-14
+ Inversion failed.  Reducing to 16 matrices.
+ Large coefficients: NSaved= 16 BigCof=   12.03 CofMax=   10.00 Det=-4.37D-14
+ Inversion failed.  Reducing to 15 matrices.
+ Large coefficients: NSaved= 15 BigCof=   12.32 CofMax=   10.00 Det=-4.45D-14
+ Inversion failed.  Reducing to 14 matrices.
+ Large coefficients: NSaved= 14 BigCof=   12.17 CofMax=   10.00 Det=-4.52D-14
+ Inversion failed.  Reducing to 13 matrices.
+ Large coefficients: NSaved= 13 BigCof=   12.17 CofMax=   10.00 Det=-4.65D-14
+ Inversion failed.  Reducing to 12 matrices.
+ Large coefficients: NSaved= 12 BigCof=   12.38 CofMax=   10.00 Det=-4.89D-14
+ Inversion failed.  Reducing to 11 matrices.
+ Large coefficients: NSaved= 11 BigCof=   12.37 CofMax=   10.00 Det=-4.89D-14
+ Inversion failed.  Reducing to 10 matrices.
+ Large coefficients: NSaved= 10 BigCof=   12.37 CofMax=   10.00 Det=-4.89D-14
+ Inversion failed.  Reducing to  9 matrices.
+ Large coefficients: NSaved=  9 BigCof=   12.52 CofMax=   10.00 Det=-5.03D-14
+ Inversion failed.  Reducing to  8 matrices.
+ Large coefficients: NSaved=  8 BigCof=   12.60 CofMax=   10.00 Det=-5.04D-14
+ Inversion failed.  Reducing to  7 matrices.
+ Large coefficients: NSaved=  7 BigCof=   12.20 CofMax=   10.00 Det=-5.18D-14
+ Inversion failed.  Reducing to  6 matrices.
+ Large coefficients: NSaved=  6 BigCof=   13.36 CofMax=   10.00 Det=-5.75D-14
+ Inversion failed.  Reducing to  5 matrices.
+ Large coefficients: NSaved=  5 BigCof=   14.02 CofMax=   10.00 Det=-5.99D-14
+ Inversion failed.  Reducing to  4 matrices.
+ Large coefficients: NSaved=  4 BigCof=   14.06 CofMax=   10.00 Det=-7.12D-14
+ Inversion failed.  Reducing to  3 matrices.
+ Large coefficients: NSaved=  3 BigCof=   17.93 CofMax=   10.00 Det=-1.09D-13
+ Inversion failed.  Reducing to  2 matrices.
+ Large coefficients: NSaved=  2 BigCof=   16.41 CofMax=   10.00 Det=-1.40D-12
+ Coeff-Com: -0.154D+02 0.164D+02
+ Coeff:     -0.154D+02 0.164D+02
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=9.32D-06 MaxDP=6.42D-04 DE=-1.24D-09 OVMax= 1.28D-04
+
+ Cycle  24  Pass 1  IDiag  1:
+ RMSU=  8.64D-06    CP:  1.00D+00  3.00D+00  3.00D+00
+ E= -4452.09524855792     Delta-E=       -0.000000005457 Rises=F Damp=F
+ DIIS: error= 1.18D-06 at cycle  24 NSaved=   3.
+ NSaved= 3 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.18D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 2.15D-10 BMatP= 5.58D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.727D+01 0.773D+01 0.547D+00
+ Coeff:     -0.727D+01 0.773D+01 0.547D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.77D-06 MaxDP=1.19D-04 DE=-5.46D-09 OVMax= 2.41D-05
+
+ Cycle  25  Pass 1  IDiag  1:
+ RMSU=  8.77D-07    CP:  1.00D+00  3.00D+00  2.57D+00  1.09D+00
+ E= -4452.09524855523     Delta-E=        0.000000002690 Rises=F Damp=F
+ DIIS: error= 1.19D-06 at cycle  25 NSaved=   4.
+ NSaved= 4 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.19D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.60D-10 BMatP= 2.15D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.495D+00-0.508D+00 0.577D-01 0.956D+00
+ Coeff:      0.495D+00-0.508D+00 0.577D-01 0.956D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.47D-06 MaxDP=1.08D-04 DE= 2.69D-09 OVMax= 3.90D-05
+
+ Cycle  26  Pass 1  IDiag  1:
+ RMSU=  3.79D-07    CP:  1.00D+00  3.00D+00 -1.75D-01  1.16D+00  1.29D+00
+ E= -4452.09524855372     Delta-E=        0.000000001508 Rises=F Damp=F
+ DIIS: error= 1.19D-06 at cycle  26 NSaved=   5.
+ NSaved= 5 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.19D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.52D-10 BMatP= 1.60D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com: -0.821D+00 0.881D+00-0.249D+00 0.421D+00 0.767D+00
+ Coeff:     -0.821D+00 0.881D+00-0.249D+00 0.421D+00 0.767D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=5.72D-07 MaxDP=3.78D-05 DE= 1.51D-09 OVMax= 3.33D-05
+
+ Cycle  27  Pass 1  IDiag  1:
+ RMSU=  9.26D-08    CP:  1.00D+00  3.00D+00  3.60D-01  1.11D+00  1.26D+00
+                    CP:  1.11D+00
+ E= -4452.09524855502     Delta-E=       -0.000000001299 Rises=F Damp=F
+ DIIS: error= 1.20D-06 at cycle  27 NSaved=   6.
+ NSaved= 6 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.20D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.42D-10 BMatP= 1.52D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.506D+00-0.550D+00-0.103D-02-0.154D+00-0.160D+00 0.136D+01
+ Coeff:      0.506D+00-0.550D+00-0.103D-02-0.154D+00-0.160D+00 0.136D+01
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=3.83D-07 MaxDP=2.85D-05 DE=-1.30D-09 OVMax= 6.43D-05
+
+ Cycle  28  Pass 1  IDiag  1:
+ RMSU=  6.82D-08    CP:  1.00D+00  3.00D+00 -3.83D-01  1.13D+00  1.32D+00
+                    CP:  1.28D+00  1.74D+00
+ E= -4452.09524855524     Delta-E=       -0.000000000216 Rises=F Damp=F
+ DIIS: error= 1.21D-06 at cycle  28 NSaved=   7.
+ NSaved= 7 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.21D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.42D-10 BMatP= 1.42D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.125D+01-0.136D+01 0.266D+00-0.541D+00-0.914D+00 0.129D+01
+ Coeff-Com:  0.100D+01
+ Coeff:      0.125D+01-0.136D+01 0.266D+00-0.541D+00-0.914D+00 0.129D+01
+ Coeff:      0.100D+01
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=2.31D-07 MaxDP=3.03D-05 DE=-2.16D-10 OVMax= 1.01D-04
+
+ Cycle  29  Pass 1  IDiag  1:
+ RMSU=  6.03D-08    CP:  1.00D+00  3.00D+00 -6.89D-01  1.14D+00  1.37D+00
+                    CP:  1.49D+00  2.55D+00  2.48D+00
+ E= -4452.09524855653     Delta-E=       -0.000000001297 Rises=F Damp=F
+ DIIS: error= 1.23D-06 at cycle  29 NSaved=   8.
+ NSaved= 8 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.23D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.41D-10 BMatP= 1.42D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.722D+00-0.785D+00 0.222D+00-0.338D+00-0.627D+00 0.629D+00
+ Coeff-Com:  0.645D+00 0.533D+00
+ Coeff:      0.722D+00-0.785D+00 0.222D+00-0.338D+00-0.627D+00 0.629D+00
+ Coeff:      0.645D+00 0.533D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.93D-07 MaxDP=1.44D-05 DE=-1.30D-09 OVMax= 3.91D-05
+
+ Cycle  30  Pass 1  IDiag  1:
+ RMSU=  2.35D-08    CP:  1.00D+00  3.00D+00 -3.08D-01  1.13D+00  1.36D+00
+                    CP:  1.50D+00  2.60D+00  3.00D+00  1.93D+00
+ E= -4452.09524855707     Delta-E=       -0.000000000538 Rises=F Damp=F
+ DIIS: error= 1.23D-06 at cycle  30 NSaved=   9.
+ NSaved= 9 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.23D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.41D-10 BMatP= 1.41D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.764D+00-0.832D+00 0.244D+00-0.375D+00-0.692D+00 0.669D+00
+ Coeff-Com:  0.726D+00 0.667D+00-0.172D+00
+ Coeff:      0.764D+00-0.832D+00 0.244D+00-0.375D+00-0.692D+00 0.669D+00
+ Coeff:      0.726D+00 0.667D+00-0.172D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.65D-08 MaxDP=1.38D-06 DE=-5.38D-10 OVMax= 4.48D-06
+
+ Cycle  31  Pass 1  IDiag  1:
+ RMSU=  6.56D-09    CP:  1.00D+00  3.00D+00 -3.29D-01  1.13D+00  1.36D+00
+                    CP:  1.50D+00  2.59D+00  3.00D+00  1.81D+00  7.38D-01
+ E= -4452.09524855710     Delta-E=       -0.000000000027 Rises=F Damp=F
+ DIIS: error= 1.23D-06 at cycle  31 NSaved=  10.
+ NSaved=10 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.23D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.41D-10 BMatP= 1.41D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.773D+00-0.842D+00 0.255D+00-0.374D+00-0.702D+00 0.640D+00
+ Coeff-Com:  0.730D+00 0.775D+00-0.125D+01 0.996D+00
+ Coeff:      0.773D+00-0.842D+00 0.255D+00-0.374D+00-0.702D+00 0.640D+00
+ Coeff:      0.730D+00 0.775D+00-0.125D+01 0.996D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=3.04D-08 MaxDP=2.31D-06 DE=-2.73D-11 OVMax= 3.93D-06
+
+ Cycle  32  Pass 1  IDiag  1:
+ RMSU=  2.80D-08    CP:  1.00D+00  3.00D+00 -3.36D-01  1.13D+00  1.36D+00
+                    CP:  1.51D+00  2.59D+00  3.00D+00  1.77D+00  6.09D-01
+                    CP:  2.44D+00
+ E= -4452.09524855700     Delta-E=        0.000000000098 Rises=F Damp=F
+ DIIS: error= 1.23D-06 at cycle  32 NSaved=  11.
+ NSaved=11 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.23D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.41D-10 BMatP= 1.41D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.835D+00-0.909D+00 0.254D+00-0.376D+00-0.708D+00 0.665D+00
+ Coeff-Com:  0.729D+00 0.710D+00-0.103D+01 0.190D+00 0.642D+00
+ Coeff:      0.835D+00-0.909D+00 0.254D+00-0.376D+00-0.708D+00 0.665D+00
+ Coeff:      0.729D+00 0.710D+00-0.103D+01 0.190D+00 0.642D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=6.00D-08 MaxDP=4.86D-06 DE= 9.82D-11 OVMax= 5.39D-07
+
+ Cycle  33  Pass 1  IDiag  1:
+ RMSU=  2.94D-08    CP:  1.00D+00  3.00D+00 -4.30D-01  1.13D+00  1.37D+00
+                    CP:  1.53D+00  2.77D+00  2.89D+00  1.81D+00  7.38D-01
+                    CP:  3.00D+00  1.90D+00
+ E= -4452.09524855653     Delta-E=        0.000000000469 Rises=F Damp=F
+ DIIS: error= 1.23D-06 at cycle  33 NSaved=  12.
+ NSaved=12 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.23D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.41D-10 BMatP= 1.41D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.823D+00-0.895D+00 0.255D+00-0.375D+00-0.707D+00 0.660D+00
+ Coeff-Com:  0.729D+00 0.717D+00-0.101D+01 0.168D+00 0.500D+00 0.135D+00
+ Coeff:      0.823D+00-0.895D+00 0.255D+00-0.375D+00-0.707D+00 0.660D+00
+ Coeff:      0.729D+00 0.717D+00-0.101D+01 0.168D+00 0.500D+00 0.135D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=1.12D-08 MaxDP=9.53D-07 DE= 4.69D-10 OVMax= 3.47D-08
+
+ Cycle  34  Pass 1  IDiag  1:
+ RMSU=  5.07D-09    CP:  1.00D+00  3.00D+00 -4.22D-01  1.13D+00  1.37D+00
+                    CP:  1.53D+00  2.78D+00  2.91D+00  1.81D+00  8.37D-01
+                    CP:  3.00D+00  2.09D+00  1.15D+00
+ E= -4452.09524855639     Delta-E=        0.000000000144 Rises=F Damp=F
+ DIIS: error= 1.23D-06 at cycle  34 NSaved=  13.
+ NSaved=13 IEnMin= 3 EnMin= -4452.09524855792     IErMin= 1 ErrMin= 1.16D-06
+ ErrMax= 1.23D-06  0.00D+00 EMaxC= 1.00D-01 BMatC= 1.41D-10 BMatP= 1.41D-10
+ IDIUse=1 WtCom= 1.00D+00 WtEn= 0.00D+00
+ Coeff-Com:  0.821D+00-0.893D+00 0.254D+00-0.374D+00-0.706D+00 0.657D+00
+ Coeff-Com:  0.727D+00 0.715D+00-0.102D+01 0.166D+00 0.516D+00 0.367D+00
+ Coeff-Com: -0.229D+00
+ Coeff:      0.821D+00-0.893D+00 0.254D+00-0.374D+00-0.706D+00 0.657D+00
+ Coeff:      0.727D+00 0.715D+00-0.102D+01 0.166D+00 0.516D+00 0.367D+00
+ Coeff:     -0.229D+00
+ Gap=     0.102 Goal=   None    Shift=    0.000
+ Gap=     0.096 Goal=   None    Shift=    0.000
+ RMSDP=9.30D-09 MaxDP=9.15D-07 DE= 1.44D-10 OVMax= 9.17D-08
+
+ Error on total polarization charges =  0.03450
+ SCF Done:  E(UPBE1PBE) =  -4452.09524856     A.U. after   34 cycles
+            NFock= 34  Conv=0.93D-08     -V/T= 2.0030
+ <Sx>= 0.0000 <Sy>= 0.0000 <Sz>= 2.0000 <S**2>= 6.0082 S= 2.0016
+ <L.S>= 0.000000000000E+00
+ KE= 4.438861054172D+03 PE=-2.763981275601D+04 EE= 1.018366705200D+04
+ SMD-CDS (non-electrostatic) energy       (kcal/mol) =      15.72
+ (included in total energy above)
+ Annihilation of the first spin contaminant:
+ S**2 before annihilation     6.0082,   after     6.0000
+ Leave Link  502 at Wed Jan 16 23:21:32 2019, MaxMem= 16374562816 cpu:     37751.6
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l508.exe)
+ QCSCF skips out because SCF is already converged.
+ Leave Link  508 at Wed Jan 16 23:21:33 2019, MaxMem= 16374562816 cpu:         0.0
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l801.exe)
+ DoSCS=F DFT=T ScalE2(SS,OS)=  1.000000  1.000000
+ Range of M.O.s used for correlation:     1  1121
+ NBasis=  1121 NAE=   211 NBE=   207 NFC=     0 NFV=     0
+ NROrb=   1121 NOA=   211 NOB=   207 NVA=   910 NVB=   914
+
+ **** Warning!!: The largest alpha MO coefficient is  0.57573829D+02
+
+
+ **** Warning!!: The largest beta MO coefficient is  0.52482297D+02
+
+
+ **** Warning!!: The smallest beta delta epsilon is  0.96361093D-01
+
+ Leave Link  801 at Wed Jan 16 23:21:33 2019, MaxMem= 16374562816 cpu:         5.2
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l1101.exe)
+ Using compressed storage, NAtomX=    61.
+ Will process     62 centers per pass.
+ Leave Link 1101 at Wed Jan 16 23:21:44 2019, MaxMem= 16374562816 cpu:       361.1
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l1102.exe)
+ Symmetrizing basis deriv contribution to polar:
+ IMax=3 JMax=2 DiffMx= 0.00D+00
+ Leave Link 1102 at Wed Jan 16 23:21:47 2019, MaxMem= 16374562816 cpu:        11.6
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l1110.exe)
+ Forming Gx(P) for the SCF density, NAtomX=    61.
+ Integral derivatives from FoFJK, PRISM(SPDF).
+ Do as many integral derivatives as possible in FoFJK.
+ G2DrvN: MDV=   16374562224.
+ G2DrvN: will do    62 centers at a time, making    1 passes.
+ Calling FoFCou, ICntrl=  3107 FMM=T I1Cent=   0 AccDes= 0.00D+00.
+ FoFJK:  IHMeth= 1 ICntrl=    3107 DoSepK=F KAlg= 0 I1Cent=   0 FoldK=F
+ IRaf=         0 NMat=   1 IRICut=       1 DoRegI=T DoRafI=F ISym2E= 0.
+ FoFCou: FMM=T IPFlag=           0 FMFlag=      100000 FMFlg1=        2001
+         NFxFlg=           0 DoJE=F BraDBF=F KetDBF=F FulRan=T
+         wScrn=  0.000000 ICntrl=    3107 IOpCl=  1 I1Cent=           0 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ FMM levels:  10  Number of levels for PrismC:   9
+ NEqPCM:  Using equilibrium solvation (IEInf=0, Eps=  78.3553, EpsInf=   1.7778)
+ G2PCM: DoFxE=T DoFxN=T DoGrad=T DoDP/DQ/DG/TGxP=FFFF NFrqRd=   0 IEInf=0 SqF1=F DoCFld=F IF1Alg=4.
+ GePol: Maximum number of non-zero 1st derivatives   =     173
+ End of G2Drv F.D. properties file   721 does not exist.
+ End of G2Drv F.D. properties file   722 does not exist.
+ End of G2Drv F.D. properties file   788 does not exist.
+ Leave Link 1110 at Wed Jan 16 23:34:55 2019, MaxMem= 16374562816 cpu:     25209.9
+ (Enter /sw/xc40cle6/gaussian09/d.01/precompiled/g09/l1002.exe)
+ Minotr:  UHF open shell wavefunction.
+          IDoAtm=11111111111111111111111111111111111111111111111111
+          IDoAtm=11111111111
+ NEqPCM:  Using equilibrium solvation (IEInf=0, Eps=  78.3553, EpsInf=   1.7778)
+          Direct CPHF calculation.
+          Differentiating once with respect to nuclear coordinates.
+          Requested convergence is 1.0D-08 RMS, and 1.0D-07 maximum.
+          Secondary convergence is 1.0D-12 RMS, and 1.0D-12 maximum.
+          NewPWx=T KeepS1=F KeepF1=F KeepIn=T MapXYZ=F SortEE=F KeepMc=T.
+          MDV=   16374559960 using IRadAn=       2.
+ Generate precomputed XC quadrature information.
+          Solving linear equations simultaneously, MaxMat=      96.
+ FoF2E skips out because all densities are zero.
+ CalDSu exits because no D1Ps are significant.
+ FoFJK:  IHMeth= 1 ICntrl=       0 DoSepK=F KAlg= 0 I1Cent=   0 FoldK=F
+ IRaf= 590000000 NMat=  96 IRICut=       1 DoRegI=T DoRafI=F ISym2E= 2.
+          There are   186 degrees of freedom in the 1st order CPHF.  IDoFFX=6 NUNeed=     0.
+    183 vectors produced by pass  0 Test12= 3.81D-13 1.00D-09 XBig12= 5.16D-01 1.23D-01.
+ AX will form    96 AO Fock derivatives at one time.
+    183 vectors produced by pass  1 Test12= 3.81D-13 1.00D-09 XBig12= 1.07D-01 3.10D-02.
+    180 vectors produced by pass  2 Test12= 3.81D-13 1.00D-09 XBig12= 1.54D-03 4.36D-03.
+    180 vectors produced by pass  3 Test12= 3.81D-13 1.00D-09 XBig12= 4.23D-05 9.53D-04.
+    180 vectors produced by pass  4 Test12= 3.81D-13 1.00D-09 XBig12= 7.61D-07 1.05D-04.
+    180 vectors produced by pass  5 Test12= 3.81D-13 1.00D-09 XBig12= 8.91D-09 8.35D-06.
+    179 vectors produced by pass  6 Test12= 3.81D-13 1.00D-09 XBig12= 6.31D-11 5.99D-07.
+    138 vectors produced by pass  7 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-12 5.38D-08.
+     96 vectors produced by pass  8 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-13 1.58D-08.
+     72 vectors produced by pass  9 Test12= 3.81D-13 1.00D-09 XBig12= 1.01D-13 1.44D-08.
+     60 vectors produced by pass 10 Test12= 3.81D-13 1.00D-09 XBig12= 1.00D-13 1.22D-08.
+     51 vectors produced by pass 11 Test12= 3.81D-13 1.00D-09 XBig12= 7.36D-14 9.70D-09.
+     44 vectors produced by pass 12 Test12= 3.81D-13 1.00D-09 XBig12= 5.70D-14 8.25D-09.
+     40 vectors produced by pass 13 Test12= 3.81D-13 1.00D-09 XBig12= 7.37D-14 1.20D-08.
+     26 vectors produced by pass 14 Test12= 3.81D-13 1.00D-09 XBig12= 2.88D-14 6.61D-09.
+     23 vectors produced by pass 15 Test12= 3.81D-13 1.00D-09 XBig12= 3.31D-14 5.64D-09.
+     23 vectors produced by pass 16 Test12= 3.81D-13 1.00D-09 XBig12= 4.57D-14 9.11D-09.
+     23 vectors produced by pass 17 Test12= 3.81D-13 1.00D-09 XBig12= 4.09D-14 5.82D-09.
+     23 vectors produced by pass 18 Test12= 3.81D-13 1.00D-09 XBig12= 7.34D-14 1.03D-08.
+     20 vectors produced by pass 19 Test12= 3.81D-13 1.00D-09 XBig12= 3.78D-14 7.21D-09.
+     19 vectors produced by pass 20 Test12= 3.81D-13 1.00D-09 XBig12= 6.31D-14 8.13D-09.
+     18 vectors produced by pass 21 Test12= 3.81D-13 1.00D-09 XBig12= 4.40D-14 7.64D-09.
+     18 vectors produced by pass 22 Test12= 3.81D-13 1.00D-09 XBig12= 4.40D-14 6.93D-09.
+     16 vectors produced by pass 23 Test12= 3.81D-13 1.00D-09 XBig12= 5.41D-14 6.85D-09.
+     13 vectors produced by pass 24 Test12= 3.81D-13 1.00D-09 XBig12= 3.54D-14 6.56D-09.
+     12 vectors produced by pass 25 Test12= 3.81D-13 1.00D-09 XBig12= 5.02D-14 6.49D-09.
+     12 vectors produced by pass 26 Test12= 3.81D-13 1.00D-09 XBig12= 5.10D-14 7.03D-09.
+     12 vectors produced by pass 27 Test12= 3.81D-13 1.00D-09 XBig12= 6.04D-14 6.35D-09.
+     12 vectors produced by pass 28 Test12= 3.81D-13 1.00D-09 XBig12= 3.43D-14 5.91D-09.
+     12 vectors produced by pass 29 Test12= 3.81D-13 1.00D-09 XBig12= 6.69D-14 7.66D-09.
+     12 vectors produced by pass 30 Test12= 3.81D-13 1.00D-09 XBig12= 3.91D-14 5.65D-09.
+     12 vectors produced by pass 31 Test12= 3.81D-13 1.00D-09 XBig12= 5.59D-14 7.08D-09.
+     12 vectors produced by pass 32 Test12= 3.81D-13 1.00D-09 XBig12= 4.78D-14 6.06D-09.
+     12 vectors produced by pass 33 Test12= 3.81D-13 1.00D-09 XBig12= 5.69D-14 8.26D-09.
+     12 vectors produced by pass 34 Test12= 3.81D-13 1.00D-09 XBig12= 4.09D-14 7.29D-09.
+     12 vectors produced by pass 35 Test12= 3.81D-13 1.00D-09 XBig12= 6.38D-14 6.87D-09.
+     11 vectors produced by pass 36 Test12= 3.81D-13 1.00D-09 XBig12= 2.97D-14 6.22D-09.
+     11 vectors produced by pass 37 Test12= 3.81D-13 1.00D-09 XBig12= 5.05D-14 5.95D-09.
+     11 vectors produced by pass 38 Test12= 3.81D-13 1.00D-09 XBig12= 4.67D-14 6.46D-09.
+     11 vectors produced by pass 39 Test12= 3.81D-13 1.00D-09 XBig12= 4.63D-14 6.54D-09.
+     11 vectors produced by pass 40 Test12= 3.81D-13 1.00D-09 XBig12= 2.98D-14 4.91D-09.
+     11 vectors produced by pass 41 Test12= 3.81D-13 1.00D-09 XBig12= 5.24D-14 6.15D-09.
+     11 vectors produced by pass 42 Test12= 3.81D-13 1.00D-09 XBig12= 3.01D-14 4.89D-09.
+     11 vectors produced by pass 43 Test12= 3.81D-13 1.00D-09 XBig12= 3.50D-14 5.80D-09.
+     11 vectors produced by pass 44 Test12= 3.81D-13 1.00D-09 XBig12= 5.95D-14 8.50D-09.
+     10 vectors produced by pass 45 Test12= 3.81D-13 1.00D-09 XBig12= 3.77D-14 5.16D-09.
+     10 vectors produced by pass 46 Test12= 3.81D-13 1.00D-09 XBig12= 4.38D-14 5.88D-09.
+     10 vectors produced by pass 47 Test12= 3.81D-13 1.00D-09 XBig12= 3.57D-14 5.10D-09.
+     10 vectors produced by pass 48 Test12= 3.81D-13 1.00D-09 XBig12= 4.05D-14 6.56D-09.
+     10 vectors produced by pass 49 Test12= 3.81D-13 1.00D-09 XBig12= 3.98D-14 5.59D-09.
+     10 vectors produced by pass 50 Test12= 3.81D-13 1.00D-09 XBig12= 3.54D-14 5.86D-09.
+     10 vectors produced by pass 51 Test12= 3.81D-13 1.00D-09 XBig12= 4.44D-14 7.21D-09.
+     10 vectors produced by pass 52 Test12= 3.81D-13 1.00D-09 XBig12= 4.24D-14 5.30D-09.
+     10 vectors produced by pass 53 Test12= 3.81D-13 1.00D-09 XBig12= 4.99D-14 7.31D-09.
+     10 vectors produced by pass 54 Test12= 3.81D-13 1.00D-09 XBig12= 2.96D-14 4.57D-09.
+     10 vectors produced by pass 55 Test12= 3.81D-13 1.00D-09 XBig12= 4.08D-14 5.86D-09.
+     10 vectors produced by pass 56 Test12= 3.81D-13 1.00D-09 XBig12= 2.49D-14 4.39D-09.
+     10 vectors produced by pass 57 Test12= 3.81D-13 1.00D-09 XBig12= 4.44D-14 5.71D-09.
+     10 vectors produced by pass 58 Test12= 3.81D-13 1.00D-09 XBig12= 6.02D-14 7.51D-09.
+     10 vectors produced by pass 59 Test12= 3.81D-13 1.00D-09 XBig12= 2.43D-14 3.92D-09.
+     10 vectors produced by pass 60 Test12= 3.81D-13 1.00D-09 XBig12= 3.31D-14 5.22D-09.
+     10 vectors produced by pass 61 Test12= 3.81D-13 1.00D-09 XBig12= 4.10D-14 5.20D-09.
+     10 vectors produced by pass 62 Test12= 3.81D-13 1.00D-09 XBig12= 5.89D-14 7.11D-09.
+     10 vectors produced by pass 63 Test12= 3.81D-13 1.00D-09 XBig12= 2.98D-14 5.22D-09.
+     10 vectors produced by pass 64 Test12= 3.81D-13 1.00D-09 XBig12= 3.40D-14 5.25D-09.
+     10 vectors produced by pass 65 Test12= 3.81D-13 1.00D-09 XBig12= 3.22D-14 4.74D-09.
+     10 vectors produced by pass 66 Test12= 3.81D-13 1.00D-09 XBig12= 3.87D-14 5.17D-09.
+     10 vectors produced by pass 67 Test12= 3.81D-13 1.00D-09 XBig12= 3.59D-14 5.31D-09.
+     10 vectors produced by pass 68 Test12= 3.81D-13 1.00D-09 XBig12= 3.95D-14 4.77D-09.
+     10 vectors produced by pass 69 Test12= 3.81D-13 1.00D-09 XBig12= 3.73D-14 6.22D-09.
+     10 vectors produced by pass 70 Test12= 3.81D-13 1.00D-09 XBig12= 3.87D-14 6.40D-09.
+     10 vectors produced by pass 71 Test12= 3.81D-13 1.00D-09 XBig12= 3.28D-14 4.37D-09.
+     10 vectors produced by pass 72 Test12= 3.81D-13 1.00D-09 XBig12= 3.21D-14 4.59D-09.
+     10 vectors produced by pass 73 Test12= 3.81D-13 1.00D-09 XBig12= 3.09D-14 4.76D-09.
+     10 vectors produced by pass 74 Test12= 3.81D-13 1.00D-09 XBig12= 3.52D-14 5.76D-09.
+      9 vectors produced by pass 75 Test12= 3.81D-13 1.00D-09 XBig12= 2.79D-14 4.18D-09.
+      9 vectors produced by pass 76 Test12= 3.81D-13 1.00D-09 XBig12= 2.85D-14 4.07D-09.
+      9 vectors produced by pass 77 Test12= 3.81D-13 1.00D-09 XBig12= 3.70D-14 5.28D-09.
+      9 vectors produced by pass 78 Test12= 3.81D-13 1.00D-09 XBig12= 3.33D-14 4.74D-09.
+      8 vectors produced by pass 79 Test12= 3.81D-13 1.00D-09 XBig12= 2.64D-14 4.22D-09.
+      8 vectors produced by pass 80 Test12= 3.81D-13 1.00D-09 XBig12= 4.61D-14 5.88D-09.
+      8 vectors produced by pass 81 Test12= 3.81D-13 1.00D-09 XBig12= 3.17D-14 4.22D-09.
+      8 vectors produced by pass 82 Test12= 3.81D-13 1.00D-09 XBig12= 3.99D-14 4.90D-09.
+      8 vectors produced by pass 83 Test12= 3.81D-13 1.00D-09 XBig12= 3.02D-14 3.86D-09.
+      8 vectors produced by pass 84 Test12= 3.81D-13 1.00D-09 XBig12= 3.80D-14 5.42D-09.
+      7 vectors produced by pass 85 Test12= 3.81D-13 1.00D-09 XBig12= 1.92D-14 4.14D-09.
+      7 vectors produced by pass 86 Test12= 3.81D-13 1.00D-09 XBig12= 4.47D-14 5.26D-09.
+      7 vectors produced by pass 87 Test12= 3.81D-13 1.00D-09 XBig12= 3.28D-14 5.19D-09.
+      7 vectors produced by pass 88 Test12= 3.81D-13 1.00D-09 XBig12= 4.27D-14 5.72D-09.
+      6 vectors produced by pass 89 Test12= 3.81D-13 1.00D-09 XBig12= 2.25D-14 3.48D-09.
+      6 vectors produced by pass 90 Test12= 3.81D-13 1.00D-09 XBig12= 2.92D-14 4.59D-09.
+      6 vectors produced by pass 91 Test12= 3.81D-13 1.00D-09 XBig12= 3.36D-14 4.35D-09.
+      6 vectors produced by pass 92 Test12= 3.81D-13 1.00D-09 XBig12= 3.13D-14 5.24D-09.
+      6 vectors produced by pass 93 Test12= 3.81D-13 1.00D-09 XBig12= 3.85D-14 4.61D-09.
+      6 vectors produced by pass 94 Test12= 3.81D-13 1.00D-09 XBig12= 3.68D-14 4.64D-09.
+      6 vectors produced by pass 95 Test12= 3.81D-13 1.00D-09 XBig12= 3.52D-14 4.73D-09.
+      6 vectors produced by pass 96 Test12= 3.81D-13 1.00D-09 XBig12= 3.39D-14 5.00D-09.
+      6 vectors produced by pass 97 Test12= 3.81D-13 1.00D-09 XBig12= 2.71D-14 4.09D-09.
+      6 vectors produced by pass 98 Test12= 3.81D-13 1.00D-09 XBig12= 3.33D-14 5.16D-09.
+      6 vectors produced by pass 99 Test12= 3.81D-13 1.00D-09 XBig12= 5.27D-14 5.62D-09.
+      6 vectors produced by pass100 Test12= 3.81D-13 1.00D-09 XBig12= 2.85D-14 4.56D-09.
+      6 vectors produced by pass101 Test12= 3.81D-13 1.00D-09 XBig12= 3.87D-14 4.76D-09.
+      6 vectors produced by pass102 Test12= 3.81D-13 1.00D-09 XBig12= 2.94D-14 3.98D-09.
+      6 vectors produced by pass103 Test12= 3.81D-13 1.00D-09 XBig12= 3.22D-14 4.17D-09.
+      6 vectors produced by pass104 Test12= 3.81D-13 1.00D-09 XBig12= 4.12D-14 5.44D-09.
+      6 vectors produced by pass105 Test12= 3.81D-13 1.00D-09 XBig12= 3.39D-14 4.65D-09.
+      6 vectors produced by pass106 Test12= 3.81D-13 1.00D-09 XBig12= 3.23D-14 4.42D-09.
+      6 vectors produced by pass107 Test12= 3.81D-13 1.00D-09 XBig12= 3.24D-14 4.86D-09.
+      6 vectors produced by pass108 Test12= 3.81D-13 1.00D-09 XBig12= 3.63D-14 5.35D-09.
+      6 vectors produced by pass109 Test12= 3.81D-13 1.00D-09 XBig12= 2.80D-14 5.13D-09.
+      6 vectors produced by pass110 Test12= 3.81D-13 1.00D-09 XBig12= 2.26D-14 4.23D-09.
+      6 vectors produced by pass111 Test12= 3.81D-13 1.00D-09 XBig12= 2.40D-14 4.66D-09.
+      6 vectors produced by pass112 Test12= 3.81D-13 1.00D-09 XBig12= 3.29D-14 4.81D-09.
+      6 vectors produced by pass113 Test12= 3.81D-13 1.00D-09 XBig12= 2.08D-14 3.63D-09.
+      6 vectors produced by pass114 Test12= 3.81D-13 1.00D-09 XBig12= 2.85D-14 4.13D-09.
+      6 vectors produced by pass115 Test12= 3.81D-13 1.00D-09 XBig12= 3.07D-14 4.34D-09.
+      6 vectors produced by pass116 Test12= 3.81D-13 1.00D-09 XBig12= 3.62D-14 4.83D-09.
+      6 vectors produced by pass117 Test12= 3.81D-13 1.00D-09 XBig12= 2.26D-14 3.77D-09.
+      6 vectors produced by pass118 Test12= 3.81D-13 1.00D-09 XBig12= 3.50D-14 4.54D-09.
+      6 vectors produced by pass119 Test12= 3.81D-13 1.00D-09 XBig12= 3.00D-14 4.11D-09.
+      6 vectors produced by pass120 Test12= 3.81D-13 1.00D-09 XBig12= 3.23D-14 5.04D-09.
+      6 vectors produced by pass121 Test12= 3.81D-13 1.00D-09 XBig12= 2.49D-14 3.98D-09.
+      6 vectors produced by pass122 Test12= 3.81D-13 1.00D-09 XBig12= 2.53D-14 4.40D-09.
+      6 vectors produced by pass123 Test12= 3.81D-13 1.00D-09 XBig12= 3.49D-14 4.59D-09.
+      6 vectors produced by pass124 Test12= 3.81D-13 1.00D-09 XBig12= 2.83D-14 4.50D-09.
+      6 vectors produced by pass125 Test12= 3.81D-13 1.00D-09 XBig12= 2.51D-14 3.27D-09.
+      6 vectors produced by pass126 Test12= 3.81D-13 1.00D-09 XBig12= 2.77D-14 3.63D-09.
+      6 vectors produced by pass127 Test12= 3.81D-13 1.00D-09 XBig12= 3.36D-14 3.94D-09.
+      6 vectors produced by pass128 Test12= 3.81D-13 1.00D-09 XBig12= 3.01D-14 4.73D-09.
+      6 vectors produced by pass129 Test12= 3.81D-13 1.00D-09 XBig12= 3.47D-14 4.76D-09.
+      6 vectors produced by pass130 Test12= 3.81D-13 1.00D-09 XBig12= 2.15D-14 3.31D-09.
+      6 vectors produced by pass131 Test12= 3.81D-13 1.00D-09 XBig12= 2.81D-14 4.19D-09.
+      6 vectors produced by pass132 Test12= 3.81D-13 1.00D-09 XBig12= 1.94D-14 4.06D-09.
+      6 vectors produced by pass133 Test12= 3.81D-13 1.00D-09 XBig12= 3.12D-14 4.74D-09.
+      6 vectors produced by pass134 Test12= 3.81D-13 1.00D-09 XBig12= 2.65D-14 4.20D-09.
+      6 vectors produced by pass135 Test12= 3.81D-13 1.00D-09 XBig12= 3.07D-14 3.88D-09.
+      6 vectors produced by pass136 Test12= 3.81D-13 1.00D-09 XBig12= 2.16D-14 3.94D-09.
+      6 vectors produced by pass137 Test12= 3.81D-13 1.00D-09 XBig12= 3.25D-14 4.90D-09.
+      6 vectors produced by pass138 Test12= 3.81D-13 1.00D-09 XBig12= 4.32D-14 4.89D-09.
+      6 vectors produced by pass139 Test12= 3.81D-13 1.00D-09 XBig12= 1.74D-14 3.43D-09.
+      6 vectors produced by pass140 Test12= 3.81D-13 1.00D-09 XBig12= 2.49D-14 3.81D-09.
+      6 vectors produced by pass141 Test12= 3.81D-13 1.00D-09 XBig12= 4.12D-14 5.89D-09.
+      6 vectors produced by pass142 Test12= 3.81D-13 1.00D-09 XBig12= 1.56D-14 3.42D-09.
+      6 vectors produced by pass143 Test12= 3.81D-13 1.00D-09 XBig12= 2.31D-14 3.60D-09.
+      6 vectors produced by pass144 Test12= 3.81D-13 1.00D-09 XBig12= 2.70D-14 4.84D-09.
+      6 vectors produced by pass145 Test12= 3.81D-13 1.00D-09 XBig12= 2.00D-14 4.16D-09.
+      6 vectors produced by pass146 Test12= 3.81D-13 1.00D-09 XBig12= 2.22D-14 4.46D-09.
+      6 vectors produced by pass147 Test12= 3.81D-13 1.00D-09 XBig12= 2.00D-14 3.34D-09.
+      6 vectors produced by pass148 Test12= 3.81D-13 1.00D-09 XBig12= 2.29D-14 3.43D-09.
+      6 vectors produced by pass149 Test12= 3.81D-13 1.00D-09 XBig12= 2.00D-14 4.02D-09.
+      6 vectors produced by pass150 Test12= 3.81D-13 1.00D-09 XBig12= 2.52D-14 4.12D-09.
+      6 vectors produced by pass151 Test12= 3.81D-13 1.00D-09 XBig12= 2.03D-14 3.64D-09.
+      6 vectors produced by pass152 Test12= 3.81D-13 1.00D-09 XBig12= 2.57D-14 4.64D-09.
+      6 vectors produced by pass153 Test12= 3.81D-13 1.00D-09 XBig12= 2.45D-14 4.01D-09.
+      6 vectors produced by pass154 Test12= 3.81D-13 1.00D-09 XBig12= 3.00D-14 4.68D-09.
+      6 vectors produced by pass155 Test12= 3.81D-13 1.00D-09 XBig12= 2.30D-14 3.98D-09.
+      6 vectors produced by pass156 Test12= 3.81D-13 1.00D-09 XBig12= 2.39D-14 4.17D-09.
+      6 vectors produced by pass157 Test12= 3.81D-13 1.00D-09 XBig12= 2.34D-14 3.71D-09.
+      6 vectors produced by pass158 Test12= 3.81D-13 1.00D-09 XBig12= 2.54D-14 4.25D-09.
+      6 vectors produced by pass159 Test12= 3.81D-13 1.00D-09 XBig12= 1.93D-14 3.62D-09.
+      6 vectors produced by pass160 Test12= 3.81D-13 1.00D-09 XBig12= 2.49D-14 4.47D-09.
+      6 vectors produced by pass161 Test12= 3.81D-13 1.00D-09 XBig12= 2.99D-14 4.40D-09.
+      6 vectors produced by pass162 Test12= 3.81D-13 1.00D-09 XBig12= 1.83D-14 3.34D-09.
+      6 vectors produced by pass163 Test12= 3.81D-13 1.00D-09 XBig12= 2.18D-14 4.15D-09.
+      6 vectors produced by pass164 Test12= 3.81D-13 1.00D-09 XBig12= 2.68D-14 4.20D-09.
+      6 vectors produced by pass165 Test12= 3.81D-13 1.00D-09 XBig12= 1.76D-14 3.07D-09.
+      6 vectors produced by pass166 Test12= 3.81D-13 1.00D-09 XBig12= 2.01D-14 3.61D-09.
+      6 vectors produced by pass167 Test12= 3.81D-13 1.00D-09 XBig12= 2.80D-14 4.44D-09.
+      6 vectors produced by pass168 Test12= 3.81D-13 1.00D-09 XBig12= 2.15D-14 3.24D-09.
+      6 vectors produced by pass169 Test12= 3.81D-13 1.00D-09 XBig12= 2.24D-14 3.48D-09.
+      6 vectors produced by pass170 Test12= 3.81D-13 1.00D-09 XBig12= 1.72D-14 3.48D-09.
+      6 vectors produced by pass171 Test12= 3.81D-13 1.00D-09 XBig12= 1.83D-14 3.41D-09.
+      6 vectors produced by pass172 Test12= 3.81D-13 1.00D-09 XBig12= 2.02D-14 3.59D-09.
+      6 vectors produced by pass173 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 3.66D-09.
+      6 vectors produced by pass174 Test12= 3.81D-13 1.00D-09 XBig12= 1.81D-14 3.26D-09.
+      6 vectors produced by pass175 Test12= 3.81D-13 1.00D-09 XBig12= 1.43D-14 3.20D-09.
+      6 vectors produced by pass176 Test12= 3.81D-13 1.00D-09 XBig12= 2.42D-14 3.69D-09.
+      6 vectors produced by pass177 Test12= 3.81D-13 1.00D-09 XBig12= 2.70D-14 4.34D-09.
+      6 vectors produced by pass178 Test12= 3.81D-13 1.00D-09 XBig12= 2.28D-14 3.56D-09.
+      6 vectors produced by pass179 Test12= 3.81D-13 1.00D-09 XBig12= 2.54D-14 4.13D-09.
+      6 vectors produced by pass180 Test12= 3.81D-13 1.00D-09 XBig12= 2.19D-14 3.74D-09.
+      6 vectors produced by pass181 Test12= 3.81D-13 1.00D-09 XBig12= 2.34D-14 3.58D-09.
+      6 vectors produced by pass182 Test12= 3.81D-13 1.00D-09 XBig12= 2.68D-14 3.99D-09.
+      6 vectors produced by pass183 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 3.40D-09.
+      6 vectors produced by pass184 Test12= 3.81D-13 1.00D-09 XBig12= 2.34D-14 3.87D-09.
+      6 vectors produced by pass185 Test12= 3.81D-13 1.00D-09 XBig12= 1.56D-14 3.42D-09.
+      6 vectors produced by pass186 Test12= 3.81D-13 1.00D-09 XBig12= 2.57D-14 3.69D-09.
+      6 vectors produced by pass187 Test12= 3.81D-13 1.00D-09 XBig12= 2.17D-14 3.53D-09.
+      6 vectors produced by pass188 Test12= 3.81D-13 1.00D-09 XBig12= 2.41D-14 4.37D-09.
+      6 vectors produced by pass189 Test12= 3.81D-13 1.00D-09 XBig12= 1.57D-14 3.21D-09.
+      6 vectors produced by pass190 Test12= 3.81D-13 1.00D-09 XBig12= 1.44D-14 3.11D-09.
+      6 vectors produced by pass191 Test12= 3.81D-13 1.00D-09 XBig12= 1.86D-14 4.43D-09.
+      6 vectors produced by pass192 Test12= 3.81D-13 1.00D-09 XBig12= 1.62D-14 3.14D-09.
+      6 vectors produced by pass193 Test12= 3.81D-13 1.00D-09 XBig12= 1.65D-14 3.19D-09.
+      6 vectors produced by pass194 Test12= 3.81D-13 1.00D-09 XBig12= 1.95D-14 3.35D-09.
+      6 vectors produced by pass195 Test12= 3.81D-13 1.00D-09 XBig12= 1.56D-14 3.08D-09.
+      6 vectors produced by pass196 Test12= 3.81D-13 1.00D-09 XBig12= 2.02D-14 4.39D-09.
+      6 vectors produced by pass197 Test12= 3.81D-13 1.00D-09 XBig12= 3.40D-14 4.81D-09.
+      6 vectors produced by pass198 Test12= 3.81D-13 1.00D-09 XBig12= 1.35D-14 2.71D-09.
+      6 vectors produced by pass199 Test12= 3.81D-13 1.00D-09 XBig12= 1.57D-14 3.59D-09.
+      6 vectors produced by pass200 Test12= 3.81D-13 1.00D-09 XBig12= 2.57D-14 4.25D-09.
+      6 vectors produced by pass201 Test12= 3.81D-13 1.00D-09 XBig12= 1.63D-14 3.63D-09.
+      6 vectors produced by pass202 Test12= 3.81D-13 1.00D-09 XBig12= 2.25D-14 4.21D-09.
+      6 vectors produced by pass203 Test12= 3.81D-13 1.00D-09 XBig12= 1.67D-14 3.09D-09.
+      6 vectors produced by pass204 Test12= 3.81D-13 1.00D-09 XBig12= 1.68D-14 2.81D-09.
+      6 vectors produced by pass205 Test12= 3.81D-13 1.00D-09 XBig12= 2.27D-14 4.16D-09.
+      6 vectors produced by pass206 Test12= 3.81D-13 1.00D-09 XBig12= 2.02D-14 3.28D-09.
+      6 vectors produced by pass207 Test12= 3.81D-13 1.00D-09 XBig12= 2.18D-14 3.69D-09.
+      6 vectors produced by pass208 Test12= 3.81D-13 1.00D-09 XBig12= 2.19D-14 3.50D-09.
+      6 vectors produced by pass209 Test12= 3.81D-13 1.00D-09 XBig12= 1.73D-14 2.99D-09.
+      6 vectors produced by pass210 Test12= 3.81D-13 1.00D-09 XBig12= 2.07D-14 3.62D-09.
+      6 vectors produced by pass211 Test12= 3.81D-13 1.00D-09 XBig12= 2.87D-14 4.15D-09.
+      6 vectors produced by pass212 Test12= 3.81D-13 1.00D-09 XBig12= 2.00D-14 3.56D-09.
+      5 vectors produced by pass213 Test12= 3.81D-13 1.00D-09 XBig12= 1.64D-14 2.84D-09.
+      5 vectors produced by pass214 Test12= 3.81D-13 1.00D-09 XBig12= 1.87D-14 3.37D-09.
+      5 vectors produced by pass215 Test12= 3.81D-13 1.00D-09 XBig12= 2.52D-14 3.38D-09.
+      5 vectors produced by pass216 Test12= 3.81D-13 1.00D-09 XBig12= 1.92D-14 3.16D-09.
+      5 vectors produced by pass217 Test12= 3.81D-13 1.00D-09 XBig12= 2.77D-14 3.89D-09.
+      5 vectors produced by pass218 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 2.68D-09.
+      5 vectors produced by pass219 Test12= 3.81D-13 1.00D-09 XBig12= 2.51D-14 3.49D-09.
+      5 vectors produced by pass220 Test12= 3.81D-13 1.00D-09 XBig12= 2.14D-14 3.71D-09.
+      5 vectors produced by pass221 Test12= 3.81D-13 1.00D-09 XBig12= 2.19D-14 3.46D-09.
+      5 vectors produced by pass222 Test12= 3.81D-13 1.00D-09 XBig12= 1.50D-14 2.82D-09.
+      5 vectors produced by pass223 Test12= 3.81D-13 1.00D-09 XBig12= 2.31D-14 3.39D-09.
+      5 vectors produced by pass224 Test12= 3.81D-13 1.00D-09 XBig12= 2.84D-14 3.99D-09.
+      5 vectors produced by pass225 Test12= 3.81D-13 1.00D-09 XBig12= 1.99D-14 3.34D-09.
+      5 vectors produced by pass226 Test12= 3.81D-13 1.00D-09 XBig12= 1.98D-14 3.53D-09.
+      5 vectors produced by pass227 Test12= 3.81D-13 1.00D-09 XBig12= 2.20D-14 3.36D-09.
+      5 vectors produced by pass228 Test12= 3.81D-13 1.00D-09 XBig12= 1.69D-14 2.97D-09.
+      5 vectors produced by pass229 Test12= 3.81D-13 1.00D-09 XBig12= 1.54D-14 3.08D-09.
+      5 vectors produced by pass230 Test12= 3.81D-13 1.00D-09 XBig12= 2.15D-14 3.46D-09.
+      5 vectors produced by pass231 Test12= 3.81D-13 1.00D-09 XBig12= 2.26D-14 3.79D-09.
+      5 vectors produced by pass232 Test12= 3.81D-13 1.00D-09 XBig12= 2.97D-14 3.74D-09.
+      5 vectors produced by pass233 Test12= 3.81D-13 1.00D-09 XBig12= 1.85D-14 2.95D-09.
+      4 vectors produced by pass234 Test12= 3.81D-13 1.00D-09 XBig12= 1.51D-14 2.70D-09.
+      4 vectors produced by pass235 Test12= 3.81D-13 1.00D-09 XBig12= 1.62D-14 3.36D-09.
+      4 vectors produced by pass236 Test12= 3.81D-13 1.00D-09 XBig12= 1.81D-14 3.09D-09.
+      4 vectors produced by pass237 Test12= 3.81D-13 1.00D-09 XBig12= 1.98D-14 3.44D-09.
+      4 vectors produced by pass238 Test12= 3.81D-13 1.00D-09 XBig12= 1.40D-14 2.70D-09.
+      4 vectors produced by pass239 Test12= 3.81D-13 1.00D-09 XBig12= 1.26D-14 2.59D-09.
+      4 vectors produced by pass240 Test12= 3.81D-13 1.00D-09 XBig12= 1.68D-14 3.47D-09.
+      4 vectors produced by pass241 Test12= 3.81D-13 1.00D-09 XBig12= 1.51D-14 3.51D-09.
+      4 vectors produced by pass242 Test12= 3.81D-13 1.00D-09 XBig12= 1.68D-14 3.48D-09.
+      4 vectors produced by pass243 Test12= 3.81D-13 1.00D-09 XBig12= 2.11D-14 3.16D-09.
+      4 vectors produced by pass244 Test12= 3.81D-13 1.00D-09 XBig12= 1.38D-14 3.08D-09.
+      4 vectors produced by pass245 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 3.20D-09.
+      4 vectors produced by pass246 Test12= 3.81D-13 1.00D-09 XBig12= 1.53D-14 3.01D-09.
+      4 vectors produced by pass247 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 3.47D-09.
+      4 vectors produced by pass248 Test12= 3.81D-13 1.00D-09 XBig12= 2.21D-14 3.48D-09.
+      4 vectors produced by pass249 Test12= 3.81D-13 1.00D-09 XBig12= 1.79D-14 3.14D-09.
+      4 vectors produced by pass250 Test12= 3.81D-13 1.00D-09 XBig12= 1.85D-14 3.21D-09.
+      4 vectors produced by pass251 Test12= 3.81D-13 1.00D-09 XBig12= 1.22D-14 2.96D-09.
+      4 vectors produced by pass252 Test12= 3.81D-13 1.00D-09 XBig12= 1.84D-14 3.01D-09.
+      4 vectors produced by pass253 Test12= 3.81D-13 1.00D-09 XBig12= 2.62D-14 3.73D-09.
+      4 vectors produced by pass254 Test12= 3.81D-13 1.00D-09 XBig12= 1.54D-14 2.91D-09.
+      4 vectors produced by pass255 Test12= 3.81D-13 1.00D-09 XBig12= 1.85D-14 3.02D-09.
+      4 vectors produced by pass256 Test12= 3.81D-13 1.00D-09 XBig12= 2.29D-14 3.31D-09.
+      4 vectors produced by pass257 Test12= 3.81D-13 1.00D-09 XBig12= 2.51D-14 3.71D-09.
+      4 vectors produced by pass258 Test12= 3.81D-13 1.00D-09 XBig12= 1.82D-14 2.87D-09.
+      4 vectors produced by pass259 Test12= 3.81D-13 1.00D-09 XBig12= 1.63D-14 2.93D-09.
+      4 vectors produced by pass260 Test12= 3.81D-13 1.00D-09 XBig12= 1.16D-14 2.45D-09.
+      4 vectors produced by pass261 Test12= 3.81D-13 1.00D-09 XBig12= 2.11D-14 3.22D-09.
+      4 vectors produced by pass262 Test12= 3.81D-13 1.00D-09 XBig12= 2.34D-14 3.61D-09.
+      4 vectors produced by pass263 Test12= 3.81D-13 1.00D-09 XBig12= 2.23D-14 3.32D-09.
+      4 vectors produced by pass264 Test12= 3.81D-13 1.00D-09 XBig12= 2.44D-14 3.30D-09.
+      4 vectors produced by pass265 Test12= 3.81D-13 1.00D-09 XBig12= 1.87D-14 3.22D-09.
+      4 vectors produced by pass266 Test12= 3.81D-13 1.00D-09 XBig12= 2.12D-14 3.04D-09.
+      4 vectors produced by pass267 Test12= 3.81D-13 1.00D-09 XBig12= 2.76D-14 4.46D-09.
+      4 vectors produced by pass268 Test12= 3.81D-13 1.00D-09 XBig12= 1.67D-14 3.06D-09.
+      4 vectors produced by pass269 Test12= 3.81D-13 1.00D-09 XBig12= 1.77D-14 3.30D-09.
+      4 vectors produced by pass270 Test12= 3.81D-13 1.00D-09 XBig12= 2.21D-14 3.46D-09.
+      4 vectors produced by pass271 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.75D-09.
+      4 vectors produced by pass272 Test12= 3.81D-13 1.00D-09 XBig12= 1.75D-14 3.34D-09.
+      4 vectors produced by pass273 Test12= 3.81D-13 1.00D-09 XBig12= 1.77D-14 2.77D-09.
+      4 vectors produced by pass274 Test12= 3.81D-13 1.00D-09 XBig12= 1.51D-14 2.99D-09.
+      4 vectors produced by pass275 Test12= 3.81D-13 1.00D-09 XBig12= 1.61D-14 3.30D-09.
+      4 vectors produced by pass276 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.52D-09.
+      4 vectors produced by pass277 Test12= 3.81D-13 1.00D-09 XBig12= 1.80D-14 3.33D-09.
+      4 vectors produced by pass278 Test12= 3.81D-13 1.00D-09 XBig12= 1.81D-14 3.13D-09.
+      4 vectors produced by pass279 Test12= 3.81D-13 1.00D-09 XBig12= 2.10D-14 3.28D-09.
+      4 vectors produced by pass280 Test12= 3.81D-13 1.00D-09 XBig12= 1.40D-14 2.98D-09.
+      4 vectors produced by pass281 Test12= 3.81D-13 1.00D-09 XBig12= 1.39D-14 4.22D-09.
+      4 vectors produced by pass282 Test12= 3.81D-13 1.00D-09 XBig12= 1.99D-14 3.17D-09.
+      4 vectors produced by pass283 Test12= 3.81D-13 1.00D-09 XBig12= 1.83D-14 3.83D-09.
+      4 vectors produced by pass284 Test12= 3.81D-13 1.00D-09 XBig12= 1.81D-14 2.92D-09.
+      4 vectors produced by pass285 Test12= 3.81D-13 1.00D-09 XBig12= 1.83D-14 3.05D-09.
+      4 vectors produced by pass286 Test12= 3.81D-13 1.00D-09 XBig12= 2.01D-14 3.06D-09.
+      4 vectors produced by pass287 Test12= 3.81D-13 1.00D-09 XBig12= 1.28D-14 2.72D-09.
+      4 vectors produced by pass288 Test12= 3.81D-13 1.00D-09 XBig12= 2.06D-14 3.18D-09.
+      4 vectors produced by pass289 Test12= 3.81D-13 1.00D-09 XBig12= 2.18D-14 3.17D-09.
+      4 vectors produced by pass290 Test12= 3.81D-13 1.00D-09 XBig12= 2.90D-14 4.66D-09.
+      4 vectors produced by pass291 Test12= 3.81D-13 1.00D-09 XBig12= 1.94D-14 3.09D-09.
+      4 vectors produced by pass292 Test12= 3.81D-13 1.00D-09 XBig12= 9.39D-15 2.31D-09.
+      4 vectors produced by pass293 Test12= 3.81D-13 1.00D-09 XBig12= 2.00D-14 3.71D-09.
+      4 vectors produced by pass294 Test12= 3.81D-13 1.00D-09 XBig12= 1.93D-14 3.11D-09.
+      4 vectors produced by pass295 Test12= 3.81D-13 1.00D-09 XBig12= 1.31D-14 2.45D-09.
+      4 vectors produced by pass296 Test12= 3.81D-13 1.00D-09 XBig12= 1.54D-14 3.16D-09.
+      4 vectors produced by pass297 Test12= 3.81D-13 1.00D-09 XBig12= 2.17D-14 3.07D-09.
+      4 vectors produced by pass298 Test12= 3.81D-13 1.00D-09 XBig12= 1.59D-14 2.74D-09.
+      4 vectors produced by pass299 Test12= 3.81D-13 1.00D-09 XBig12= 1.81D-14 2.80D-09.
+      4 vectors produced by pass300 Test12= 3.81D-13 1.00D-09 XBig12= 1.86D-14 3.08D-09.
+      4 vectors produced by pass301 Test12= 3.81D-13 1.00D-09 XBig12= 1.01D-14 2.58D-09.
+      4 vectors produced by pass302 Test12= 3.81D-13 1.00D-09 XBig12= 1.72D-14 2.97D-09.
+      4 vectors produced by pass303 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 2.83D-09.
+      4 vectors produced by pass304 Test12= 3.81D-13 1.00D-09 XBig12= 2.01D-14 3.40D-09.
+      4 vectors produced by pass305 Test12= 3.81D-13 1.00D-09 XBig12= 2.15D-14 2.97D-09.
+      4 vectors produced by pass306 Test12= 3.81D-13 1.00D-09 XBig12= 1.77D-14 3.28D-09.
+      4 vectors produced by pass307 Test12= 3.81D-13 1.00D-09 XBig12= 1.69D-14 3.33D-09.
+      4 vectors produced by pass308 Test12= 3.81D-13 1.00D-09 XBig12= 1.87D-14 3.05D-09.
+      4 vectors produced by pass309 Test12= 3.81D-13 1.00D-09 XBig12= 1.56D-14 3.13D-09.
+      4 vectors produced by pass310 Test12= 3.81D-13 1.00D-09 XBig12= 1.68D-14 3.26D-09.
+      4 vectors produced by pass311 Test12= 3.81D-13 1.00D-09 XBig12= 1.67D-14 3.31D-09.
+      4 vectors produced by pass312 Test12= 3.81D-13 1.00D-09 XBig12= 1.95D-14 3.20D-09.
+      4 vectors produced by pass313 Test12= 3.81D-13 1.00D-09 XBig12= 1.59D-14 2.77D-09.
+      4 vectors produced by pass314 Test12= 3.81D-13 1.00D-09 XBig12= 2.26D-14 3.40D-09.
+      4 vectors produced by pass315 Test12= 3.81D-13 1.00D-09 XBig12= 1.70D-14 2.90D-09.
+      4 vectors produced by pass316 Test12= 3.81D-13 1.00D-09 XBig12= 1.30D-14 2.46D-09.
+      4 vectors produced by pass317 Test12= 3.81D-13 1.00D-09 XBig12= 1.41D-14 2.67D-09.
+      4 vectors produced by pass318 Test12= 3.81D-13 1.00D-09 XBig12= 1.80D-14 3.33D-09.
+      4 vectors produced by pass319 Test12= 3.81D-13 1.00D-09 XBig12= 1.55D-14 2.56D-09.
+      4 vectors produced by pass320 Test12= 3.81D-13 1.00D-09 XBig12= 1.52D-14 2.87D-09.
+      4 vectors produced by pass321 Test12= 3.81D-13 1.00D-09 XBig12= 8.66D-15 2.21D-09.
+      4 vectors produced by pass322 Test12= 3.81D-13 1.00D-09 XBig12= 1.79D-14 2.93D-09.
+      4 vectors produced by pass323 Test12= 3.81D-13 1.00D-09 XBig12= 2.26D-14 3.43D-09.
+      4 vectors produced by pass324 Test12= 3.81D-13 1.00D-09 XBig12= 1.14D-14 2.54D-09.
+      4 vectors produced by pass325 Test12= 3.81D-13 1.00D-09 XBig12= 1.14D-14 2.24D-09.
+      4 vectors produced by pass326 Test12= 3.81D-13 1.00D-09 XBig12= 1.38D-14 2.58D-09.
+      4 vectors produced by pass327 Test12= 3.81D-13 1.00D-09 XBig12= 1.48D-14 2.69D-09.
+      4 vectors produced by pass328 Test12= 3.81D-13 1.00D-09 XBig12= 1.79D-14 3.45D-09.
+      4 vectors produced by pass329 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 3.01D-09.
+      4 vectors produced by pass330 Test12= 3.81D-13 1.00D-09 XBig12= 2.00D-14 3.12D-09.
+      4 vectors produced by pass331 Test12= 3.81D-13 1.00D-09 XBig12= 1.14D-14 2.86D-09.
+      4 vectors produced by pass332 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 2.86D-09.
+      4 vectors produced by pass333 Test12= 3.81D-13 1.00D-09 XBig12= 1.81D-14 2.97D-09.
+      4 vectors produced by pass334 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.69D-09.
+      4 vectors produced by pass335 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-14 3.06D-09.
+      4 vectors produced by pass336 Test12= 3.81D-13 1.00D-09 XBig12= 1.95D-14 3.19D-09.
+      4 vectors produced by pass337 Test12= 3.81D-13 1.00D-09 XBig12= 1.51D-14 2.81D-09.
+      4 vectors produced by pass338 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 3.00D-09.
+      4 vectors produced by pass339 Test12= 3.81D-13 1.00D-09 XBig12= 1.48D-14 2.94D-09.
+      4 vectors produced by pass340 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 2.74D-09.
+      4 vectors produced by pass341 Test12= 3.81D-13 1.00D-09 XBig12= 1.76D-14 3.36D-09.
+      4 vectors produced by pass342 Test12= 3.81D-13 1.00D-09 XBig12= 1.75D-14 2.90D-09.
+      4 vectors produced by pass343 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 3.07D-09.
+      4 vectors produced by pass344 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.63D-09.
+      4 vectors produced by pass345 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.74D-09.
+      4 vectors produced by pass346 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 2.95D-09.
+      4 vectors produced by pass347 Test12= 3.81D-13 1.00D-09 XBig12= 1.40D-14 2.73D-09.
+      4 vectors produced by pass348 Test12= 3.81D-13 1.00D-09 XBig12= 1.74D-14 3.97D-09.
+      4 vectors produced by pass349 Test12= 3.81D-13 1.00D-09 XBig12= 1.21D-14 2.65D-09.
+      4 vectors produced by pass350 Test12= 3.81D-13 1.00D-09 XBig12= 1.11D-14 2.38D-09.
+      4 vectors produced by pass351 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-14 3.15D-09.
+      4 vectors produced by pass352 Test12= 3.81D-13 1.00D-09 XBig12= 1.74D-14 3.04D-09.
+      4 vectors produced by pass353 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.50D-09.
+      4 vectors produced by pass354 Test12= 3.81D-13 1.00D-09 XBig12= 1.17D-14 3.37D-09.
+      4 vectors produced by pass355 Test12= 3.81D-13 1.00D-09 XBig12= 1.62D-14 3.22D-09.
+      4 vectors produced by pass356 Test12= 3.81D-13 1.00D-09 XBig12= 1.16D-14 2.56D-09.
+      4 vectors produced by pass357 Test12= 3.81D-13 1.00D-09 XBig12= 1.48D-14 3.19D-09.
+      4 vectors produced by pass358 Test12= 3.81D-13 1.00D-09 XBig12= 2.37D-14 3.84D-09.
+      4 vectors produced by pass359 Test12= 3.81D-13 1.00D-09 XBig12= 1.54D-14 2.78D-09.
+      4 vectors produced by pass360 Test12= 3.81D-13 1.00D-09 XBig12= 1.71D-14 2.74D-09.
+      4 vectors produced by pass361 Test12= 3.81D-13 1.00D-09 XBig12= 1.78D-14 2.91D-09.
+      4 vectors produced by pass362 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 2.68D-09.
+      4 vectors produced by pass363 Test12= 3.81D-13 1.00D-09 XBig12= 1.40D-14 3.21D-09.
+      4 vectors produced by pass364 Test12= 3.81D-13 1.00D-09 XBig12= 1.30D-14 2.65D-09.
+      4 vectors produced by pass365 Test12= 3.81D-13 1.00D-09 XBig12= 1.15D-14 2.93D-09.
+      4 vectors produced by pass366 Test12= 3.81D-13 1.00D-09 XBig12= 1.32D-14 2.59D-09.
+      4 vectors produced by pass367 Test12= 3.81D-13 1.00D-09 XBig12= 1.99D-14 3.89D-09.
+      4 vectors produced by pass368 Test12= 3.81D-13 1.00D-09 XBig12= 1.32D-14 2.84D-09.
+      4 vectors produced by pass369 Test12= 3.81D-13 1.00D-09 XBig12= 1.27D-14 3.32D-09.
+      4 vectors produced by pass370 Test12= 3.81D-13 1.00D-09 XBig12= 1.52D-14 2.86D-09.
+      4 vectors produced by pass371 Test12= 3.81D-13 1.00D-09 XBig12= 1.32D-14 2.55D-09.
+      4 vectors produced by pass372 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 2.94D-09.
+      4 vectors produced by pass373 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 2.81D-09.
+      4 vectors produced by pass374 Test12= 3.81D-13 1.00D-09 XBig12= 1.04D-14 2.82D-09.
+      4 vectors produced by pass375 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 2.38D-09.
+      4 vectors produced by pass376 Test12= 3.81D-13 1.00D-09 XBig12= 8.77D-15 2.19D-09.
+      4 vectors produced by pass377 Test12= 3.81D-13 1.00D-09 XBig12= 9.99D-15 2.57D-09.
+      4 vectors produced by pass378 Test12= 3.81D-13 1.00D-09 XBig12= 9.01D-15 2.65D-09.
+      4 vectors produced by pass379 Test12= 3.81D-13 1.00D-09 XBig12= 1.11D-14 2.70D-09.
+      4 vectors produced by pass380 Test12= 3.81D-13 1.00D-09 XBig12= 9.58D-15 2.33D-09.
+      4 vectors produced by pass381 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 3.02D-09.
+      4 vectors produced by pass382 Test12= 3.81D-13 1.00D-09 XBig12= 9.18D-15 2.45D-09.
+      4 vectors produced by pass383 Test12= 3.81D-13 1.00D-09 XBig12= 1.35D-14 2.69D-09.
+      4 vectors produced by pass384 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 2.58D-09.
+      4 vectors produced by pass385 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.41D-09.
+      4 vectors produced by pass386 Test12= 3.81D-13 1.00D-09 XBig12= 1.48D-14 2.92D-09.
+      4 vectors produced by pass387 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.36D-09.
+      4 vectors produced by pass388 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 2.78D-09.
+      4 vectors produced by pass389 Test12= 3.81D-13 1.00D-09 XBig12= 2.17D-14 3.24D-09.
+      4 vectors produced by pass390 Test12= 3.81D-13 1.00D-09 XBig12= 1.26D-14 2.74D-09.
+      4 vectors produced by pass391 Test12= 3.81D-13 1.00D-09 XBig12= 8.90D-15 2.06D-09.
+      4 vectors produced by pass392 Test12= 3.81D-13 1.00D-09 XBig12= 1.12D-14 2.41D-09.
+      4 vectors produced by pass393 Test12= 3.81D-13 1.00D-09 XBig12= 1.66D-14 3.11D-09.
+      4 vectors produced by pass394 Test12= 3.81D-13 1.00D-09 XBig12= 1.21D-14 2.62D-09.
+      4 vectors produced by pass395 Test12= 3.81D-13 1.00D-09 XBig12= 1.41D-14 2.79D-09.
+      4 vectors produced by pass396 Test12= 3.81D-13 1.00D-09 XBig12= 1.65D-14 3.16D-09.
+      4 vectors produced by pass397 Test12= 3.81D-13 1.00D-09 XBig12= 8.86D-15 2.01D-09.
+      4 vectors produced by pass398 Test12= 3.81D-13 1.00D-09 XBig12= 1.61D-14 2.94D-09.
+      4 vectors produced by pass399 Test12= 3.81D-13 1.00D-09 XBig12= 1.30D-14 2.36D-09.
+      4 vectors produced by pass400 Test12= 3.81D-13 1.00D-09 XBig12= 1.43D-14 2.65D-09.
+      4 vectors produced by pass401 Test12= 3.81D-13 1.00D-09 XBig12= 1.38D-14 2.60D-09.
+      4 vectors produced by pass402 Test12= 3.81D-13 1.00D-09 XBig12= 9.17D-15 2.49D-09.
+      4 vectors produced by pass403 Test12= 3.81D-13 1.00D-09 XBig12= 1.15D-14 2.62D-09.
+      4 vectors produced by pass404 Test12= 3.81D-13 1.00D-09 XBig12= 1.17D-14 2.76D-09.
+      4 vectors produced by pass405 Test12= 3.81D-13 1.00D-09 XBig12= 9.80D-15 2.58D-09.
+      4 vectors produced by pass406 Test12= 3.81D-13 1.00D-09 XBig12= 1.51D-14 2.76D-09.
+      4 vectors produced by pass407 Test12= 3.81D-13 1.00D-09 XBig12= 1.36D-14 2.45D-09.
+      4 vectors produced by pass408 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 2.61D-09.
+      4 vectors produced by pass409 Test12= 3.81D-13 1.00D-09 XBig12= 9.83D-15 2.28D-09.
+      4 vectors produced by pass410 Test12= 3.81D-13 1.00D-09 XBig12= 1.11D-14 2.99D-09.
+      4 vectors produced by pass411 Test12= 3.81D-13 1.00D-09 XBig12= 1.24D-14 2.39D-09.
+      4 vectors produced by pass412 Test12= 3.81D-13 1.00D-09 XBig12= 1.27D-14 2.86D-09.
+      4 vectors produced by pass413 Test12= 3.81D-13 1.00D-09 XBig12= 1.22D-14 2.61D-09.
+      4 vectors produced by pass414 Test12= 3.81D-13 1.00D-09 XBig12= 1.36D-14 3.07D-09.
+      4 vectors produced by pass415 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 3.30D-09.
+      4 vectors produced by pass416 Test12= 3.81D-13 1.00D-09 XBig12= 1.77D-14 3.12D-09.
+      4 vectors produced by pass417 Test12= 3.81D-13 1.00D-09 XBig12= 8.74D-15 2.17D-09.
+      4 vectors produced by pass418 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 2.36D-09.
+      4 vectors produced by pass419 Test12= 3.81D-13 1.00D-09 XBig12= 1.01D-14 2.77D-09.
+      4 vectors produced by pass420 Test12= 3.81D-13 1.00D-09 XBig12= 1.32D-14 2.86D-09.
+      4 vectors produced by pass421 Test12= 3.81D-13 1.00D-09 XBig12= 1.25D-14 2.68D-09.
+      4 vectors produced by pass422 Test12= 3.81D-13 1.00D-09 XBig12= 1.51D-14 2.54D-09.
+      4 vectors produced by pass423 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-14 2.58D-09.
+      4 vectors produced by pass424 Test12= 3.81D-13 1.00D-09 XBig12= 1.54D-14 2.94D-09.
+      4 vectors produced by pass425 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.05D-09.
+      4 vectors produced by pass426 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.62D-09.
+      4 vectors produced by pass427 Test12= 3.81D-13 1.00D-09 XBig12= 1.73D-14 3.25D-09.
+      4 vectors produced by pass428 Test12= 3.81D-13 1.00D-09 XBig12= 1.04D-14 2.18D-09.
+      4 vectors produced by pass429 Test12= 3.81D-13 1.00D-09 XBig12= 1.36D-14 2.82D-09.
+      4 vectors produced by pass430 Test12= 3.81D-13 1.00D-09 XBig12= 2.36D-14 3.47D-09.
+      4 vectors produced by pass431 Test12= 3.81D-13 1.00D-09 XBig12= 9.15D-15 2.35D-09.
+      4 vectors produced by pass432 Test12= 3.81D-13 1.00D-09 XBig12= 1.48D-14 2.85D-09.
+      4 vectors produced by pass433 Test12= 3.81D-13 1.00D-09 XBig12= 1.76D-14 2.80D-09.
+      4 vectors produced by pass434 Test12= 3.81D-13 1.00D-09 XBig12= 1.38D-14 2.42D-09.
+      4 vectors produced by pass435 Test12= 3.81D-13 1.00D-09 XBig12= 1.33D-14 2.61D-09.
+      4 vectors produced by pass436 Test12= 3.81D-13 1.00D-09 XBig12= 1.46D-14 2.95D-09.
+      4 vectors produced by pass437 Test12= 3.81D-13 1.00D-09 XBig12= 8.74D-15 2.17D-09.
+      4 vectors produced by pass438 Test12= 3.81D-13 1.00D-09 XBig12= 1.27D-14 2.59D-09.
+      4 vectors produced by pass439 Test12= 3.81D-13 1.00D-09 XBig12= 1.43D-14 2.60D-09.
+      4 vectors produced by pass440 Test12= 3.81D-13 1.00D-09 XBig12= 9.76D-15 2.64D-09.
+      4 vectors produced by pass441 Test12= 3.81D-13 1.00D-09 XBig12= 9.57D-15 2.64D-09.
+      4 vectors produced by pass442 Test12= 3.81D-13 1.00D-09 XBig12= 1.27D-14 2.95D-09.
+      4 vectors produced by pass443 Test12= 3.81D-13 1.00D-09 XBig12= 1.16D-14 2.40D-09.
+      4 vectors produced by pass444 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.44D-09.
+      4 vectors produced by pass445 Test12= 3.81D-13 1.00D-09 XBig12= 1.01D-14 2.65D-09.
+      4 vectors produced by pass446 Test12= 3.81D-13 1.00D-09 XBig12= 1.05D-14 2.14D-09.
+      4 vectors produced by pass447 Test12= 3.81D-13 1.00D-09 XBig12= 1.31D-14 2.73D-09.
+      4 vectors produced by pass448 Test12= 3.81D-13 1.00D-09 XBig12= 9.37D-15 2.65D-09.
+      4 vectors produced by pass449 Test12= 3.81D-13 1.00D-09 XBig12= 9.81D-15 2.48D-09.
+      4 vectors produced by pass450 Test12= 3.81D-13 1.00D-09 XBig12= 1.25D-14 2.32D-09.
+      4 vectors produced by pass451 Test12= 3.81D-13 1.00D-09 XBig12= 1.21D-14 2.80D-09.
+      4 vectors produced by pass452 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.49D-09.
+      4 vectors produced by pass453 Test12= 3.81D-13 1.00D-09 XBig12= 1.21D-14 2.37D-09.
+      4 vectors produced by pass454 Test12= 3.81D-13 1.00D-09 XBig12= 1.38D-14 2.76D-09.
+      4 vectors produced by pass455 Test12= 3.81D-13 1.00D-09 XBig12= 7.58D-15 2.15D-09.
+      4 vectors produced by pass456 Test12= 3.81D-13 1.00D-09 XBig12= 9.63D-15 2.41D-09.
+      4 vectors produced by pass457 Test12= 3.81D-13 1.00D-09 XBig12= 1.34D-14 2.54D-09.
+      4 vectors produced by pass458 Test12= 3.81D-13 1.00D-09 XBig12= 9.28D-15 2.14D-09.
+      4 vectors produced by pass459 Test12= 3.81D-13 1.00D-09 XBig12= 1.24D-14 3.29D-09.
+      4 vectors produced by pass460 Test12= 3.81D-13 1.00D-09 XBig12= 2.03D-14 4.10D-09.
+      4 vectors produced by pass461 Test12= 3.81D-13 1.00D-09 XBig12= 8.28D-15 1.95D-09.
+      4 vectors produced by pass462 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.56D-09.
+      4 vectors produced by pass463 Test12= 3.81D-13 1.00D-09 XBig12= 1.76D-14 3.19D-09.
+      4 vectors produced by pass464 Test12= 3.81D-13 1.00D-09 XBig12= 5.47D-15 1.78D-09.
+      4 vectors produced by pass465 Test12= 3.81D-13 1.00D-09 XBig12= 9.15D-15 2.31D-09.
+      4 vectors produced by pass466 Test12= 3.81D-13 1.00D-09 XBig12= 1.18D-14 2.65D-09.
+      4 vectors produced by pass467 Test12= 3.81D-13 1.00D-09 XBig12= 8.74D-15 2.04D-09.
+      4 vectors produced by pass468 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 2.66D-09.
+      4 vectors produced by pass469 Test12= 3.81D-13 1.00D-09 XBig12= 1.32D-14 2.52D-09.
+      4 vectors produced by pass470 Test12= 3.81D-13 1.00D-09 XBig12= 6.22D-15 2.25D-09.
+      4 vectors produced by pass471 Test12= 3.81D-13 1.00D-09 XBig12= 1.18D-14 2.89D-09.
+      4 vectors produced by pass472 Test12= 3.81D-13 1.00D-09 XBig12= 8.15D-15 2.02D-09.
+      4 vectors produced by pass473 Test12= 3.81D-13 1.00D-09 XBig12= 1.20D-14 2.76D-09.
+      4 vectors produced by pass474 Test12= 3.81D-13 1.00D-09 XBig12= 1.08D-14 2.69D-09.
+      4 vectors produced by pass475 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 2.68D-09.
+      4 vectors produced by pass476 Test12= 3.81D-13 1.00D-09 XBig12= 1.41D-14 2.78D-09.
+      4 vectors produced by pass477 Test12= 3.81D-13 1.00D-09 XBig12= 8.18D-15 2.10D-09.
+      4 vectors produced by pass478 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.23D-09.
+      4 vectors produced by pass479 Test12= 3.81D-13 1.00D-09 XBig12= 1.69D-14 2.82D-09.
+      4 vectors produced by pass480 Test12= 3.81D-13 1.00D-09 XBig12= 9.17D-15 2.16D-09.
+      4 vectors produced by pass481 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 2.45D-09.
+      4 vectors produced by pass482 Test12= 3.81D-13 1.00D-09 XBig12= 1.34D-14 2.55D-09.
+      4 vectors produced by pass483 Test12= 3.81D-13 1.00D-09 XBig12= 9.59D-15 2.02D-09.
+      4 vectors produced by pass484 Test12= 3.81D-13 1.00D-09 XBig12= 8.14D-15 1.98D-09.
+      4 vectors produced by pass485 Test12= 3.81D-13 1.00D-09 XBig12= 9.52D-15 2.42D-09.
+      4 vectors produced by pass486 Test12= 3.81D-13 1.00D-09 XBig12= 7.63D-15 2.01D-09.
+      4 vectors produced by pass487 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.72D-09.
+      4 vectors produced by pass488 Test12= 3.81D-13 1.00D-09 XBig12= 1.53D-14 2.78D-09.
+      4 vectors produced by pass489 Test12= 3.81D-13 1.00D-09 XBig12= 9.01D-15 2.04D-09.
+      4 vectors produced by pass490 Test12= 3.81D-13 1.00D-09 XBig12= 1.20D-14 2.53D-09.
+      4 vectors produced by pass491 Test12= 3.81D-13 1.00D-09 XBig12= 1.20D-14 2.46D-09.
+      4 vectors produced by pass492 Test12= 3.81D-13 1.00D-09 XBig12= 1.05D-14 2.28D-09.
+      4 vectors produced by pass493 Test12= 3.81D-13 1.00D-09 XBig12= 1.05D-14 2.63D-09.
+      4 vectors produced by pass494 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.39D-09.
+      4 vectors produced by pass495 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 2.38D-09.
+      4 vectors produced by pass496 Test12= 3.81D-13 1.00D-09 XBig12= 1.45D-14 3.00D-09.
+      4 vectors produced by pass497 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.28D-09.
+      4 vectors produced by pass498 Test12= 3.81D-13 1.00D-09 XBig12= 1.52D-14 3.13D-09.
+      4 vectors produced by pass499 Test12= 3.81D-13 1.00D-09 XBig12= 1.05D-14 2.38D-09.
+      4 vectors produced by pass500 Test12= 3.81D-13 1.00D-09 XBig12= 1.01D-14 2.10D-09.
+      4 vectors produced by pass501 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 2.58D-09.
+      4 vectors produced by pass502 Test12= 3.81D-13 1.00D-09 XBig12= 1.47D-14 2.62D-09.
+      4 vectors produced by pass503 Test12= 3.81D-13 1.00D-09 XBig12= 1.05D-14 2.79D-09.
+      4 vectors produced by pass504 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.34D-09.
+      4 vectors produced by pass505 Test12= 3.81D-13 1.00D-09 XBig12= 1.56D-14 2.75D-09.
+      4 vectors produced by pass506 Test12= 3.81D-13 1.00D-09 XBig12= 1.18D-14 2.37D-09.
+      4 vectors produced by pass507 Test12= 3.81D-13 1.00D-09 XBig12= 1.16D-14 2.33D-09.
+      4 vectors produced by pass508 Test12= 3.81D-13 1.00D-09 XBig12= 1.30D-14 2.54D-09.
+      4 vectors produced by pass509 Test12= 3.81D-13 1.00D-09 XBig12= 8.85D-15 1.98D-09.
+      4 vectors produced by pass510 Test12= 3.81D-13 1.00D-09 XBig12= 8.03D-15 2.28D-09.
+      4 vectors produced by pass511 Test12= 3.81D-13 1.00D-09 XBig12= 1.33D-14 2.94D-09.
+      4 vectors produced by pass512 Test12= 3.81D-13 1.00D-09 XBig12= 1.25D-14 2.46D-09.
+      4 vectors produced by pass513 Test12= 3.81D-13 1.00D-09 XBig12= 1.12D-14 2.84D-09.
+      4 vectors produced by pass514 Test12= 3.81D-13 1.00D-09 XBig12= 1.14D-14 2.72D-09.
+      4 vectors produced by pass515 Test12= 3.81D-13 1.00D-09 XBig12= 1.18D-14 2.26D-09.
+      4 vectors produced by pass516 Test12= 3.81D-13 1.00D-09 XBig12= 1.07D-14 2.60D-09.
+      4 vectors produced by pass517 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.25D-09.
+      4 vectors produced by pass518 Test12= 3.81D-13 1.00D-09 XBig12= 9.50D-15 2.17D-09.
+      4 vectors produced by pass519 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 3.40D-09.
+      4 vectors produced by pass520 Test12= 3.81D-13 1.00D-09 XBig12= 1.08D-14 3.18D-09.
+      4 vectors produced by pass521 Test12= 3.81D-13 1.00D-09 XBig12= 1.33D-14 2.59D-09.
+      4 vectors produced by pass522 Test12= 3.81D-13 1.00D-09 XBig12= 1.03D-14 2.24D-09.
+      4 vectors produced by pass523 Test12= 3.81D-13 1.00D-09 XBig12= 1.41D-14 2.73D-09.
+      4 vectors produced by pass524 Test12= 3.81D-13 1.00D-09 XBig12= 1.15D-14 2.18D-09.
+      4 vectors produced by pass525 Test12= 3.81D-13 1.00D-09 XBig12= 1.21D-14 2.48D-09.
+      4 vectors produced by pass526 Test12= 3.81D-13 1.00D-09 XBig12= 1.30D-14 2.62D-09.
+      4 vectors produced by pass527 Test12= 3.81D-13 1.00D-09 XBig12= 7.89D-15 1.91D-09.
+      4 vectors produced by pass528 Test12= 3.81D-13 1.00D-09 XBig12= 9.43D-15 2.00D-09.
+      4 vectors produced by pass529 Test12= 3.81D-13 1.00D-09 XBig12= 9.61D-15 2.29D-09.
+      4 vectors produced by pass530 Test12= 3.81D-13 1.00D-09 XBig12= 1.14D-14 2.43D-09.
+      4 vectors produced by pass531 Test12= 3.81D-13 1.00D-09 XBig12= 9.31D-15 2.27D-09.
+      4 vectors produced by pass532 Test12= 3.81D-13 1.00D-09 XBig12= 1.03D-14 2.33D-09.
+      4 vectors produced by pass533 Test12= 3.81D-13 1.00D-09 XBig12= 1.15D-14 2.22D-09.
+      4 vectors produced by pass534 Test12= 3.81D-13 1.00D-09 XBig12= 1.45D-14 2.47D-09.
+      4 vectors produced by pass535 Test12= 3.81D-13 1.00D-09 XBig12= 7.52D-15 1.75D-09.
+      4 vectors produced by pass536 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.17D-09.
+      4 vectors produced by pass537 Test12= 3.81D-13 1.00D-09 XBig12= 1.42D-14 2.32D-09.
+      4 vectors produced by pass538 Test12= 3.81D-13 1.00D-09 XBig12= 6.48D-15 1.80D-09.
+      4 vectors produced by pass539 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-14 2.70D-09.
+      4 vectors produced by pass540 Test12= 3.81D-13 1.00D-09 XBig12= 9.85D-15 2.17D-09.
+      4 vectors produced by pass541 Test12= 3.81D-13 1.00D-09 XBig12= 9.89D-15 2.35D-09.
+      4 vectors produced by pass542 Test12= 3.81D-13 1.00D-09 XBig12= 1.15D-14 2.34D-09.
+      4 vectors produced by pass543 Test12= 3.81D-13 1.00D-09 XBig12= 7.86D-15 2.04D-09.
+      4 vectors produced by pass544 Test12= 3.81D-13 1.00D-09 XBig12= 9.75D-15 2.56D-09.
+      4 vectors produced by pass545 Test12= 3.81D-13 1.00D-09 XBig12= 1.22D-14 2.71D-09.
+      4 vectors produced by pass546 Test12= 3.81D-13 1.00D-09 XBig12= 5.46D-15 2.00D-09.
+      4 vectors produced by pass547 Test12= 3.81D-13 1.00D-09 XBig12= 8.37D-15 1.92D-09.
+      4 vectors produced by pass548 Test12= 3.81D-13 1.00D-09 XBig12= 9.07D-15 2.33D-09.
+      4 vectors produced by pass549 Test12= 3.81D-13 1.00D-09 XBig12= 1.22D-14 2.23D-09.
+      4 vectors produced by pass550 Test12= 3.81D-13 1.00D-09 XBig12= 7.58D-15 1.87D-09.
+      4 vectors produced by pass551 Test12= 3.81D-13 1.00D-09 XBig12= 7.86D-15 1.85D-09.
+      4 vectors produced by pass552 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 3.06D-09.
+      4 vectors produced by pass553 Test12= 3.81D-13 1.00D-09 XBig12= 7.08D-15 1.97D-09.
+      4 vectors produced by pass554 Test12= 3.81D-13 1.00D-09 XBig12= 8.64D-15 2.29D-09.
+      4 vectors produced by pass555 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.15D-09.
+      4 vectors produced by pass556 Test12= 3.81D-13 1.00D-09 XBig12= 1.08D-14 2.54D-09.
+      4 vectors produced by pass557 Test12= 3.81D-13 1.00D-09 XBig12= 5.53D-15 1.69D-09.
+      4 vectors produced by pass558 Test12= 3.81D-13 1.00D-09 XBig12= 9.14D-15 2.12D-09.
+      4 vectors produced by pass559 Test12= 3.81D-13 1.00D-09 XBig12= 8.11D-15 1.88D-09.
+      4 vectors produced by pass560 Test12= 3.81D-13 1.00D-09 XBig12= 1.12D-14 2.65D-09.
+      4 vectors produced by pass561 Test12= 3.81D-13 1.00D-09 XBig12= 8.75D-15 2.06D-09.
+      4 vectors produced by pass562 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 2.18D-09.
+      4 vectors produced by pass563 Test12= 3.81D-13 1.00D-09 XBig12= 7.58D-15 1.80D-09.
+      4 vectors produced by pass564 Test12= 3.81D-13 1.00D-09 XBig12= 9.50D-15 2.13D-09.
+      4 vectors produced by pass565 Test12= 3.81D-13 1.00D-09 XBig12= 7.41D-15 1.85D-09.
+      4 vectors produced by pass566 Test12= 3.81D-13 1.00D-09 XBig12= 1.04D-14 2.80D-09.
+      4 vectors produced by pass567 Test12= 3.81D-13 1.00D-09 XBig12= 8.00D-15 2.01D-09.
+      4 vectors produced by pass568 Test12= 3.81D-13 1.00D-09 XBig12= 1.09D-14 2.44D-09.
+      4 vectors produced by pass569 Test12= 3.81D-13 1.00D-09 XBig12= 9.45D-15 2.44D-09.
+      4 vectors produced by pass570 Test12= 3.81D-13 1.00D-09 XBig12= 9.25D-15 2.13D-09.
+      4 vectors produced by pass571 Test12= 3.81D-13 1.00D-09 XBig12= 9.34D-15 2.26D-09.
+      4 vectors produced by pass572 Test12= 3.81D-13 1.00D-09 XBig12= 1.07D-14 2.43D-09.
+      4 vectors produced by pass573 Test12= 3.81D-13 1.00D-09 XBig12= 1.37D-14 2.48D-09.
+      4 vectors produced by pass574 Test12= 3.81D-13 1.00D-09 XBig12= 8.14D-15 2.06D-09.
+      4 vectors produced by pass575 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.11D-09.
+      4 vectors produced by pass576 Test12= 3.81D-13 1.00D-09 XBig12= 1.30D-14 2.45D-09.
+      4 vectors produced by pass577 Test12= 3.81D-13 1.00D-09 XBig12= 5.78D-15 1.55D-09.
+      4 vectors produced by pass578 Test12= 3.81D-13 1.00D-09 XBig12= 5.09D-15 1.71D-09.
+      4 vectors produced by pass579 Test12= 3.81D-13 1.00D-09 XBig12= 1.00D-14 2.60D-09.
+      4 vectors produced by pass580 Test12= 3.81D-13 1.00D-09 XBig12= 9.91D-15 2.35D-09.
+      4 vectors produced by pass581 Test12= 3.81D-13 1.00D-09 XBig12= 9.23D-15 2.24D-09.
+      4 vectors produced by pass582 Test12= 3.81D-13 1.00D-09 XBig12= 9.55D-15 2.15D-09.
+      4 vectors produced by pass583 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.95D-09.
+      4 vectors produced by pass584 Test12= 3.81D-13 1.00D-09 XBig12= 7.74D-15 2.11D-09.
+      4 vectors produced by pass585 Test12= 3.81D-13 1.00D-09 XBig12= 7.25D-15 2.12D-09.
+      4 vectors produced by pass586 Test12= 3.81D-13 1.00D-09 XBig12= 9.32D-15 2.11D-09.
+      4 vectors produced by pass587 Test12= 3.81D-13 1.00D-09 XBig12= 9.37D-15 2.05D-09.
+      4 vectors produced by pass588 Test12= 3.81D-13 1.00D-09 XBig12= 9.72D-15 2.06D-09.
+      4 vectors produced by pass589 Test12= 3.81D-13 1.00D-09 XBig12= 8.03D-15 1.69D-09.
+      4 vectors produced by pass590 Test12= 3.81D-13 1.00D-09 XBig12= 9.72D-15 2.09D-09.
+      4 vectors produced by pass591 Test12= 3.81D-13 1.00D-09 XBig12= 1.11D-14 2.13D-09.
+      4 vectors produced by pass592 Test12= 3.81D-13 1.00D-09 XBig12= 7.43D-15 1.82D-09.
+      4 vectors produced by pass593 Test12= 3.81D-13 1.00D-09 XBig12= 9.16D-15 2.01D-09.
+      4 vectors produced by pass594 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-14 2.34D-09.
+      4 vectors produced by pass595 Test12= 3.81D-13 1.00D-09 XBig12= 6.77D-15 1.81D-09.
+      4 vectors produced by pass596 Test12= 3.81D-13 1.00D-09 XBig12= 6.86D-15 2.16D-09.
+      4 vectors produced by pass597 Test12= 3.81D-13 1.00D-09 XBig12= 9.83D-15 2.33D-09.
+      4 vectors produced by pass598 Test12= 3.81D-13 1.00D-09 XBig12= 6.47D-15 1.71D-09.
+      4 vectors produced by pass599 Test12= 3.81D-13 1.00D-09 XBig12= 8.67D-15 2.23D-09.
+      4 vectors produced by pass600 Test12= 3.81D-13 1.00D-09 XBig12= 8.20D-15 1.79D-09.
+      4 vectors produced by pass601 Test12= 3.81D-13 1.00D-09 XBig12= 5.56D-15 2.01D-09.
+      4 vectors produced by pass602 Test12= 3.81D-13 1.00D-09 XBig12= 8.10D-15 2.33D-09.
+      4 vectors produced by pass603 Test12= 3.81D-13 1.00D-09 XBig12= 1.37D-14 2.67D-09.
+      4 vectors produced by pass604 Test12= 3.81D-13 1.00D-09 XBig12= 5.27D-15 1.67D-09.
+      4 vectors produced by pass605 Test12= 3.81D-13 1.00D-09 XBig12= 5.05D-15 1.59D-09.
+      4 vectors produced by pass606 Test12= 3.81D-13 1.00D-09 XBig12= 8.65D-15 2.31D-09.
+      4 vectors produced by pass607 Test12= 3.81D-13 1.00D-09 XBig12= 7.16D-15 1.83D-09.
+      4 vectors produced by pass608 Test12= 3.81D-13 1.00D-09 XBig12= 9.94D-15 2.22D-09.
+      4 vectors produced by pass609 Test12= 3.81D-13 1.00D-09 XBig12= 8.99D-15 2.25D-09.
+      4 vectors produced by pass610 Test12= 3.81D-13 1.00D-09 XBig12= 1.24D-14 2.63D-09.
+      4 vectors produced by pass611 Test12= 3.81D-13 1.00D-09 XBig12= 8.04D-15 1.94D-09.
+      4 vectors produced by pass612 Test12= 3.81D-13 1.00D-09 XBig12= 1.22D-14 2.37D-09.
+      4 vectors produced by pass613 Test12= 3.81D-13 1.00D-09 XBig12= 9.54D-15 1.91D-09.
+      4 vectors produced by pass614 Test12= 3.81D-13 1.00D-09 XBig12= 9.89D-15 2.18D-09.
+      4 vectors produced by pass615 Test12= 3.81D-13 1.00D-09 XBig12= 6.87D-15 2.03D-09.
+      4 vectors produced by pass616 Test12= 3.81D-13 1.00D-09 XBig12= 1.11D-14 2.15D-09.
+      4 vectors produced by pass617 Test12= 3.81D-13 1.00D-09 XBig12= 1.17D-14 2.25D-09.
+      4 vectors produced by pass618 Test12= 3.81D-13 1.00D-09 XBig12= 8.90D-15 2.26D-09.
+      4 vectors produced by pass619 Test12= 3.81D-13 1.00D-09 XBig12= 8.67D-15 1.78D-09.
+      4 vectors produced by pass620 Test12= 3.81D-13 1.00D-09 XBig12= 1.03D-14 1.99D-09.
+      4 vectors produced by pass621 Test12= 3.81D-13 1.00D-09 XBig12= 1.00D-14 2.27D-09.
+      4 vectors produced by pass622 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.34D-09.
+      4 vectors produced by pass623 Test12= 3.81D-13 1.00D-09 XBig12= 8.28D-15 1.97D-09.
+      4 vectors produced by pass624 Test12= 3.81D-13 1.00D-09 XBig12= 9.33D-15 1.97D-09.
+      4 vectors produced by pass625 Test12= 3.81D-13 1.00D-09 XBig12= 1.29D-14 2.70D-09.
+      4 vectors produced by pass626 Test12= 3.81D-13 1.00D-09 XBig12= 9.35D-15 2.65D-09.
+      4 vectors produced by pass627 Test12= 3.81D-13 1.00D-09 XBig12= 9.96D-15 2.11D-09.
+      4 vectors produced by pass628 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.24D-09.
+      4 vectors produced by pass629 Test12= 3.81D-13 1.00D-09 XBig12= 8.43D-15 1.87D-09.
+      4 vectors produced by pass630 Test12= 3.81D-13 1.00D-09 XBig12= 9.79D-15 2.16D-09.
+      4 vectors produced by pass631 Test12= 3.81D-13 1.00D-09 XBig12= 1.34D-14 2.56D-09.
+      4 vectors produced by pass632 Test12= 3.81D-13 1.00D-09 XBig12= 8.63D-15 2.04D-09.
+      4 vectors produced by pass633 Test12= 3.81D-13 1.00D-09 XBig12= 1.04D-14 2.18D-09.
+      4 vectors produced by pass634 Test12= 3.81D-13 1.00D-09 XBig12= 7.65D-15 1.71D-09.
+      4 vectors produced by pass635 Test12= 3.81D-13 1.00D-09 XBig12= 5.64D-15 1.71D-09.
+      4 vectors produced by pass636 Test12= 3.81D-13 1.00D-09 XBig12= 6.65D-15 1.95D-09.
+      4 vectors produced by pass637 Test12= 3.81D-13 1.00D-09 XBig12= 9.77D-15 2.24D-09.
+      4 vectors produced by pass638 Test12= 3.81D-13 1.00D-09 XBig12= 7.81D-15 1.69D-09.
+      4 vectors produced by pass639 Test12= 3.81D-13 1.00D-09 XBig12= 1.10D-14 2.26D-09.
+      4 vectors produced by pass640 Test12= 3.81D-13 1.00D-09 XBig12= 9.65D-15 2.04D-09.
+      4 vectors produced by pass641 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.12D-09.
+      4 vectors produced by pass642 Test12= 3.81D-13 1.00D-09 XBig12= 8.90D-15 2.12D-09.
+      4 vectors produced by pass643 Test12= 3.81D-13 1.00D-09 XBig12= 8.63D-15 1.98D-09.
+      4 vectors produced by pass644 Test12= 3.81D-13 1.00D-09 XBig12= 8.96D-15 2.35D-09.
+      4 vectors produced by pass645 Test12= 3.81D-13 1.00D-09 XBig12= 1.01D-14 2.11D-09.
+      4 vectors produced by pass646 Test12= 3.81D-13 1.00D-09 XBig12= 8.27D-15 2.08D-09.
+      4 vectors produced by pass647 Test12= 3.81D-13 1.00D-09 XBig12= 9.61D-15 1.94D-09.
+      4 vectors produced by pass648 Test12= 3.81D-13 1.00D-09 XBig12= 5.93D-15 1.62D-09.
+      4 vectors produced by pass649 Test12= 3.81D-13 1.00D-09 XBig12= 6.69D-15 1.84D-09.
+      4 vectors produced by pass650 Test12= 3.81D-13 1.00D-09 XBig12= 9.17D-15 2.08D-09.
+      4 vectors produced by pass651 Test12= 3.81D-13 1.00D-09 XBig12= 5.81D-15 1.51D-09.
+      4 vectors produced by pass652 Test12= 3.81D-13 1.00D-09 XBig12= 7.96D-15 2.07D-09.
+      4 vectors produced by pass653 Test12= 3.81D-13 1.00D-09 XBig12= 8.82D-15 2.00D-09.
+      4 vectors produced by pass654 Test12= 3.81D-13 1.00D-09 XBig12= 5.78D-15 1.90D-09.
+      4 vectors produced by pass655 Test12= 3.81D-13 1.00D-09 XBig12= 9.53D-15 2.15D-09.
+      4 vectors produced by pass656 Test12= 3.81D-13 1.00D-09 XBig12= 5.99D-15 1.67D-09.
+      4 vectors produced by pass657 Test12= 3.81D-13 1.00D-09 XBig12= 9.04D-15 2.14D-09.
+      4 vectors produced by pass658 Test12= 3.81D-13 1.00D-09 XBig12= 8.28D-15 2.14D-09.
+      4 vectors produced by pass659 Test12= 3.81D-13 1.00D-09 XBig12= 9.53D-15 2.18D-09.
+      4 vectors produced by pass660 Test12= 3.81D-13 1.00D-09 XBig12= 6.36D-15 1.71D-09.
+      4 vectors produced by pass661 Test12= 3.81D-13 1.00D-09 XBig12= 8.80D-15 2.03D-09.
+      4 vectors produced by pass662 Test12= 3.81D-13 1.00D-09 XBig12= 9.85D-15 2.49D-09.
+      4 vectors produced by pass663 Test12= 3.81D-13 1.00D-09 XBig12= 9.16D-15 2.22D-09.
+      4 vectors produced by pass664 Test12= 3.81D-13 1.00D-09 XBig12= 8.37D-15 1.93D-09.
+      4 vectors produced by pass665 Test12= 3.81D-13 1.00D-09 XBig12= 8.36D-15 2.23D-09.
+      4 vectors produced by pass666 Test12= 3.81D-13 1.00D-09 XBig12= 5.87D-15 1.85D-09.
+      4 vectors produced by pass667 Test12= 3.81D-13 1.00D-09 XBig12= 9.13D-15 2.01D-09.
+      4 vectors produced by pass668 Test12= 3.81D-13 1.00D-09 XBig12= 7.07D-15 1.86D-09.
+      4 vectors produced by pass669 Test12= 3.81D-13 1.00D-09 XBig12= 7.14D-15 1.94D-09.
+      4 vectors produced by pass670 Test12= 3.81D-13 1.00D-09 XBig12= 7.90D-15 2.02D-09.
+      4 vectors produced by pass671 Test12= 3.81D-13 1.00D-09 XBig12= 5.54D-15 1.69D-09.
+      4 vectors produced by pass672 Test12= 3.81D-13 1.00D-09 XBig12= 1.03D-14 2.11D-09.
+      4 vectors produced by pass673 Test12= 3.81D-13 1.00D-09 XBig12= 4.91D-15 1.62D-09.
+      4 vectors produced by pass674 Test12= 3.81D-13 1.00D-09 XBig12= 5.93D-15 1.78D-09.
+      4 vectors produced by pass675 Test12= 3.81D-13 1.00D-09 XBig12= 1.04D-14 1.99D-09.
+      4 vectors produced by pass676 Test12= 3.81D-13 1.00D-09 XBig12= 8.90D-15 2.08D-09.
+      4 vectors produced by pass677 Test12= 3.81D-13 1.00D-09 XBig12= 1.11D-14 2.36D-09.
+      4 vectors produced by pass678 Test12= 3.81D-13 1.00D-09 XBig12= 6.49D-15 1.77D-09.
+      4 vectors produced by pass679 Test12= 3.81D-13 1.00D-09 XBig12= 9.56D-15 2.14D-09.
+      4 vectors produced by pass680 Test12= 3.81D-13 1.00D-09 XBig12= 9.90D-15 2.09D-09.
+      4 vectors produced by pass681 Test12= 3.81D-13 1.00D-09 XBig12= 8.94D-15 1.94D-09.
+      4 vectors produced by pass682 Test12= 3.81D-13 1.00D-09 XBig12= 6.84D-15 1.80D-09.
+      4 vectors produced by pass683 Test12= 3.81D-13 1.00D-09 XBig12= 6.37D-15 1.81D-09.
+      4 vectors produced by pass684 Test12= 3.81D-13 1.00D-09 XBig12= 8.78D-15 2.04D-09.
+      4 vectors produced by pass685 Test12= 3.81D-13 1.00D-09 XBig12= 8.12D-15 1.89D-09.
+      4 vectors produced by pass686 Test12= 3.81D-13 1.00D-09 XBig12= 8.71D-15 1.97D-09.
+      4 vectors produced by pass687 Test12= 3.81D-13 1.00D-09 XBig12= 7.56D-15 1.70D-09.
+      4 vectors produced by pass688 Test12= 3.81D-13 1.00D-09 XBig12= 7.96D-15 2.09D-09.
+      4 vectors produced by pass689 Test12= 3.81D-13 1.00D-09 XBig12= 9.10D-15 2.42D-09.
+      4 vectors produced by pass690 Test12= 3.81D-13 1.00D-09 XBig12= 8.29D-15 2.10D-09.
+      4 vectors produced by pass691 Test12= 3.81D-13 1.00D-09 XBig12= 7.87D-15 2.05D-09.
+      4 vectors produced by pass692 Test12= 3.81D-13 1.00D-09 XBig12= 6.58D-15 1.75D-09.
+      4 vectors produced by pass693 Test12= 3.81D-13 1.00D-09 XBig12= 9.47D-15 2.24D-09.
+      4 vectors produced by pass694 Test12= 3.81D-13 1.00D-09 XBig12= 6.96D-15 1.81D-09.
+      4 vectors produced by pass695 Test12= 3.81D-13 1.00D-09 XBig12= 9.70D-15 2.30D-09.
+      4 vectors produced by pass696 Test12= 3.81D-13 1.00D-09 XBig12= 6.59D-15 1.60D-09.
+      4 vectors produced by pass697 Test12= 3.81D-13 1.00D-09 XBig12= 5.83D-15 1.86D-09.
+      4 vectors produced by pass698 Test12= 3.81D-13 1.00D-09 XBig12= 5.42D-15 1.72D-09.
+      4 vectors produced by pass699 Test12= 3.81D-13 1.00D-09 XBig12= 8.00D-15 2.00D-09.
+      4 vectors produced by pass700 Test12= 3.81D-13 1.00D-09 XBig12= 9.97D-15 2.43D-09.
+      4 vectors produced by pass701 Test12= 3.81D-13 1.00D-09 XBig12= 5.24D-15 1.55D-09.
+      4 vectors produced by pass702 Test12= 3.81D-13 1.00D-09 XBig12= 1.04D-14 2.10D-09.
+      4 vectors produced by pass703 Test12= 3.81D-13 1.00D-09 XBig12= 7.19D-15 1.73D-09.
+      4 vectors produced by pass704 Test12= 3.81D-13 1.00D-09 XBig12= 7.18D-15 1.95D-09.
+      4 vectors produced by pass705 Test12= 3.81D-13 1.00D-09 XBig12= 8.65D-15 2.06D-09.
+      4 vectors produced by pass706 Test12= 3.81D-13 1.00D-09 XBig12= 9.07D-15 2.10D-09.
+      4 vectors produced by pass707 Test12= 3.81D-13 1.00D-09 XBig12= 9.89D-15 1.95D-09.
+      4 vectors produced by pass708 Test12= 3.81D-13 1.00D-09 XBig12= 9.53D-15 1.93D-09.
+      4 vectors produced by pass709 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 2.13D-09.
+      4 vectors produced by pass710 Test12= 3.81D-13 1.00D-09 XBig12= 1.18D-14 2.12D-09.
+      4 vectors produced by pass711 Test12= 3.81D-13 1.00D-09 XBig12= 9.02D-15 1.94D-09.
+      4 vectors produced by pass712 Test12= 3.81D-13 1.00D-09 XBig12= 8.58D-15 1.91D-09.
+      4 vectors produced by pass713 Test12= 3.81D-13 1.00D-09 XBig12= 7.18D-15 1.64D-09.
+      4 vectors produced by pass714 Test12= 3.81D-13 1.00D-09 XBig12= 8.11D-15 1.92D-09.
+      4 vectors produced by pass715 Test12= 3.81D-13 1.00D-09 XBig12= 8.88D-15 2.34D-09.
+      4 vectors produced by pass716 Test12= 3.81D-13 1.00D-09 XBig12= 7.74D-15 1.95D-09.
+      4 vectors produced by pass717 Test12= 3.81D-13 1.00D-09 XBig12= 7.94D-15 1.80D-09.
+      4 vectors produced by pass718 Test12= 3.81D-13 1.00D-09 XBig12= 9.73D-15 2.30D-09.
+      4 vectors produced by pass719 Test12= 3.81D-13 1.00D-09 XBig12= 8.34D-15 2.27D-09.
+      4 vectors produced by pass720 Test12= 3.81D-13 1.00D-09 XBig12= 8.62D-15 1.97D-09.
+      4 vectors produced by pass721 Test12= 3.81D-13 1.00D-09 XBig12= 5.67D-15 1.53D-09.
+      4 vectors produced by pass722 Test12= 3.81D-13 1.00D-09 XBig12= 7.34D-15 1.75D-09.
+      4 vectors produced by pass723 Test12= 3.81D-13 1.00D-09 XBig12= 9.97D-15 2.26D-09.
+      4 vectors produced by pass724 Test12= 3.81D-13 1.00D-09 XBig12= 6.68D-15 1.84D-09.
+      4 vectors produced by pass725 Test12= 3.81D-13 1.00D-09 XBig12= 7.81D-15 1.81D-09.
+      4 vectors produced by pass726 Test12= 3.81D-13 1.00D-09 XBig12= 1.13D-14 2.03D-09.
+      4 vectors produced by pass727 Test12= 3.81D-13 1.00D-09 XBig12= 1.19D-14 2.21D-09.
+      4 vectors produced by pass728 Test12= 3.81D-13 1.00D-09 XBig12= 5.86D-15 1.51D-09.
+      4 vectors produced by pass729 Test12= 3.81D-13 1.00D-09 XBig12= 8.87D-15 1.87D-09.
+      4 vectors produced by pass730 Test12= 3.81D-13 1.00D-09 XBig12= 8.90D-15 2.13D-09.
+      4 vectors produced by pass731 Test12= 3.81D-13 1.00D-09 XBig12= 8.41D-15 1.94D-09.
+      4 vectors produced by pass732 Test12= 3.81D-13 1.00D-09 XBig12= 8.51D-15 2.01D-09.
+      4 vectors produced by pass733 Test12= 3.81D-13 1.00D-09 XBig12= 8.67D-15 2.26D-09.
+      4 vectors produced by pass734 Test12= 3.81D-13 1.00D-09 XBig12= 6.30D-15 1.88D-09.
+      4 vectors produced by pass735 Test12= 3.81D-13 1.00D-09 XBig12= 6.82D-15 1.85D-09.
+      4 vectors produced by pass736 Test12= 3.81D-13 1.00D-09 XBig12= 1.02D-14 1.96D-09.
+      4 vectors produced by pass737 Test12= 3.81D-13 1.00D-09 XBig12= 7.79D-15 1.89D-09.
+      4 vectors produced by pass738 Test12= 3.81D-13 1.00D-09 XBig12= 7.33D-15 1.85D-09.
+      4 vectors produced by pass739 Test12= 3.81D-13 1.00D-09 XBig12= 5.93D-15 1.62D-09.
+      4 vectors produced by pass740 Test12= 3.81D-13 1.00D-09 XBig12= 6.41D-15 1.94D-09.
+      4 vectors produced by pass741 Test12= 3.81D-13 1.00D-09 XBig12= 4.88D-15 1.38D-09.
+      4 vectors produced by pass742 Test12= 3.81D-13 1.00D-09 XBig12= 8.68D-15 2.10D-09.
+      4 vectors produced by pass743 Test12= 3.81D-13 1.00D-09 XBig12= 5.96D-15 1.88D-09.
+      4 vectors produced by pass744 Test12= 3.81D-13 1.00D-09 XBig12= 7.36D-15 1.76D-09.
+      4 vectors produced by pass745 Test12= 3.81D-13 1.00D-09 XBig12= 9.78D-15 2.03D-09.
+      4 vectors produced by pass746 Test12= 3.81D-13 1.00D-09 XBig12= 7.34D-15 1.91D-09.
+      4 vectors produced by pass747 Test12= 3.81D-13 1.00D-09 XBig12= 6.94D-15 2.04D-09.
+      4 vectors produced by pass748 Test12= 3.81D-13 1.00D-09 XBig12= 7.83D-15 1.91D-09.
+      4 vectors produced by pass749 Test12= 3.81D-13 1.00D-09 XBig12= 6.24D-15 1.64D-09.
+      4 vectors produced by pass750 Test12= 3.81D-13 1.00D-09 XBig12= 7.60D-15 2.11D-09.
+      4 vectors produced by pass751 Test12= 3.81D-13 1.00D-09 XBig12= 7.45D-15 1.81D-09.
+      4 vectors produced by pass752 Test12= 3.81D-13 1.00D-09 XBig12= 5.71D-15 1.78D-09.
+      4 vectors produced by pass753 Test12= 3.81D-13 1.00D-09 XBig12= 6.49D-15 1.67D-09.
+      4 vectors produced by pass754 Test12= 3.81D-13 1.00D-09 XBig12= 5.99D-15 1.73D-09.
+      4 vectors produced by pass755 Test12= 3.81D-13 1.00D-09 XBig12= 7.19D-15 1.80D-09.
+      4 vectors produced by pass756 Test12= 3.81D-13 1.00D-09 XBig12= 5.72D-15 1.60D-09.
+      4 vectors produced by pass757 Test12= 3.81D-13 1.00D-09 XBig12= 9.34D-15 2.38D-09.
+      4 vectors produced by pass758 Test12= 3.81D-13 1.00D-09 XBig12= 7.22D-15 1.61D-09.
+      4 vectors produced by pass759 Test12= 3.81D-13 1.00D-09 XBig12= 7.26D-15 1.75D-09.
+      4 vectors produced by pass760 Test12= 3.81D-13 1.00D-09 XBig12= 8.67D-15 1.94D-09.
+      4 vectors produced by pass761 Test12= 3.81D-13 1.00D-09 XBig12= 5.70D-15 1.75D-09.
+      4 vectors produced by pass762 Test12= 3.81D-13 1.00D-09 XBig12= 6.98D-15 1.91D-09.
+      4 vectors produced by pass763 Test12= 3.81D-13 1.00D-09 XBig12= 8.06D-15 2.18D-09.
+      4 vectors produced by pass764 Test12= 3.81D-13 1.00D-09 XBig12= 9.75D-15 1.93D-09.
+      4 vectors produced by pass765 Test12= 3.81D-13 1.00D-09 XBig12= 7.07D-15 1.72D-09.
+      4 vectors produced by pass766 Test12= 3.81D-13 1.00D-09 XBig12= 7.41D-15 1.86D-09.
+      4 vectors produced by pass767 Test12= 3.81D-13 1.00D-09 XBig12= 9.25D-15 2.02D-09.
+      4 vectors produced by pass768 Test12= 3.81D-13 1.00D-09 XBig12= 6.48D-15 1.68D-09.
+      4 vectors produced by pass769 Test12= 3.81D-13 1.00D-09 XBig12= 8.06D-15 2.10D-09.
+      4 vectors produced by pass770 Test12= 3.81D-13 1.00D-09 XBig12= 6.74D-15 1.71D-09.
+      4 vectors produced by pass771 Test12= 3.81D-13 1.00D-09 XBig12= 9.32D-15 1.98D-09.
+      4 vectors produced by pass772 Test12= 3.81D-13 1.00D-09 XBig12= 6.95D-15 1.84D-09.
+      4 vectors produced by pass773 Test12= 3.81D-13 1.00D-09 XBig12= 7.05D-15 1.82D-09.
+      4 vectors produced by pass774 Test12= 3.81D-13 1.00D-09 XBig12= 5.63D-15 1.78D-09.
+      4 vectors produced by pass775 Test12= 3.81D-13 1.00D-09 XBig12= 6.59D-15 2.06D-09.
+      4 vectors produced by pass776 Test12= 3.81D-13 1.00D-09 XBig12= 9.16D-15 2.14D-09.
+      4 vectors produced by pass777 Test12= 3.81D-13 1.00D-09 XBig12= 7.44D-15 1.87D-09.
+      4 vectors produced by pass778 Test12= 3.81D-13 1.00D-09 XBig12= 5.49D-15 1.81D-09.
+      4 vectors produced by pass779 Test12= 3.81D-13 1.00D-09 XBig12= 8.98D-15 2.01D-09.
+      4 vectors produced by pass780 Test12= 3.81D-13 1.00D-09 XBig12= 6.57D-15 1.71D-09.
+      4 vectors produced by pass781 Test12= 3.81D-13 1.00D-09 XBig12= 6.39D-15 1.72D-09.
+      4 vectors produced by pass782 Test12= 3.81D-13 1.00D-09 XBig12= 6.03D-15 1.93D-09.
+      4 vectors produced by pass783 Test12= 3.81D-13 1.00D-09 XBig12= 9.22D-15 2.03D-09.
+      4 vectors produced by pass784 Test12= 3.81D-13 1.00D-09 XBig12= 6.77D-15 1.59D-09.
+      4 vectors produced by pass785 Test12= 3.81D-13 1.00D-09 XBig12= 7.11D-15 1.91D-09.
+      4 vectors produced by pass786 Test12= 3.81D-13 1.00D-09 XBig12= 8.79D-15 1.84D-09.
+      4 vectors produced by pass787 Test12= 3.81D-13 1.00D-09 XBig12= 6.10D-15 1.89D-09.
+      4 vectors produced by pass788 Test12= 3.81D-13 1.00D-09 XBig12= 7.18D-15 1.95D-09.
+      4 vectors produced by pass789 Test12= 3.81D-13 1.00D-09 XBig12= 1.06D-14 2.08D-09.
+      4 vectors produced by pass790 Test12= 3.81D-13 1.00D-09 XBig12= 5.48D-15 1.64D-09.
+      4 vectors produced by pass791 Test12= 3.81D-13 1.00D-09 XBig12= 6.19D-15 1.55D-09.
+      4 vectors produced by pass792 Test12= 3.81D-13 1.00D-09 XBig12= 5.92D-15 1.84D-09.
+      4 vectors produced by pass793 Test12= 3.81D-13 1.00D-09 XBig12= 6.56D-15 1.69D-09.
+      4 vectors produced by pass794 Test12= 3.81D-13 1.00D-09 XBig12= 7.09D-15 1.64D-09.
+      4 vectors produced by pass795 Test12= 3.81D-13 1.00D-09 XBig12= 5.23D-15 1.55D-09.
+      4 vectors produced by pass796 Test12= 3.81D-13 1.00D-09 XBig12= 5.70D-15 1.60D-09.
+      4 vectors produced by pass797 Test12= 3.81D-13 1.00D-09 XBig12= 7.92D-15 1.97D-09.
+      4 vectors produced by pass798 Test12= 3.81D-13 1.00D-09 XBig12= 6.57D-15 1.56D-09.
+      4 vectors produced by pass799 Test12= 3.81D-13 1.00D-09 XBig12= 8.44D-15 2.07D-09.
+      4 vectors produced by pass800 Test12= 3.81D-13 1.00D-09 XBig12= 7.04D-15 1.70D-09.
+      4 vectors produced by pass801 Test12= 3.81D-13 1.00D-09 XBig12= 7.71D-15 1.83D-09.
+      4 vectors produced by pass802 Test12= 3.81D-13 1.00D-09 XBig12= 7.90D-15 1.77D-09.
+      4 vectors produced by pass803 Test12= 3.81D-13 1.00D-09 XBig12= 8.96D-15 2.16D-09.
+      4 vectors produced by pass804 Test12= 3.81D-13 1.00D-09 XBig12= 5.64D-15 1.65D-09.
+      4 vectors produced by pass805 Test12= 3.81D-13 1.00D-09 XBig12= 8.27D-15 1.96D-09.
+      4 vectors produced by pass806 Test12= 3.81D-13 1.00D-09 XBig12= 7.11D-15 1.64D-09.
+      4 vectors produced by pass807 Test12= 3.81D-13 1.00D-09 XBig12= 6.68D-15 1.87D-09.
+      4 vectors produced by pass808 Test12= 3.81D-13 1.00D-09 XBig12= 7.03D-15 1.77D-09.
+      4 vectors produced by pass809 Test12= 3.81D-13 1.00D-09 XBig12= 7.89D-15 2.00D-09.
+      4 vectors produced by pass810 Test12= 3.81D-13 1.00D-09 XBig12= 7.02D-15 1.78D-09.
+      4 vectors produced by pass811 Test12= 3.81D-13 1.00D-09 XBig12= 5.52D-15 1.50D-09.
+      4 vectors produced by pass812 Test12= 3.81D-13 1.00D-09 XBig12= 7.48D-15 2.03D-09.
+      4 vectors produced by pass813 Test12= 3.81D-13 1.00D-09 XBig12= 6.73D-15 1.94D-09.
+      4 vectors produced by pass814 Test12= 3.81D-13 1.00D-09 XBig12= 7.90D-15 1.92D-09.
+      4 vectors produced by pass815 Test12= 3.81D-13 1.00D-09 XBig12= 9.15D-15 1.96D-09.
+      4 vectors produced by pass816 Test12= 3.81D-13 1.00D-09 XBig12= 7.79D-15 1.89D-09.
+      4 vectors produced by pass817 Test12= 3.81D-13 1.00D-09 XBig12= 8.25D-15 1.97D-09.
+      4 vectors produced by pass818 Test12= 3.81D-13 1.00D-09 XBig12= 8.73D-15 2.15D-09.
+      4 vectors produced by pass819 Test12= 3.81D-13 1.00D-09 XBig12= 6.91D-15 1.86D-09.
+      4 vectors produced by pass820 Test12= 3.81D-13 1.00D-09 XBig12= 6.84D-15 1.93D-09.
+      4 vectors produced by pass821 Test12= 3.81D-13 1.00D-09 XBig12= 6.95D-15 1.68D-09.
+      4 vectors produced by pass822 Test12= 3.81D-13 1.00D-09 XBig12= 5.93D-15 1.56D-09.
+      4 vectors produced by pass823 Test12= 3.81D-13 1.00D-09 XBig12= 7.86D-15 1.72D-09.
+      4 vectors produced by pass824 Test12= 3.81D-13 1.00D-09 XBig12= 7.64D-15 1.70D-09.
+      4 vectors produced by pass825 Test12= 3.81D-13 1.00D-09 XBig12= 7.33D-15 1.81D-09.
+      4 vectors produced by pass826 Test12= 3.81D-13 1.00D-09 XBig12= 5.22D-15 1.52D-09.
+      4 vectors produced by pass827 Test12= 3.81D-13 1.00D-09 XBig12= 8.27D-15 2.23D-09.
+      4 vectors produced by pass828 Test12= 3.81D-13 1.00D-09 XBig12= 5.72D-15 1.73D-09.
+      4 vectors produced by pass829 Test12= 3.81D-13 1.00D-09 XBig12= 5.82D-15 1.45D-09.
+      4 vectors produced by pass830 Test12= 3.81D-13 1.00D-09 XBig12= 7.51D-15 1.72D-09.
+      4 vectors produced by pass831 Test12= 3.81D-13 1.00D-09 XBig12= 6.20D-15 1.64D-09.
+      4 vectors produced by pass832 Test12= 3.81D-13 1.00D-09 XBig12= 6.38D-15 1.83D-09.
+      4 vectors produced by pass833 Test12= 3.81D-13 1.00D-09 XBig12= 6.76D-15 1.71D-09.
+      4 vectors produced by pass834 Test12= 3.81D-13 1.00D-09 XBig12= 6.89D-15 1.83D-09.
+      4 vectors produced by pass835 Test12= 3.81D-13 1.00D-09 XBig12= 6.49D-15 1.58D-09.
+      4 vectors produced by pass836 Test12= 3.81D-13 1.00D-09 XBig12= 5.38D-15 1.76D-09.
+      4 vectors produced by pass837 Test12= 3.81D-13 1.00D-09 XBig12= 6.13D-15 1.58D-09.
+      4 vectors produced by pass838 Test12= 3.81D-13 1.00D-09 XBig12= 5.35D-15 1.52D-09.
+      4 vectors produced by pass839 Test12= 3.81D-13 1.00D-09 XBig12= 5.94D-15 1.77D-09.
+      4 vectors produced by pass840 Test12= 3.81D-13 1.00D-09 XBig12= 6.09D-15 1.58D-09.
+      4 vectors produced by pass841 Test12= 3.81D-13 1.00D-09 XBig12= 4.50D-15 1.67D-09.
+      4 vectors produced by pass842 Test12= 3.81D-13 1.00D-09 XBig12= 6.18D-15 1.63D-09.
+      4 vectors produced by pass843 Test12= 3.81D-13 1.00D-09 XBig12= 6.36D-15 1.70D-09.
+      4 vectors produced by pass844 Test12= 3.81D-13 1.00D-09 XBig12= 5.96D-15 1.77D-09.
+      4 vectors produced by pass845 Test12= 3.81D-13 1.00D-09 XBig12= 7.02D-15 1.91D-09.
+      4 vectors produced by pass846 Test12= 3.81D-13 1.00D-09 XBig12= 7.66D-15 1.91D-09.
+      4 vectors produced by pass847 Test12= 3.81D-13 1.00D-09 XBig12= 7.30D-15 1.77D-09.
+      4 vectors produced by pass848 Test12= 3.81D-13 1.00D-09 XBig12= 7.78D-15 1.89D-09.
+      4 vectors produced by pass849 Test12= 3.81D-13 1.00D-09 XBig12= 6.62D-15 1.78D-09.
+      4 vectors produced by pass850 Test12= 3.81D-13 1.00D-09 XBig12= 8.23D-15 1.80D-09.
+      4 vectors produced by pass851 Test12= 3.81D-13 1.00D-09 XBig12= 6.63D-15 1.58D-09.
+      4 vectors produced by pass852 Test12= 3.81D-13 1.00D-09 XBig12= 6.16D-15 1.66D-09.
+      4 vectors produced by pass853 Test12= 3.81D-13 1.00D-09 XBig12= 5.95D-15 1.53D-09.
+      4 vectors produced by pass854 Test12= 3.81D-13 1.00D-09 XBig12= 5.78D-15 1.56D-09.
+      4 vectors produced by pass855 Test12= 3.81D-13 1.00D-09 XBig12= 5.98D-15 1.64D-09.
+      4 vectors produced by pass856 Test12= 3.81D-13 1.00D-09 XBig12= 5.34D-15 1.53D-09.
+      4 vectors produced by pass857 Test12= 3.81D-13 1.00D-09 XBig12= 6.49D-15 1.78D-09.
+      4 vectors produced by pass858 Test12= 3.81D-13 1.00D-09 XBig12= 4.83D-15 1.75D-09.
+      4 vectors produced by pass859 Test12= 3.81D-13 1.00D-09 XBig12= 6.52D-15 1.64D-09.
+      4 vectors produced by pass860 Test12= 3.81D-13 1.00D-09 XBig12= 5.60D-15 1.40D-09.
+      4 vectors produced by pass861 Test12= 3.81D-13 1.00D-09 XBig12= 6.47D-15 1.81D-09.
+      4 vectors produced by pass862 Test12= 3.81D-13 1.00D-09 XBig12= 7.12D-15 1.84D-09.
+      4 vectors produced by pass863 Test12= 3.81D-13 1.00D-09 XBig12= 5.63D-15 1.50D-09.
+      4 vectors produced by pass864 Test12= 3.81D-13 1.00D-09 XBig12= 6.73D-15 1.71D-09.
+      4 vectors produced by pass865 Test12= 3.81D-13 1.00D-09 XBig12= 7.06D-15 1.81D-09.
+      4 vectors produced by pass866 Test12= 3.81D-13 1.00D-09 XBig12= 6.26D-15 1.75D-09.
+      4 vectors produced by pass867 Test12= 3.81D-13 1.00D-09 XBig12= 6.49D-15 1.72D-09.
+      4 vectors produced by pass868 Test12= 3.81D-13 1.00D-09 XBig12= 5.54D-15 1.47D-09.
+      4 vectors produced by pass869 Test12= 3.81D-13 1.00D-09 XBig12= 5.38D-15 1.45D-09.
+      4 vectors produced by pass870 Test12= 3.81D-13 1.00D-09 XBig12= 4.97D-15 1.86D-09.
+      4 vectors produced by pass871 Test12= 3.81D-13 1.00D-09 XBig12= 5.87D-15 1.67D-09.
+      4 vectors produced by pass872 Test12= 3.81D-13 1.00D-09 XBig12= 7.94D-15 1.97D-09.
+      4 vectors produced by pass873 Test12= 3.81D-13 1.00D-09 XBig12= 5.51D-15 1.60D-09.
+      4 vectors produced by pass874 Test12= 3.81D-13 1.00D-09 XBig12= 6.33D-15 1.68D-09.
+      4 vectors produced by pass875 Test12= 3.81D-13 1.00D-09 XBig12= 6.86D-15 1.89D-09.
+      4 vectors produced by pass876 Test12= 3.81D-13 1.00D-09 XBig12= 6.15D-15 1.73D-09.
+      4 vectors produced by pass877 Test12= 3.81D-13 1.00D-09 XBig12= 6.34D-15 1.57D-09.
+      4 vectors produced by pass878 Test12= 3.81D-13 1.00D-09 XBig12= 6.93D-15 1.97D-09.
+      4 vectors produced by pass879 Test12= 3.81D-13 1.00D-09 XBig12= 5.18D-15 1.69D-09.
+      4 vectors produced by pass880 Test12= 3.81D-13 1.00D-09 XBig12= 5.88D-15 1.61D-09.
+      4 vectors produced by pass881 Test12= 3.81D-13 1.00D-09 XBig12= 7.58D-15 1.94D-09.
+      4 vectors produced by pass882 Test12= 3.81D-13 1.00D-09 XBig12= 5.34D-15 1.66D-09.
+      4 vectors produced by pass883 Test12= 3.81D-13 1.00D-09 XBig12= 6.09D-15 1.57D-09.
+      4 vectors produced by pass884 Test12= 3.81D-13 1.00D-09 XBig12= 4.70D-15 1.90D-09.
+      4 vectors produced by pass885 Test12= 3.81D-13 1.00D-09 XBig12= 6.54D-15 1.75D-09.
+      4 vectors produced by pass886 Test12= 3.81D-13 1.00D-09 XBig12= 6.57D-15 1.65D-09.
+      4 vectors produced by pass887 Test12= 3.81D-13 1.00D-09 XBig12= 4.86D-15 1.59D-09.
+      4 vectors produced by pass888 Test12= 3.81D-13 1.00D-09 XBig12= 5.38D-15 1.65D-09.
+      4 vectors produced by pass889 Test12= 3.81D-13 1.00D-09 XBig12= 7.50D-15 2.06D-09.
+      4 vectors produced by pass890 Test12= 3.81D-13 1.00D-09 XBig12= 5.56D-15 1.43D-09.
+      4 vectors produced by pass891 Test12= 3.81D-13 1.00D-09 XBig12= 7.36D-15 1.60D-09.
+      4 vectors produced by pass892 Test12= 3.81D-13 1.00D-09 XBig12= 5.35D-15 1.69D-09.
+      4 vectors produced by pass893 Test12= 3.81D-13 1.00D-09 XBig12= 8.40D-15 1.83D-09.
+      4 vectors produced by pass894 Test12= 3.81D-13 1.00D-09 XBig12= 4.86D-15 1.49D-09.
+      4 vectors produced by pass895 Test12= 3.81D-13 1.00D-09 XBig12= 5.80D-15 1.53D-09.
+      4 vectors produced by pass896 Test12= 3.81D-13 1.00D-09 XBig12= 5.40D-15 1.57D-09.
+      4 vectors produced by pass897 Test12= 3.81D-13 1.00D-09 XBig12= 7.38D-15 1.88D-09.
+      4 vectors produced by pass898 Test12= 3.81D-13 1.00D-09 XBig12= 5.06D-15 1.52D-09.
+      4 vectors produced by pass899 Test12= 3.81D-13 1.00D-09 XBig12= 5.59D-15 1.44D-09.
+      4 vectors produced by pass900 Test12= 3.81D-13 1.00D-09 XBig12= 7.32D-15 1.80D-09.
+      4 vectors produced by pass901 Test12= 3.81D-13 1.00D-09 XBig12= 5.64D-15 1.48D-09.
+      4 vectors produced by pass902 Test12= 3.81D-13 1.00D-09 XBig12= 5.29D-15 1.47D-09.
+      4 vectors produced by pass903 Test12= 3.81D-13 1.00D-09 XBig12= 5.63D-15 1.62D-09.
+      4 vectors produced by pass904 Test12= 3.81D-13 1.00D-09 XBig12= 7.34D-15 1.75D-09.
+      4 vectors produced by pass905 Test12= 3.81D-13 1.00D-09 XBig12= 5.03D-15 1.55D-09.
+      4 vectors produced by pass906 Test12= 3.81D-13 1.00D-09 XBig12= 6.39D-15 1.42D-09.
+      4 vectors produced by pass907 Test12= 3.81D-13 1.00D-09 XBig12= 5.82D-15 1.52D-09.
+      4 vectors produced by pass908 Test12= 3.81D-13 1.00D-09 XBig12= 6.48D-15 1.68D-09.
+      4 vectors produced by pass909 Test12= 3.81D-13 1.00D-09 XBig12= 5.28D-15 1.45D-09.
+      4 vectors produced by pass910 Test12= 3.81D-13 1.00D-09 XBig12= 6.73D-15 1.60D-09.
+      4 vectors produced by pass911 Test12= 3.81D-13 1.00D-09 XBig12= 5.57D-15 1.60D-09.
+      4 vectors produced by pass912 Test12= 3.81D-13 1.00D-09 XBig12= 6.57D-15 1.72D-09.
+      4 vectors produced by pass913 Test12= 3.81D-13 1.00D-09 XBig12= 5.25D-15 1.45D-09.
+      4 vectors produced by pass914 Test12= 3.81D-13 1.00D-09 XBig12= 7.27D-15 1.67D-09.
+      4 vectors produced by pass915 Test12= 3.81D-13 1.00D-09 XBig12= 5.09D-15 1.52D-09.
+      4 vectors produced by pass916 Test12= 3.81D-13 1.00D-09 XBig12= 7.85D-15 1.74D-09.
+      4 vectors produced by pass917 Test12= 3.81D-13 1.00D-09 XBig12= 6.21D-15 1.80D-09.
+      4 vectors produced by pass918 Test12= 3.81D-13 1.00D-09 XBig12= 6.12D-15 1.77D-09.
+      4 vectors produced by pass919 Test12= 3.81D-13 1.00D-09 XBig12= 6.08D-15 1.50D-09.
+      4 vectors produced by pass920 Test12= 3.81D-13 1.00D-09 XBig12= 4.77D-15 1.46D-09.
+      4 vectors produced by pass921 Test12= 3.81D-13 1.00D-09 XBig12= 5.61D-15 1.50D-09.
+      4 vectors produced by pass922 Test12= 3.81D-13 1.00D-09 XBig12= 6.03D-15 1.67D-09.
+      4 vectors produced by pass923 Test12= 3.81D-13 1.00D-09 XBig12= 4.76D-15 1.67D-09.
+      4 vectors produced by pass924 Test12= 3.81D-13 1.00D-09 XBig12= 5.62D-15 1.53D-09.
+      4 vectors produced by pass925 Test12= 3.81D-13 1.00D-09 XBig12= 7.20D-15 1.80D-09.
+      4 vectors produced by pass926 Test12= 3.81D-13 1.00D-09 XBig12= 7.44D-15 1.86D-09.
+      4 vectors produced by pass927 Test12= 3.81D-13 1.00D-09 XBig12= 6.00D-15 1.45D-09.
+      4 vectors produced by pass928 Test12= 3.81D-13 1.00D-09 XBig12= 5.55D-15 1.60D-09.
+      4 vectors produced by pass929 Test12= 3.81D-13 1.00D-09 XBig12= 5.97D-15 1.88D-09.
+      4 vectors produced by pass930 Test12= 3.81D-13 1.00D-09 XBig12= 7.20D-15 1.76D-09.
+      4 vectors produced by pass931 Test12= 3.81D-13 1.00D-09 XBig12= 4.91D-15 1.61D-09.
+      4 vectors produced by pass932 Test12= 3.81D-13 1.00D-09 XBig12= 5.96D-15 1.40D-09.
+      4 vectors produced by pass933 Test12= 3.81D-13 1.00D-09 XBig12= 4.66D-15 1.79D-09.
+      4 vectors produced by pass934 Test12= 3.81D-13 1.00D-09 XBig12= 6.99D-15 1.60D-09.
+      4 vectors produced by pass935 Test12= 3.81D-13 1.00D-09 XBig12= 6.01D-15 1.58D-09.
+      4 vectors produced by pass936 Test12= 3.81D-13 1.00D-09 XBig12= 6.37D-15 1.79D-09.
+      4 vectors produced by pass937 Test12= 3.81D-13 1.00D-09 XBig12= 4.46D-15 1.38D-09.
+      4 vectors produced by pass938 Test12= 3.81D-13 1.00D-09 XBig12= 5.89D-15 1.53D-09.
+      4 vectors produced by pass939 Test12= 3.81D-13 1.00D-09 XBig12= 5.23D-15 1.49D-09.
+      4 vectors produced by pass940 Test12= 3.81D-13 1.00D-09 XBig12= 6.65D-15 1.57D-09.
+      2 vectors produced by pass941 Test12= 3.81D-13 1.00D-09 XBig12= 2.96D-15 1.43D-09.
+ InvSVY:  IOpt=1 It=  1 EMax= 1.55D-15
+ Solved reduced A of dimension  6310 with   186 vectors.
+ End of Minotr F.D. properties file   721 does not exist.
+ End of Minotr F.D. properties file   722 does not exist.
+ End of Minotr F.D. properties file   788 does not exist.
+ Leave Link 1002 at Thu Jan 17 11:33:58 2019, MaxMem= 16374562816 cpu:   1377731.5
+galloc:  could not allocate memory.
