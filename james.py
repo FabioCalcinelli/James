@@ -2,7 +2,6 @@
 ### python james.py function (parameters) ###
 ### functions:  run	
 #				convert
-#				read
 #				check
 #				write
 #				collect
@@ -100,9 +99,9 @@ def check_minimum(log_lines):
                                                 negs += [negativ_eigen]
                                                 all_positives = False
         if all_positives:
-                return ('(Confirmed local minimum)')
+                return ('Y')
         else:
-                return('***WARNING: negative eigenvalue detected: '+str(negs)+' *** ')
+                return('Neg: '+str(negs))
 
 def read_opt_status(log_lines):
 	### returns a tuple containing the number of geometry opt. steps completed so far and the convergence parameters of the last one
@@ -302,13 +301,13 @@ def read(index_file,results_file,freq_mode,current_dir):
 				elif decision == 'Success':
 				### 5) If the calculation is successful, records its result
 					if freq_mode:
-				  		results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
-                	else:
-                  		results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+['']
+						results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
+					else:
+						results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+['']
 				elif decision == 'Failure':
 					results[number] = ['Failed']+[""]+[""]
-                elif decision == 'Mistery':
-                   	results[number] = ['*** Anomaly ***']+[""]+[""]
+				elif decision == 'Mistery':
+					results[number] = ['*** Anomaly ***']+[""]+[""]
 			except:
 				descriptions[number] = 'NO .LOG'
 				results[number] = ['NO .LOG']+['NO']+['NO']
@@ -321,7 +320,7 @@ def read(index_file,results_file,freq_mode,current_dir):
                 lines.append('\n'+'\n')
 	write_lines(lines,current_dir+'/'+results_file)
 	
-def check(index_file,results_file,current_dir):
+def check(index_file,results_file,freq_mode,current_dir):
 	### Checks the status of the calculations listed in index, and returns the number of steps executed so far and the data about the last cycle ###
 
         ###_____>>> python james.py check index_file results_file  <<<_____
@@ -330,6 +329,7 @@ def check(index_file,results_file,current_dir):
 
 	### 1) Sets up initial dicts
 	opt_status = dict()
+	results = dict()
 	descriptions = dict()
 	numbers = []
 	### 2) Reads the index
@@ -345,14 +345,28 @@ def check(index_file,results_file,current_dir):
 				log_lines = read_lines(current_dir+'/'+number+'/'+number+'.log')
                         	opt_status[number]=read_opt_status(log_lines) 
                         	descriptions[number] = read_description(log_lines)
+				decision = evaluate_status(log_lines)
+				if decision == 'Working':
+                                        results[number] = ['In progress']+[""]+[""]
+                                elif decision == 'Success':
+                                ### 5) If the calculation is successful, records its result
+                                        if freq_mode:
+                                                results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+[str(check_minimum(log_lines))]
+                                        else:
+                                                results[number] = ['Completed: ']+[str(read_energy(log_lines,freq_mode))]+['']
+                                elif decision == 'Failure':
+                                        results[number] = ['Failed']+[""]+[""]
+                                elif decision == 'Mistery':
+                                        results[number] = ['*** Anomaly ***']+[""]+[""]
+
 			except:
 				log_lines = 'NO .LOG FILE'
 				opt_status[number]=['NO .LOG']*5
 				descriptions[number]='NO .LOG'
 	### 4) Records optimization status on results file	
-	out_lines = [('{0:4}{1:1}{2:53}{3:15}{4:15}{5:15}{6:15}{7:15}'.format('Num.','','Description','N. iterations','Max. Force','RMS Force','Max. disp.','RMS disp.'))+'\n']
+	out_lines = [('{0:4}{1:5}{2:38}{3:15}{4:18}{5:15}{6:15}{7:15}{8:15}{9:15}{10:15}'.format('Num.','','Description','Status','Energy','Glob. min.','N. iterations','Max. Force','RMS Force','Max. disp.','RMS disp.'))+'\n']
 	for number in numbers:
-                line = ('{0:2}{1:5}{2:55}{3:15}{4:15}{5:15}{6:15}{7:15}'.format(str(number),' --> ',descriptions[number],str(opt_status[number][0]),opt_status[number][1],opt_status[number][2],opt_status[number][3],opt_status[number][4]))
+                line = ('{0:4}{1:5}{2:38}{3:15}{4:18}{5:15}{6:15}{7:15}{8:15}{9:15}{10:15}'.format(str(number),' --> ',descriptions[number],str(results[number][0]),str(results[number][1]),str(results[number][2]),str(opt_status[number][0]),opt_status[number][1],opt_status[number][2],opt_status[number][3],opt_status[number][4]))
                 out_lines.append(line)
                 out_lines.append('\n'+'\n')
 	write_lines(out_lines,current_dir+'/'+results_file)
@@ -367,14 +381,14 @@ def write(coords_file,index_file,first_number,current_dir):
 	### 1) Defines execution parameters
 	intro = "%nprocshared=32 \n%mem=122GB \n%chk=q.chk"
 	### 2) Defines command line
-	command = "#pbe1pbe/Def2TZVP scf=(xqc, maxconventionalcycles=2000) SCRF=(SMD,Solvent=water) opt"
+	command = "#pbe1pbe/Def2TZVP scf=(xqc, maxconventionalcycles=2000) opt EmpiricalDispersion=GD3BJ"
 	### 3) Defines comment (NOTE: 'Dscr' will be added automatically)
-	comment = (['1','2H','2F','3H','3F']*7, ['Fe(III) S 4']*5+['Fe(III) S 2']*5+['Fe(II) S 5']*5+['Fe(II) S 3']*5+['Fe(II) S 1']*5+['Fe(I) S 4']*5+['Fe(I) S 1']*5)
+	comment = ((['1']*5+['2H']*5+['2F']*5+['3H']*5+['3F']*5)*4,['Co(II) S2']*25+['Co(II) S4']*25+['Co(I) S1']*25+['Co(I) S3']*25, ['CO2','COOH','CO','HCOO','HCOOH']*20)
 	### 4) Defines charge and spin
-	charge_spin = ['1 4']*5+['1 2']*5+['0 5']*5+['0 3']*5+['0 1']*5+['-1 4']*5+['-1 2']*5
+	charge_spin = (['0','1','0','-1','0']*10+['-1','0','-1','-2','-1']*10,['2']*25+['4']*25+['1']*25+['3']*25)
 	### 5) Defines coordinates (NOTE: the file must contain NO empty line, except ONE between structures)
 	coords = read_coords(current_dir+'/'+coords_file)
-	coordinates = coords*7
+	coordinates = coords
 	### 6) Defines final instructions block
 	post_coord_lines = ''
 	### 7) Defines a dict for the elements, and an ordered list of keys
@@ -447,16 +461,18 @@ def collect(numbers,coords_file,current_dir):
 
 	### 1) Scans each file
 	total_lines = []	
-	geometry = []
-	geometry_rec_1 = False
-	geometry_rec_2 = False
 	for number in numbers:
+		found=False
+		geometry = []
+		geometry_rec_1 = False
+		geometry_rec_2 = False
 		in_lines = read_lines(current_dir+'/'+number+'/'+number+'.log')
 		for line in in_lines:
                 	### 2) Detects a new geometry: cancels the old one and prepares to record the new one
                 	if line.strip() =='Number     Number       Type             X           Y           Z':
                         	geometry_rec_1 = True
                         	geometry = []
+				found=True
                		### 3) Records the geometry ...
                 	if line.strip() and line.split()[0] == '1':
                         	if geometry_rec_1:
@@ -474,6 +490,8 @@ def collect(numbers,coords_file,current_dir):
                         	geometry += new_line
 		total_lines += geometry
 		total_lines += '\n'
+		if found:
+			print (number)
 	### 4) Records the final result (deleting the last empty line)
 	write_lines(total_lines[:-1],current_dir+'/'+coords_file)
 
@@ -573,6 +591,26 @@ def restart(input_number,termination_line,current_dir):
 	### 3) Moves back the temporary .com in the folder
 	subprocess.call(['mv','temp_conversion',input_number+'/'+input_number+'.com'])
 
+def mass_restart(index_file,current_dir):
+	### Restarts all the calculation in a folder from their last optimization steps. Runs them directly ###
+
+	### >>> python james.py mass_restart <<< ###
+
+	numbers = []
+	lines = read_lines(current_dir+'/'+index_file)
+	for line in lines:
+                if line.strip():
+                        words = line.split()
+                        number = words[0]
+                        numbers.append(number)
+	for input_number in numbers:
+		try: 
+			subprocess.call(['python','james.py','restart',input_number,current_dir])
+			new_dir = (str(current_dir)+'/'+str(input_number))
+			subprocess.call(['sbatch','sub.sh'],cwd=new_dir)
+		except:
+			print('Error in ',input_number)
+
 ##########################################################################################
 ################################# Function selection #####################################
 ##########################################################################################
@@ -589,18 +627,14 @@ elif sys.argv[1]=='convert':
 	else:
 		termination_parameter = None
 	convert(log_file,com_file,termination_parameter,current_dir)
-elif sys.argv[1]=='read':
+elif sys.argv[1]=='check':
 	freq_mode = False
 	index_file = sys.argv[2]
 	results_file = sys.argv[3]
 	if len(sys.argv)==5:
 		if sys.argv[4]=='freq':
 			freq_mode=True
-	read(index_file,results_file,freq_mode,current_dir)
-elif sys.argv[1]=='check':
-	index_file = sys.argv[2]
-	results_file = sys.argv[3]
-	check(index_file,results_file,current_dir)
+	check(index_file,results_file,freq_mode,current_dir)
 elif sys.argv[1]=='write':
 	coords_file = sys.argv[2]
 	index_file = sys.argv[3]
@@ -631,3 +665,6 @@ elif sys.argv[1]=='restart':
                 termination_line = None
 
 	restart(input_number,termination_line,current_dir)
+elif sys.argv[1]=='mass_restart':
+	index_file = sys.argv[2]
+	mass_restart(index_file,current_dir)
