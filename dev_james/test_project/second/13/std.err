@@ -1,0 +1,18 @@
+[36m
+		---------------------------------------------------
+		 Loading GAUSSIAN09-d.01:
+			 GAUSSIAN09_FROM=precompiled (build)
+			 GAUSSIAN09_USE="" (compilation)
+		---------------------------------------------------[0m
+mem-bind=LOC - nid00116, task  0  0 [29091]: mask 0x3 set
+galloc:  could not allocate memory.: Cannot allocate memory
+Error: segmentation violation
+   rax 0000000000000000, rbx 000000000131c050, rcx 00002aaaab21e237
+   rdx 00000000000071a4, rsp 00007fffffff5578, rbp 000000000bbd1400
+   rsi 000000000000000b, rdi 00000000000071a4, r8  00002aaaaab35e40
+   r9  0000000000000000, r10 000000007c998911, r11 0000000000000206
+   r12 000000000229d4a0, r13 00007fffffff5618, r14 00000000012f56d8
+   r15 00000000012f56d8
+  --- traceback not available
+srun: error: nid00116: task 0: Exited with exit code 1
+srun: Terminating job step 7982581.0

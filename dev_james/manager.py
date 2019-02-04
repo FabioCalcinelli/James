@@ -65,7 +65,7 @@ class open_com(object):
 		return('james.py open_com object')
 
 class open_subsh(object):
-	""" A open_subsh object. It is created from a .com file opened as a list of lines """
+	""" A open_subsh object. It is created from a sub.sh file opened as a list of lines """
 	def __init__(self,subsh_lines):
 		self.content = subsh_lines	
 		### a more detailed control over sub.sh is to be implemented ###
@@ -76,25 +76,24 @@ class open_subsh(object):
 	def read_content(self):
 		### Reads the content and updates the attributes ###
 		for line in self.content:
-	       if line[:19]=="#SBATCH --job-name=": 
-	           new_lines += '#SBATCH --job-name='+output_number+'\n' 
-        elif line [:4] == 'srun': 
-            new_lines += 'srun --ntasks=1 --hint=nomultithread --cpus-per-task=32 --mem_bind=v,local ${GAUSSIAN09_HOME}/g09 < '+output_number+'.com > '+output_number+'.log' 
-			### da impostare la corretta lettura di questa cosa    i
-    else: 
+			if line[:19]=="#SBATCH --job-name=":
+				self.job_name = line[20:] 
+			elif line [:4] == 'srun': 
+				words = line.split()
+				self.output_number = words[-1][:-4]	
 
 
 	def write_content(self):
 		### Reads the attributes and updates the content of the lines ###	
 		lines = self.content
-	    new_lines = []
-    	for line in lines:
-        	if line[:19]=="#SBATCH --job-name=":
-                new_lines += '#SBATCH --job-name='+self.output_number+'\n'
-            elif line [:4] == 'srun':
-                new_lines += 'srun --ntasks=1 --hint=nomultithread --cpus-per-task=32 --mem_bind=v,local ${GAUSSIAN09_HOME}/g09 < '+self.output_number+'.com > '+self.output_number+'.log'
-            else:
-                new_lines += line
+		new_lines = []
+		for line in lines:
+			if line[:19]=="#SBATCH --job-name=":
+				new_lines += '#SBATCH --job-name='+self.output_number+'\n'
+			elif line [:4] == 'srun':
+				new_lines += 'srun --ntasks=1 --hint=nomultithread --cpus-per-task=32 --mem_bind=v,local ${GAUSSIAN09_HOME}/g09 < '+self.output_number+'.com > '+self.output_number+'.log'
+			else:
+				new_lines += line
 		self.content = new_lines
 
 	def __str__(self):
@@ -116,8 +115,8 @@ class calculation(object):
 
 	def get_location(self,calc_folder):
 		### If a folder calc_folder exists, saves it as location. Otherwise, creates it. ###
-		project_dir = utilities.extract_proj(calc_folder)
-		folders = glob.glob(project_dir+'/*')
+		batch_dir = utilities.extract_batch(calc_folder)
+		folders = glob.glob(batch_dir+'/*')
 		if calc_folder not in folders:
 			subprocess.call(['mkdir',calc_folder])
 		return(calc_folder)
@@ -149,8 +148,10 @@ class calculation(object):
 	
 	def create_open_file(self,file_type):
 		### If .com/.log/sub.sh is present, reads it. Otherwise, returns None ###
-		if file_type == ".com" or file_type == ".log":
+		if file_type == ".com":
 			file_name = self.location+'/'+self.name+'.com'
+		elif file_type == ".log":
+			file_name = self.location+'/'+self.name+'.log'
 		elif file_type == "sub.sh":
 			file_name = self.location+'/'+file_type
 		else:
@@ -184,6 +185,8 @@ class calculation(object):
 			err_lines = utilities.read_lines(err_name)
 			if 'Error: software termination\n' in err_lines:
 				return(True)
+			elif 'Error: segmentation violation\n' in err_lines:
+				return(True)
 			else:
 				return(False)
 		else:
@@ -195,21 +198,93 @@ class calculation(object):
 		utilities.write_lines(self.com.content,com_name)
 		sub_name = self.location+'/'+'sub.sh'
 		utilities.write_lines(self.subsh.content,sub_name)
+
+	def run(self):
+		subprocess.call(['sbatch','sub.sh'],cwd=self.location)		
+
+	def __str__(self):
+		return(self.name+" | "+self.status+"\n")		
+				
+class batch(object):
+	"""A batch is associated with a folder. Each batch is composed of several calculations, each one associated with a secondary folder."""
+	def __init__(self,batch_folder):
+		### the batch  is defined by its calculations, sub.sh file, status file, parameters file, structures file###
+		self.name = utilities.extract_calc(batch_folder)
+		self.father_project_folder = utilities.extract_batch(batch_folder)
+		self.location = self.get_location()
+		self.folder_content = self.update_folder_content()
+		self.calculations = self.get_calculations()
+		self.status = self.read_status()
+		self.subsh_prototype = self.read_subsh()
+		self.write_down_status()
+		self.execution_parameters = self.read_parameters()
+	
+	def get_location(self):
+		### Reads the location of the batch main folder. If location doesn't exist, creates it. ###
+		batch_dir = self.father_project_folder+'/'+self.name
+		folders = glob.glob(self.father_project_folder+'/*')
+		if batch_dir not in folders:
+			subprocess.call(['mkdir',batch_dir])
+		return(batch_dir)
+
+	def get_calculations(self):
+		### Checks all the subfolders in the batch folder, creates a calculation object for each, and appends them as attributes of the batch object ###
+		calculations=[]
+		folder_content = glob.glob(self.location+'/*')
+		for entity in folder_content:
+			if os.path.isdir(entity):
+				calc = calculation(entity)		
+				calculations += [calc]
+		return(calculations)
+	
+	def read_status(self):
+		### Read from james ###
+		""" Collects informations from each calculations and records it in a status object """
+		return(None)
+	
+	def write_down_status(self):
+		""" Writes down the status object in a text 'status' file """
+		return(None)
+		
+	def read_subsh(self):
+		### If sub.sh is present, and not empty, reads it. Otherwise, returns None ###
+		file_name = self.location+'/sub.sh'
+		self.update_folder_content
+		if file_name in self.folder_content:
+			file_lines = utilities.read_lines(file_name)	
+			if file_lines == [] or file_lines == ['\n']:
+				return(None)
+			else:
+				opened = open_subsh(file_lines)
+				return(opened)
+		else:
+			return(None)
+
+	def read_parameters(self):
+		self.update_folder_content
+
+	def update_folder_content(self):
+		contents = glob.glob(self.location+'/*')
+		return(contents)
+
+	def launch_calculations(self,parameters,coordinates):
 		
 
 	def __str__(self):
-		return("james.py calculation object"+"\n"+"Name: "+self.name)		
-				
+		calculations = ""
+		for calc in self.calculations:
+			calculations += str(calc)
+		return(self.name+"  |  "+"james.py batch object"+"\n"+"Location: "+self.location+'\n'+"Calculations:"+"\n"+calculations)
+#### da formattare per bene ####
+
+
 class project(object):
-	"""A project is associated with a main folder. Each project is composed of several calculations, each one associated with a secondary folder."""
+	"""A project is associated with a folder. Each project is composed of several batches, each one associated with a secondary folder."""
 	def __init__(self,project_name):
-		### The project is defined by its calculations, by its sub.sh prototype file, and by its status and results files ###
+		### the project is defined by its batches, including a special 'complete' batch ###
 		self.name = str(project_name)
 		self.location = self.get_location()
-		self.calculations = self.get_calculations()
-		self.status = self.read_status()
-		self.results = self.read_results()
-		self.subsh_prototype = self.read_subsh()
+		self.batches = self.get_batches()
 	
 	def get_location(self):
 		### Reads the location of the project main folder. If location doesn't exist, creates it. ###
@@ -220,33 +295,24 @@ class project(object):
 			subprocess.call(['mkdir',project_dir])
 		return(project_dir)
 
-	def get_calculations(self):
-		### Checks all the subfolders in the project folder, creates a calculation object for each, and appends them as attributes of the project object ###
-		calculations=[]
+	def get_batches(self):
+		### Checks all the subfolders in the project folder, creates a batch object for each, and appends them as attributes of the project object ###
+		batches=[]
 		folder_content = glob.glob(self.location+'/*')
 		for entity in folder_content:
 			if os.path.isdir(entity):
-				calc = calculation(entity)		
-				calculations += [calc]
-		return(calculations)
-	
-	def read_status(self):
-		return(None)
-
-	def read_results(self):
-		return(None)
-		
-	def read_subsh(self):
-		### If a sub.sh file is located in the project folder, reads it and appends its content as attribute of the project object. If no sub.sh file exists, writes a warning ###
-		return(None)
+				bat = batch(entity)		
+				batches += [bat]
+		return(batches)
 	
 	def update_folder_content(self):
 		contents = glob.glob(self.location+'/*')
 		return(contents)
+
 	def __str__(self):
-		calculations = ""
-		for calc in self.calculations:
-			calculations += str(calc)
-		return("james.py project object\n"+self.name+'\n'+self.location+'\n'+str([str(calc) for calc in self.calculations]))
+		batches = ""
+		for bat in self.batches:
+			batches += str(bat)
+		return(self.name+"  |  "+"james.py project object"+"\n"+"Location: "+self.location+'\n'+"Batches:"+"\n"+batches)
 #### da formattare per bene ####
 		

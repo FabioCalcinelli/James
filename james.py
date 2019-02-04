@@ -9,6 +9,9 @@
 #				repack
 #				rmsd
 #				restart
+#				mass_restart
+#				update
+#				branch
 
 import subprocess
 import sys
@@ -16,6 +19,7 @@ import itertools
 import math
 import glob
 import os
+import readline
 
 elements = {0: 'n', 1: 'H', 2: 'He', 3: 'Li', 4: 'Be', 5: 'B', 6: 'C', 7: 'N', 8: 'O', 9: 'F', 10: 'Ne', 11: 'Na', 12: 'Mg', 13: 'Al', 14: 'Si', 15: 'P', 16: 'S', 17: 'Cl', 18: 'Ar', 19: 'K', 20: 'Ca', 21: 'Sc', 22: 'Ti', 23: 'V', 24: 'Cr', 25: 'Mn', 26: 'Fe', 27: 'Co', 28: 'Ni', 29: 'Cu', 30: 'Zn', 31: 'Ga', 32: 'Ge', 33: 'As', 34: 'Se', 35: 'Br', 36: 'Kr', 37: 'Rb', 38: 'Sr', 39: 'Y', 40: 'Zr', 41: 'Nb', 42: 'Mo', 43: 'Tc', 44: 'Ru', 45: 'Rh', 46: 'Pd', 47: 'Ag', 48: 'Cd', 49:
 'In', 50: 'Sn', 51: 'Sb', 52: 'Te', 53: 'I', 54: 'Xe', 55: 'Cs', 56: 'Ba', 57: 'La', 58: 'Ce', 59: 'Pr', 60: 'Nd', 61: 'Pm', 62: 'Sm', 63: 'Eu', 64: 'Gd', 65: 'Tb', 66: 'Dy', 67: 'Ho', 68: 'Er', 69: 'Tm', 70: 'Yb', 71: 'Lu', 72: 'Hf', 73: 'Ta', 74: 'W', 75: 'Re', 76: 'Os', 77: 'Ir', 78: 'Pt', 79: 'Au', 80: 'Hg', 81: 'Tl', 82: 'Pb', 83: 'Bi', 84: 'Po', 85: 'At', 86: 'Rn', 87: 'Fr', 88: 'Ra', 89: 'Ac', 90: 'Th', 91: 'Pa', 92: 'U', 93: 'Np', 94: 'Pu', 95: 'Am', 96:
@@ -169,6 +173,33 @@ def calc_rmsd(one,two):
         rmsd = math.sqrt(summatory/len(one))
         return(rmsd)
 
+def rlinput(prompt,prefill=''):
+	### presents the user with >prompt: prefill   as predefined input ###
+	readline.set_startup_hook(lambda: readline.insert_text(prefill))
+	try:
+		return raw_input(prompt)
+	finally:
+		readline.set_startup_hook()
+
+def modify_com(first_com,new_command_line,new_comment_line):
+	### substitutes command and comment line in a given .com file ###
+	if new_command_line[-1:] != '\n':
+		new_command_line += '\n'
+	if new_comment_line[-1:] != '\n':
+		new_comment_line += '\n'
+	new_lines=[]
+	for line in first_com:
+		if line.split():
+			if line[0]=='#':
+				new_lines += new_command_line
+				new_lines += ['\n']
+			elif line.split()[0]=='Dscr':
+				new_lines += new_comment_line
+				new_lines += ['\n']
+			else:
+				new_lines += line
+	new_lines += ['\n']	
+	return new_lines
 
 ###############################################################################################
 ################################### Main Functions ############################################
@@ -271,10 +302,10 @@ def convert(log_file,com_file,termination_parameter,current_dir):
 	out_lines += geometry+['\n']	
 	write_lines(out_lines,com_file)
 
-def read(index_file,results_file,freq_mode,current_dir):
+def read(results_file,freq_mode,current_dir):
 	### Reads the results of all the calculations listed in index, and writes them in a results file ###       
 
-        ###_____>>> python james.py read index_file results_file ('freq' for reading a freq calc.) <<<_____
+        ###_____>>> python james.py read results_file ('freq' for reading a freq calc.) <<<_____
 
 	### NOTE: for the description of the calculation to be successfully included in the results file, it must begin with 'Dscr'
 
@@ -283,7 +314,7 @@ def read(index_file,results_file,freq_mode,current_dir):
 	descriptions = dict()
 	numbers=[]
 	### 2) Reads the index, and passes through each calculation listed there
-	index = read_lines(current_dir+'/'+index_file)
+	index = read_lines(current_dir+'/'+'index')
 	for line in index:
 		if line.strip():
 			### 3) Records the description of the calculation in descriptions dict
@@ -320,10 +351,10 @@ def read(index_file,results_file,freq_mode,current_dir):
                 lines.append('\n'+'\n')
 	write_lines(lines,current_dir+'/'+results_file)
 	
-def check(index_file,results_file,freq_mode,current_dir):
+def check(results_file,freq_mode,current_dir):
 	### Checks the status of the calculations listed in index, and returns the number of steps executed so far and the data about the last cycle ###
 
-        ###_____>>> python james.py check index_file results_file  <<<_____
+        ###_____>>> python james.py check results_file  <<<_____
 
 	### NOTE: for the description of the calculation to be successfully included in the results file, it must begin with 'Dscr'
 
@@ -333,7 +364,7 @@ def check(index_file,results_file,freq_mode,current_dir):
 	descriptions = dict()
 	numbers = []
 	### 2) Reads the index
-	lines = read_lines(current_dir+'/'+index_file)
+	lines = read_lines(current_dir+'/'+'index')
 	for line in lines:
                 if line.strip():
                         words = line.split()
@@ -371,24 +402,24 @@ def check(index_file,results_file,freq_mode,current_dir):
                 out_lines.append('\n'+'\n')
 	write_lines(out_lines,current_dir+'/'+results_file)
 
-def write(coords_file,index_file,first_number,current_dir):	
+def write(coords_file,first_number,current_dir):	
 	### Prepares multiple calculations iterating on different parts of the .com file. Each element can be given as a single element (to be repeated), as a list (to be iterated), or as a tuple (composed of single elements and lists). Files are named as progressive numbers starting from the given first_number ###
 
-        ###_____>>> python james.py write coords_file index_file first_number <<<_____
+        ###_____>>> python james.py write coords_file first_number <<<_____
 
 	### NOTE: all elements must have the same length (unless they are single, in which case they will be replicated to adapt the length of other elements)
 	
 	### 1) Defines execution parameters
 	intro = "%nprocshared=32 \n%mem=122GB \n%chk=q.chk"
 	### 2) Defines command line
-	command = "#pbe1pbe/Def2TZVP scf=(xqc, maxconventionalcycles=2000) opt EmpiricalDispersion=GD3BJ"
+	command = "#pbe1pbe/TZVP scf=(xqc, maxconventionalcycles=2000) opt Int=(Grid=Ultrafine) EmpiricalDispersion=GD3BJ"
 	### 3) Defines comment (NOTE: 'Dscr' will be added automatically)
-	comment = ((['1']*5+['2H']*5+['2F']*5+['3H']*5+['3F']*5)*4,['Co(II) S2']*25+['Co(II) S4']*25+['Co(I) S1']*25+['Co(I) S3']*25, ['CO2','COOH','CO','HCOO','HCOOH']*20)
+	comment = (['1']*20,['Co(II)']*10+['Co(I)']*10,['2','1','2','1','2','4','3','4','3','4']+['1','2','1','2','1','3','4','3','4','3'], ['CO2','COOH','CO','HCOO','HCOOH']*4)
 	### 4) Defines charge and spin
-	charge_spin = (['0','1','0','-1','0']*10+['-1','0','-1','-2','-1']*10,['2']*25+['4']*25+['1']*25+['3']*25)
+	charge_spin = (['0']*10+['-1']*10,['2','1','2','1','2','4','3','4','3','4']+['1','2','1','2','1','3','4','3','4','3'])
 	### 5) Defines coordinates (NOTE: the file must contain NO empty line, except ONE between structures)
 	coords = read_coords(current_dir+'/'+coords_file)
-	coordinates = coords
+	coordinates = coords*4
 	### 6) Defines final instructions block
 	post_coord_lines = ''
 	### 7) Defines a dict for the elements, and an ordered list of keys
@@ -591,13 +622,13 @@ def restart(input_number,termination_line,current_dir):
 	### 3) Moves back the temporary .com in the folder
 	subprocess.call(['mv','temp_conversion',input_number+'/'+input_number+'.com'])
 
-def mass_restart(index_file,current_dir):
+def mass_restart(current_dir):
 	### Restarts all the calculation in a folder from their last optimization steps. Runs them directly ###
 
 	### >>> python james.py mass_restart <<< ###
 
 	numbers = []
-	lines = read_lines(current_dir+'/'+index_file)
+	lines = read_lines(current_dir+'/'+'index')
 	for line in lines:
                 if line.strip():
                         words = line.split()
@@ -610,6 +641,65 @@ def mass_restart(index_file,current_dir):
 			subprocess.call(['sbatch','sub.sh'],cwd=new_dir)
 		except:
 			print('Error in ',input_number)
+
+def update_index(current_dir):
+	### Updates the index file to include all the folders existing at the moment ###
+	### >>> python james.py update <<< ###
+	content = glob.glob(current_dir+'/*')
+	numbers = []
+	for item in content:
+		try:
+			name =str(''.join(isplit(item,'/')[-1]))
+			number = int(name)
+			numbers += [number]
+		except:
+			pass
+	numbers.sort()
+	with open(str(current_dir+'/'+'index'),'w') as index:
+		for number in numbers:
+	     		index.write(str(number)+'\n')
+
+def branch(input_number, termination_line, current_dir):
+	### Restarts a calculation multiple times,  allowing the user to modify its execution parameters. ###
+	### see 'restart'
+	### >>> python james.py branch input_number termination_line <<< ###
+	### NOTE: give 'done' as an input to stop producing new calculations
+		
+	### 1) Calls the convert function on the selected structure, and stores the temporary result in the main directory
+	if termination_line == None:
+		subprocess.call(['python','james.py','convert',input_number+'/'+input_number+'.log','temp_conversion'])
+	else:
+		subprocess.call(['python','james.py','convert',input_number+'/'+input_number+'.log','temp_conversion',termination_line])
+
+	### 2) Saves the command and comment line of the initial .com file
+	first_com = read_lines(current_dir+'/temp_conversion')
+	command_line = None
+	comment_line = None
+	for line in first_com:
+		if line.strip():
+			if line[0]=='#':
+				command_line = line 
+			elif line.split()[0] == 'Dscr':
+				comment_line = line
+	### 3) Writes new .com files and calls the run function on them
+	files_count = 1
+	while True:
+		new_command_line = rlinput('Command line: ',command_line)
+		if new_command_line == 'done':
+			break
+		new_comment_line = rlinput('Comment line: ',comment_line)
+		if new_comment_line == 'done':
+			break
+		new_com = modify_com(first_com,new_command_line,new_comment_line)
+		new_name = str(input_number)+str(files_count)
+		write_lines(new_com,new_name+'.com')
+		run(str(new_name)+'.com',str(new_name),current_dir)
+		subprocess.call(['rm',current_dir+'/'+str(new_name)+'.com'])
+		files_count += 1
+	### 4) Removes temporary files and updates the index
+	subprocess.call(['rm',current_dir+'/'+'temp_conversion'])
+	update_index(current_dir)
+
 
 ##########################################################################################
 ################################# Function selection #####################################
@@ -629,17 +719,15 @@ elif sys.argv[1]=='convert':
 	convert(log_file,com_file,termination_parameter,current_dir)
 elif sys.argv[1]=='check':
 	freq_mode = False
-	index_file = sys.argv[2]
-	results_file = sys.argv[3]
-	if len(sys.argv)==5:
-		if sys.argv[4]=='freq':
+	results_file = sys.argv[2]
+	if len(sys.argv)==4:
+		if sys.argv[3]=='freq':
 			freq_mode=True
-	check(index_file,results_file,freq_mode,current_dir)
+	check(results_file,freq_mode,current_dir)
 elif sys.argv[1]=='write':
 	coords_file = sys.argv[2]
-	index_file = sys.argv[3]
-	first_number = sys.argv[4]
-	write(coords_file,index_file,first_number,current_dir)
+	first_number = sys.argv[3]
+	write(coords_file,first_number,current_dir)
 elif sys.argv[1]=='collect':
 	numbers = get_numbers_range(str(sys.argv[2]))
 	destination_file = str(sys.argv[3])
@@ -666,5 +754,14 @@ elif sys.argv[1]=='restart':
 
 	restart(input_number,termination_line,current_dir)
 elif sys.argv[1]=='mass_restart':
-	index_file = sys.argv[2]
-	mass_restart(index_file,current_dir)
+	mass_restart(current_dir)
+elif sys.argv[1]=='update':
+	update_index(current_dir)
+elif sys.argv[1]=='branch':
+	input_number = sys.argv[2]
+	if len(sys.argv) >= 4:
+                termination_line = sys.argv[3]
+        else:
+                termination_line = None
+	branch(input_number,termination_line,current_dir)
+	

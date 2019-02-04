@@ -7,8 +7,8 @@ def isplit(iterable,marker):
         return[list(g) for k,g in itertools.groupby(iterable,lambda x:x in marker) if not k]
 
 
-def extract_proj(path):
-	### Takes a path /aaa/bbb/ccc and returns /aaa/bbb ###
+def extract_batch(path):
+	### Takes a path /.../aaa/bbb/ccc and returns /.../aaa/bbb ###
 	path_in_list = list(path)
 	path_in_parts = isplit(path_in_list,'/')
 	new_parts = ["".join(x) for x in path_in_parts[:-1]]
@@ -16,7 +16,7 @@ def extract_proj(path):
 	return(new_path)
 
 def extract_calc(path):
-	### Takes a path /aaa/bbb/ccc and returns ccc ###
+	### Takes a path /.../aaa/bbb/ccc and returns ccc ###
 	path_in_list = list(path)
 	path_in_parts = isplit(path_in_list,'/')
 	new_path = "".join(path_in_parts[-1])	
