@@ -9,9 +9,6 @@
 #				repack
 #				rmsd
 #				restart
-#				mass_restart
-#				update
-#				branch
 
 import subprocess
 import sys
@@ -200,6 +197,14 @@ def modify_com(first_com,new_command_line,new_comment_line):
 				new_lines += line
 	new_lines += ['\n']	
 	return new_lines
+
+def sort_calculations(numbers):
+	### sorts a series of numbers as: 100 101 1011 1012 1013 102 103 104 ... ###
+	for e in numbers:
+		print(e[:3],len(e),e[3:])	
+	sort = sorted(numbers, key=lambda e: (e[:3], len(e), e[3:]))
+	return sort	
+	
 
 ###############################################################################################
 ################################### Main Functions ############################################
@@ -644,17 +649,18 @@ def mass_restart(current_dir):
 
 def update_index(current_dir):
 	### Updates the index file to include all the folders existing at the moment ###
+	### branches are listed under their parent calculation
 	### >>> python james.py update <<< ###
 	content = glob.glob(current_dir+'/*')
 	numbers = []
 	for item in content:
 		try:
 			name =str(''.join(isplit(item,'/')[-1]))
-			number = int(name)
-			numbers += [number]
+			is_number = int(name)
+			numbers += [name]
 		except:
 			pass
-	numbers.sort()
+	numbers = sort_calculations(numbers)
 	with open(str(current_dir+'/'+'index'),'w') as index:
 		for number in numbers:
 	     		index.write(str(number)+'\n')
