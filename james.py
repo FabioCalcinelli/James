@@ -1,6 +1,6 @@
 ### Tools for working with Gaussian 09 and slurm ###
 ### python james.py function (parameters) ###
-### functions:  run	
+### functions:                  run	
 #				convert
 #				check
 #				write
@@ -9,6 +9,12 @@
 #				repack
 #				rmsd
 #				restart
+#				mass_restart
+#				update
+#				branch
+#				excel !!!
+#				prepare
+#				rename 
 
 import subprocess
 import sys
@@ -17,6 +23,7 @@ import math
 import glob
 import os
 import readline
+#import pandas as pd
 
 elements = {0: 'n', 1: 'H', 2: 'He', 3: 'Li', 4: 'Be', 5: 'B', 6: 'C', 7: 'N', 8: 'O', 9: 'F', 10: 'Ne', 11: 'Na', 12: 'Mg', 13: 'Al', 14: 'Si', 15: 'P', 16: 'S', 17: 'Cl', 18: 'Ar', 19: 'K', 20: 'Ca', 21: 'Sc', 22: 'Ti', 23: 'V', 24: 'Cr', 25: 'Mn', 26: 'Fe', 27: 'Co', 28: 'Ni', 29: 'Cu', 30: 'Zn', 31: 'Ga', 32: 'Ge', 33: 'As', 34: 'Se', 35: 'Br', 36: 'Kr', 37: 'Rb', 38: 'Sr', 39: 'Y', 40: 'Zr', 41: 'Nb', 42: 'Mo', 43: 'Tc', 44: 'Ru', 45: 'Rh', 46: 'Pd', 47: 'Ag', 48: 'Cd', 49:
 'In', 50: 'Sn', 51: 'Sb', 52: 'Te', 53: 'I', 54: 'Xe', 55: 'Cs', 56: 'Ba', 57: 'La', 58: 'Ce', 59: 'Pr', 60: 'Nd', 61: 'Pm', 62: 'Sm', 63: 'Eu', 64: 'Gd', 65: 'Tb', 66: 'Dy', 67: 'Ho', 68: 'Er', 69: 'Tm', 70: 'Yb', 71: 'Lu', 72: 'Hf', 73: 'Ta', 74: 'W', 75: 'Re', 76: 'Os', 77: 'Ir', 78: 'Pt', 79: 'Au', 80: 'Hg', 81: 'Tl', 82: 'Pb', 83: 'Bi', 84: 'Po', 85: 'At', 86: 'Rn', 87: 'Fr', 88: 'Ra', 89: 'Ac', 90: 'Th', 91: 'Pa', 92: 'U', 93: 'Np', 94: 'Pu', 95: 'Am', 96:
@@ -178,13 +185,14 @@ def rlinput(prompt,prefill=''):
 	finally:
 		readline.set_startup_hook()
 
-def modify_com(first_com,new_command_line,new_comment_line):
+def modify_com(first_com,new_command_line,new_comment_line,new_geometry):
 	### substitutes command and comment line in a given .com file ###
 	if new_command_line[-1:] != '\n':
 		new_command_line += '\n'
 	if new_comment_line[-1:] != '\n':
 		new_comment_line += '\n'
 	new_lines=[]
+	reading_index = 0
 	for line in first_com:
 		if line.split():
 			if line[0]=='#':
@@ -193,10 +201,27 @@ def modify_com(first_com,new_command_line,new_comment_line):
 			elif line.split()[0]=='Dscr':
 				new_lines += new_comment_line
 				new_lines += ['\n']
+			elif line.split()[0] in elements.values() and len(line.split())==4:
+				if new_geometry == None:
+					new_lines += line
+				else:
+					new_lines += new_geometry[reading_index]
+					reading_index += 1
 			else:
 				new_lines += line
+	
 	new_lines += ['\n']	
 	return new_lines
+
+def take_geometry_from_com(com_lines):
+	### extracts the lines describing the geometry from a .com file opened as list of lines ###
+	geom_lines=[]
+	for line in com_lines:
+		if line.strip():
+			if line.split()[0] in elements and len(line.split()) == 4:
+				geom_lines += line
+	return geom_lines
+				
 
 def sort_calculations(numbers):
 	### sorts a series of numbers as: 100 101 1011 1012 1013 102 103 104 ... ###
@@ -412,23 +437,26 @@ def write(coords_file,first_number,current_dir):
 
 	### NOTE: all elements must have the same length (unless they are single, in which case they will be replicated to adapt the length of other elements)
 	
+	### reads the 'writer' file to retrieve all the parameters
+	subprocess.call(['cp',current_dir+'/writer.py','../writer.py'])	
 	### 1) Defines execution parameters
-	intro = "%nprocshared=32 \n%mem=122GB \n%chk=q.chk"
+	from writer import intro
 	### 2) Defines command line
-	command = "#pbe1pbe/TZVP scf=(xqc, maxconventionalcycles=2000) opt Int=(Grid=Ultrafine) EmpiricalDispersion=GD3BJ"
+	from writer import command
 	### 3) Defines comment (NOTE: 'Dscr' will be added automatically)
-	comment = (['1']*20,['Co(II)']*10+['Co(I)']*10,['2','1','2','1','2','4','3','4','3','4']+['1','2','1','2','1','3','4','3','4','3'], ['CO2','COOH','CO','HCOO','HCOOH']*4)
+	from writer import comment
 	### 4) Defines charge and spin
-	charge_spin = (['0']*10+['-1']*10,['2','1','2','1','2','4','3','4','3','4']+['1','2','1','2','1','3','4','3','4','3'])
+	from writer import charge_spin
 	### 5) Defines coordinates (NOTE: the file must contain NO empty line, except ONE between structures)
 	coords = read_coords(current_dir+'/'+coords_file)
-	coordinates = coords*4
+	from writer import mult_factor
+	coordinates = coords * mult_factor	
 	### 6) Defines final instructions block
-	post_coord_lines = ''
+	from writer import final_block
 	### 7) Defines a dict for the elements, and an ordered list of keys
 	elements=elements = ['intro','command','comment','charge_spin','coordinates','post_coord_lines']
-	elements_dict = {'intro':intro,'command':command,'comment':comment,'charge_spin':charge_spin,'coordinates':coordinates,'post_coord_lines':post_coord_lines}
-	
+	elements_dict = {'intro':intro,'command':command,'comment':comment,'charge_spin':charge_spin,'coordinates':coordinates,'post_coord_lines':final_block}
+	subprocess.call(['rm','../writer.py'])
 	### 8) Checks that all iterable elements have the same length
 	iterable_elements = []
 	for element in elements:
@@ -532,7 +560,7 @@ def collect(numbers,coords_file,current_dir):
 def unpack(coords_file,xyz_name,current_dir):
 	### Splits a multistructure coords_file in individual .xyz files ###
 	
-        ###_____>>> python james.py unpack coords_file xyz_name_nonumber numbers coordinates_file <<<_____
+        ###_____>>> python james.py unpack coords_file xyz_name_nonumber <<<_____
 	
 	### 1) Opens file and splits the different structures
 	lines = read_lines(current_dir+'/'+coords_file)	
@@ -665,7 +693,7 @@ def update_index(current_dir):
 
 def branch(input_number, termination_line, current_dir):
 	### Restarts a calculation multiple times,  allowing the user to modify its execution parameters. ###
-	### see 'restart'
+	### see 'convert'
 	### >>> python james.py branch input_number termination_line <<< ###
 	### NOTE: give 'done' as an input to stop producing new calculations
 		
@@ -679,6 +707,7 @@ def branch(input_number, termination_line, current_dir):
 	first_com = read_lines(current_dir+'/temp_conversion')
 	command_line = None
 	comment_line = None
+	geometry = None
 	for line in first_com:
 		if line.strip():
 			if line[0]=='#':
@@ -694,7 +723,15 @@ def branch(input_number, termination_line, current_dir):
 		new_comment_line = rlinput('Comment line: ',comment_line)
 		if new_comment_line == 'done':
 			break
-		new_com = modify_com(first_com,new_command_line,new_comment_line)
+		input_geometry = rlinput('Geometry: ','same')
+		if input_geometry == 'done':
+			new_geometry = None
+			break
+		elif input_geometry == 'same':
+			new_geometry = None
+		else:
+			new_geometry = read_lines(current_dir+'/'+input_geometry)
+		new_com = modify_com(first_com,new_command_line,new_comment_line,new_geometry)
 		new_name = str(input_number)+str(files_count)
 		write_lines(new_com,new_name+'.com')
 		run(str(new_name)+'.com',str(new_name),current_dir)
@@ -704,6 +741,55 @@ def branch(input_number, termination_line, current_dir):
 	subprocess.call(['rm',current_dir+'/'+'temp_conversion'])
 	update_index(current_dir)
 
+def excel(current_dir,file_name,freq_mode):
+	### stores the current status of the batch in a file_name.xlsx ###
+	### >>> python james.py excel file_name freq_mode <<< ###
+	update_index(current_dir)
+	check('status', freq_mode, current_dir)
+#	status = read_lines(current_dir+'/status')
+	
+#	results = pd.DataFrame()
+#	for line in status:
+#		line_frame = pd.DataFrame(line.split())
+#		pd.concat([results,line_frame],axis=1)
+		
+#	print(results)
+
+def prepare(folder,current_dir):
+	### prepares a batch folder, creating it and copying sub.sh, writer.py, and a link to james.py ###
+	### >>> python james.py prepare folder_name <<< ###
+	try:
+		subprocess.call(['mkdir',folder])
+	except:
+		exit
+	subprocess.call(['cp','sub.sh',current_dir+'/'+folder+'/sub.sh'])
+	subprocess.call(['cp','writer.py',current_dir+'/'+folder+'/writer.py'])
+	subprocess.call(['ln','-s', current_dir+'/'+'james.py',current_dir+'/'+folder+'/james.py'])
+
+def rename(init,fin,current_dir):
+	### renames a calculation folder, changing the name in all the files within the folder. Updates the index ###
+	### >>> python james.py rename init fin ###
+	# 1) Moves the folder
+	subprocess.call(['mv',current_dir+'/'+init, current_dir+'/'+fin])
+	folder_content = glob.glob(current_dir+'/'+fin+'/*')
+	# 2) Edits sub.sh
+        lines = read_lines(current_dir+'/'+fin+'/sub.sh') 
+        new_lines = [] 
+        for line in lines: 
+                if line[:19]=="#SBATCH --job-name=": 
+                        new_lines += '#SBATCH --job-name='+fin+'\n' 
+                elif line [:4] == 'srun': 
+                        new_lines += 'srun --ntasks=1 --hint=nomultithread --cpus-per-task=32 --mem_bind=v,local ${GAUSSIAN09_HOME}/g09 < '+fin+'.com > '+fin+'.log' 
+                else: 
+                        new_lines += line
+	write_lines(new_lines,current_dir+'/'+fin+'/sub.sh') 
+	# 3) Renames .log and .com
+	if current_dir+'/'+fin+'/'+init+'.com' in folder_content:
+		subprocess.call(['mv',current_dir+'/'+fin+'/'+init+'.com',current_dir+'/'+fin+'/'+fin+'.com'])
+	if current_dir+'/'+fin+'/'+init+'.log' in folder_content:
+		subprocess.call(['mv',current_dir+'/'+fin+'/'+init+'.log',current_dir+'/'+fin+'/'+fin+'.log'])
+	# 4) Updates index
+	update_index(current_dir)
 
 ##########################################################################################
 ################################# Function selection #####################################
@@ -755,7 +841,6 @@ elif sys.argv[1]=='restart':
                 termination_line = sys.argv[3]
         else:
                 termination_line = None
-
 	restart(input_number,termination_line,current_dir)
 elif sys.argv[1]=='mass_restart':
 	mass_restart(current_dir)
@@ -768,4 +853,17 @@ elif sys.argv[1]=='branch':
         else:
                 termination_line = None
 	branch(input_number,termination_line,current_dir)
-	
+elif sys.argv[1]=='excel':
+	freq_mode = False
+	file_name = sys.argv[2]
+	if len(sys.argv) >= 4:
+		if sys.argv[3] == 'freq':
+			freq_mode = True
+	excel(current_dir,file_name,freq_mode)
+elif sys.argv[1] == 'prepare':
+	folder_name = sys.argv[2]
+	prepare(folder_name,current_dir)
+elif sys.argv[1] == 'rename':
+	initial_name = sys.argv[2]
+	final_name = sys.argv[3]
+	rename(initial_name,final_name,current_dir)
