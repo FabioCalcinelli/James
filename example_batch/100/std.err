@@ -1,0 +1,27 @@
+[33m
+		---------------------------------------------------
+		 Loading GAUSSIAN09-d.01:
+			 GAUSSIAN09_FROM=precompiled (build)
+			 GAUSSIAN09_USE="" (compilation)
+		---------------------------------------------------[0m
+mem-bind=LOC - nid05915, task  0  0 [5472]: mask 0x3 set
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: error: *** JOB 8184752 ON nid05915 CANCELLED AT 2019-02-15T15:41:30 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 8184752.0 ON nid05915 CANCELLED AT 2019-02-15T15:41:30 DUE TO TIME LIMIT ***
+Error: software termination
+   rax fffffffffffffffc, rbx 00007ffffffee200, rcx 00002aaaab2a4e2a
+   rdx 0000000000000000, rsp 00007ffffffee1c8, rbp 0000000000000001
+   rsi 00007ffffffee200, rdi 0000000000001561, r8  00002aaaab58a4c0
+   r9  00007ffffffee120, r10 0000000000000000, r11 0000000000000246
+   r12 00007ffffffee220, r13 00000000000000a9, r14 0000000000000000
+   r15 00007fffffff4be0
+Error: software termination
+   rax 00000000000009c1, rbx 00000000000012d8, rcx 0000000000000910
+   rdx 0000000000004840, rsp 00007ffffffbdf30, rbp 00007ffffffbdf80
+   rsi 00002aaab12eab60, rdi 00002aaab1300d30, r8  00002aaab12eab60
+   r9  0000000000000868, r10 00002aaab12fd8d8, r11 00000000000164ee
+   r12 bf14d81266b94e60, r13 bf13013ae7f51850, r14 00002aaaab7a9be8
+   r15 00000000000026f7
+srun: got SIGCONT
+srun: forcing job termination
+  --- traceback not available

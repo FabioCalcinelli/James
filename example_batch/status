@@ -1,0 +1,45 @@
+Num.     Description                           Status         Energy            Glob. min.     N. iterations  Max. Force     RMS Force      Max. disp.     RMS disp.      
+100  --> Dscr 3F Fe(III) S2                    In progress                                     42             0.001370       0.000303       0.227539       0.048534       
+
+1001 --> Dscr 3F Fe(III) S2 hessian            In progress                                     0              None           None           None           None           
+
+101  --> Dscr 3F Fe(III) S4                    Completed:     -5157.98407254                   18             0.000019       0.000005       0.001167       0.000273       
+
+1011 --> Dscr 3F Fe(III) S4 FREQ               Completed:     -5157.98407229                   1              0.000039       0.000008       0.029609       0.009612       
+
+1012 --> Dscr 3F Fe(III) S4 HYBRID             Completed:     -5158.26030154                   0              None           None           None           None           
+
+1013 --> Dscr 3F Fe(III) S4 PURE               Completed:     -5158.23463774                   0              None           None           None           None           
+
+102  --> Dscr 3F Fe(II) S3                     Completed:     -5158.23392883                   20             0.000007       0.000001       0.001664       0.000275       
+
+1021 --> Dscr 3F Fe(II) S3 FREQ                In progress                                     0              None           None           None           None           
+
+1022 --> Dscr 3F Fe(II) S3 HYBRID              Completed:     -5158.42685300                   0              None           None           None           None           
+
+1023 --> Dscr 3F Fe(II) S3 PURE                Completed:     -5158.40188802                   0              None           None           None           None           
+
+103  --> Dscr 3F Fe(I) S2                      Completed:     -5158.31507584                   26             0.000011       0.000003       0.001229       0.000233       
+
+1031 --> Dscr 3F Fe(I) S2 FREQ                 In progress                                     0              None           None           None           None           
+
+1032 --> Dscr 3F Fe(I) S2 HYBRID               Completed:     -5158.51876665                   0              None           None           None           None           
+
+1033 --> Dscr 3F Fe(I) S2 PURE                 Completed:     -5158.53382561                   0              None           None           None           None           
+
+104  --> Dscr 3F Fe(I) S4                      Completed:     -5158.31879175                   18             0.000006       0.000002       0.001514       0.000384       
+
+1041 --> Dscr 3F Fe(I) S4 FREQ                 In progress                                     0              None           None           None           None           
+
+1042 --> Dscr 3F Fe(I) S4 HYBRID               Completed:     -5158.54267723                   0              None           None           None           None           
+
+1043 --> Dscr 3F Fe(I) S4 PURE                 Completed:     -5158.51682997                   0              None           None           None           None           
+
+105  --> Dscr 3F Fe(O) S3                      Completed:     -5158.28695055                   19             0.000006       0.000001       0.000446       0.000078       
+
+1051 --> Dscr 3F Fe(O) S3 FREQ                 In progress                                     0              None           None           None           None           
+
+1052 --> Dscr 3F Fe(O) S3 HYBRID               Completed:     -5158.63385428                   0              None           None           None           None           
+
+1053 --> Dscr 3F Fe(O) S3 PURE                 Completed:     -5158.63198482                   0              None           None           None           None           
+
